@@ -1,0 +1,10 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed May 17 17:53:29 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "MBI_CLKN_MOD" LOCATE = SITE "AA12" LEVEL 1;
+COMP "USER_CLOCK" LOCATE = SITE "AB13" LEVEL 1;
+COMP "MBI_CLK_MOD" LOCATE = SITE "AB12" LEVEL 1;
+SCHEMATIC END;
+
