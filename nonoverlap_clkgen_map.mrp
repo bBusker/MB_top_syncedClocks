@@ -1,0 +1,160 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'nonoverlap_clkgen'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx25t-fgg484-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o nonoverlap_clkgen_map.ncd nonoverlap_clkgen.ngd
+nonoverlap_clkgen.pcf 
+Target Device  : xc6slx25t
+Target Package : fgg484
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Thu May 18 16:53:32 2017
+
+Interim Summary
+---------------
+Slice Logic Utilization:
+  Number of Slice Registers:                     0 out of  30,064    0%
+  Number of Slice LUTs:                          0 out of  15,032    0%
+
+Slice Logic Distribution:
+  Number of MUXCYs used:                         0 out of   7,516    0%
+  Number of LUT Flip Flop pairs used:            0
+
+IO Utilization:
+  Number of bonded IOBs:                         4 out of     250    1%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      52    0%
+  Number of RAMB8BWERs:                          0 out of     104    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             1 out of      32    3%
+    Number used as BUFIO2FBs:                    1
+    Number used as BUFIO2FB_2CLKs:               0
+  Number of BUFG/BUFGMUXs:                       3 out of      16   18%
+    Number used as BUFGs:                        3
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     272    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     272    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     272    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     160    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      38    0%
+  Number of GTPA1_DUALs:                         0 out of       1    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCIE_A1s:                            0 out of       1    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            1 out of       2   50%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Design Summary
+--------------
+Number of errors   :   5
+Number of warnings :   0
+
+Section 1 - Errors
+------------------
+ERROR:Place:1205 - This design contains a global buffer instance, <clkout1_buf>,
+   driving the net, <MBI_CLK_MOD_OBUF>, that is driving the following (first 30)
+   non-clock load pins off chip.
+   < PIN: MBI_CLK_MOD.O; >
+   This design practice, in Spartan-6, can lead to an unroutable situation due
+   to limitations in the global routing. If the design does route there may be
+   excessive delay or skew on this net. It is recommended to use a Clock
+   Forwarding technique to create a reliable and repeatable low skew solution:
+   instantiate an ODDR2 component; tie the .D0 pin to Logic1; tie the .D1 pin to
+   Logic0; tie the clock net to be forwarded to .C0; tie the inverted clock to
+   .C1. If you wish to override this recommendation, you may use the
+   CLOCK_DEDICATED_ROUTE constraint (given below) in the .ucf file to demote
+   this message to a WARNING and allow your design to continue. Although the net
+   may still not route, you will be able to analyze the failure in FPGA_Editor.
+   < PIN "clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE; >
+
+ERROR:Place:1205 - This design contains a global buffer instance, <clkout2_buf>,
+   driving the net, <MBI_CLKN_MOD_OBUF>, that is driving the following (first
+   30) non-clock load pins off chip.
+   < PIN: MBI_CLKN_MOD.O; >
+   This design practice, in Spartan-6, can lead to an unroutable situation due
+   to limitations in the global routing. If the design does route there may be
+   excessive delay or skew on this net. It is recommended to use a Clock
+   Forwarding technique to create a reliable and repeatable low skew solution:
+   instantiate an ODDR2 component; tie the .D0 pin to Logic1; tie the .D1 pin to
+   Logic0; tie the clock net to be forwarded to .C0; tie the inverted clock to
+   .C1. If you wish to override this recommendation, you may use the
+   CLOCK_DEDICATED_ROUTE constraint (given below) in the .ucf file to demote
+   this message to a WARNING and allow your design to continue. Although the net
+   may still not route, you will be able to analyze the failure in FPGA_Editor.
+   < PIN "clkout2_buf.O" CLOCK_DEDICATED_ROUTE = FALSE; >
+
+ERROR:Place:1136 - This design contains a global buffer instance, <clkout1_buf>,
+   driving the net, <MBI_CLK_MOD_OBUF>, that is driving the following (first 30)
+   non-clock load pins.
+   < PIN: MBI_CLK_MOD.O; >
+   This is not a recommended design practice in Spartan-6 due to limitations in
+   the global routing that may cause excessive delay, skew or unroutable
+   situations.  It is recommended to only use a BUFG resource to drive clock
+   loads. If you wish to override this recommendation, you may use the
+   CLOCK_DEDICATED_ROUTE constraint (given below) in the .ucf file to demote
+   this message to a WARNING and allow your design to continue.
+   < PIN "clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE; >
+
+ERROR:Place:1136 - This design contains a global buffer instance, <clkout2_buf>,
+   driving the net, <MBI_CLKN_MOD_OBUF>, that is driving the following (first
+   30) non-clock load pins.
+   < PIN: MBI_CLKN_MOD.O; >
+   This is not a recommended design practice in Spartan-6 due to limitations in
+   the global routing that may cause excessive delay, skew or unroutable
+   situations.  It is recommended to only use a BUFG resource to drive clock
+   loads. If you wish to override this recommendation, you may use the
+   CLOCK_DEDICATED_ROUTE constraint (given below) in the .ucf file to demote
+   this message to a WARNING and allow your design to continue.
+   < PIN "clkout2_buf.O" CLOCK_DEDICATED_ROUTE = FALSE; >
+
+ERROR:Pack:1654 - The timing-driven placement phase encountered an error.
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network RESET has no load.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   1 block(s) optimized away
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+
+Section 12 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 13 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.

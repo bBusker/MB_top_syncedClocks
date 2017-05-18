@@ -61,3 +61,5 @@ CRITICAL WARNING: [Constraints 18-10] Could not create constraint 'CLOCK_DEDICAT
 Finished Parsing UCF File [D:/Shichen Lu/MB_top_syncedClocks/top.ucf]
 INFO: [Designutils 20-20] Invalid constraints found, use command 'write_ucf -constraints invalid <file>' to save all the invalid constraints to a file
 refresh_design: Time (s): elapsed = 00:00:05 . Memory (MB): peak = 681.215 ; gain = 0.000
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1

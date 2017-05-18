@@ -1,0 +1,2 @@
+verilog work ../../nonoverlap_clkgen.v
+verilog work ../example_design/nonoverlap_clkgen_exdes.v

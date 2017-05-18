@@ -1,2 +1,2 @@
-verilog work "twophase_nonoverlap.v"
+verilog work "nonoverlap_clkgen.v"
 verilog work "top.v"

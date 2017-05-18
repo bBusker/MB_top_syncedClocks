@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Map" timeStamp="Wed May 17 17:53:30 2017">
+  <application stringID="Map" timeStamp="Thu May 18 17:50:09 2017">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -121,8 +121,8 @@
         <item dataType="int" stringID="MAP_NUM_ERRORS" value="0"/>
         <item dataType="int" stringID="MAP_FILTERED_WARNINGS" value="0"/>
         <item dataType="int" stringID="MAP_NUM_WARNINGS" value="0"/>
-        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="375324"/>
-        <item stringID="MAP_TOTAL_REAL_TIME" value="13 secs "/>
+        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="376576"/>
+        <item stringID="MAP_TOTAL_REAL_TIME" value="5 secs "/>
         <item stringID="MAP_TOTAL_CPU_TIME" value="5 secs "/>
       </section>
       <section stringID="MAP_SLICE_REPORTING">
@@ -196,14 +196,14 @@
         <item AVAILABLE="2" dataType="int" stringID="MAP_NUM_MCB" value="0"/>
         <item AVAILABLE="1" dataType="int" stringID="MAP_NUM_PCIE_A1" value="0"/>
         <item AVAILABLE="2" dataType="int" stringID="MAP_NUM_PCILOGICSE" value="0"/>
-        <item AVAILABLE="2" dataType="int" stringID="MAP_NUM_PLL_ADV" value="0"/>
+        <item AVAILABLE="2" dataType="int" stringID="MAP_NUM_PLL_ADV" value="1"/>
         <item AVAILABLE="1" dataType="int" stringID="MAP_NUM_PMV" value="0"/>
         <item AVAILABLE="1" dataType="int" stringID="MAP_NUM_STARTUP" value="0"/>
         <item AVAILABLE="1" dataType="int" stringID="MAP_NUM_SUSPEND_SYNC" value="0"/>
       </section>
       <section stringID="MAP_BUFG_DATA">
-        <item dataType="int" label="Number used as BUFGs" stringID="MAP_NUM_BUFG" value="0"/>
-        <item dataType="int" label="Number of BUFGMUXs" stringID="MAP_NUM_BUFGMUX" value="0"/>
+        <item dataType="int" label="Number used as BUFGs" stringID="MAP_NUM_BUFG" value="4"/>
+        <item dataType="int" label="Number of BUFGMUXs" stringID="MAP_NUM_BUFGMUX" value="3"/>
         <item dataType="int" stringID="MAP_AVAILABLE" value="16"/>
       </section>
       <section stringID="MAP_MACRO_RPM_REPORTING">
@@ -268,9 +268,9 @@
       <section stringID="MAP_CONFIGURATION_STRING_DETAILS"/>
       <section stringID="MAP_GENERAL_CONFIG_DATA">
         <item stringID="MAP_CLKDV_DIVIDE" value="2.0"/>
-        <item stringID="MAP_CLKIN_DIVIDE_BY_2" value="FALSE"/>
+        <item stringID="MAP_CLKIN_DIVIDE_BY_2" value="TRUE"/>
         <item stringID="MAP_CLKOUT_PHASE_SHIFT" value="NONE"/>
-        <item stringID="MAP_CLK_FEEDBACK" value="1X"/>
+        <item stringID="MAP_CLK_FEEDBACK" value="CLKFBOUT"/>
         <item stringID="MAP_DESKEW_ADJUST" value="5"/>
         <item stringID="MAP_DFS_FREQUENCY_MODE" value="LOW"/>
         <item stringID="MAP_DLL_FREQUENCY_MODE" value="LOW"/>
@@ -282,6 +282,29 @@
         <item stringID="MAP_CLKFX_MULTIPLY" value="4"/>
         <item stringID="MAP_CLKIN_PERIOD" value="10.000000"/>
         <item stringID="MAP_PHASE_SHIFT" value="0"/>
+        <item stringID="MAP_BANDWIDTH" value="OPTIMIZED"/>
+        <item stringID="MAP_COMPENSATION" value="SYSTEM_SYNCHRONOUS"/>
+        <item stringID="MAP_CLKFBOUT_PHASE" value="0.0"/>
+        <item stringID="MAP_CLKIN1_PERIOD" value="20"/>
+        <item stringID="MAP_CLKIN2_PERIOD" value="20"/>
+        <item stringID="MAP_CLKOUT0_DUTY_CYCLE" value="0.389"/>
+        <item stringID="MAP_CLKOUT0_PHASE" value="0.0"/>
+        <item stringID="MAP_CLKOUT1_DIVIDE" value="9"/>
+        <item stringID="MAP_CLKOUT1_DUTY_CYCLE" value="0.389"/>
+        <item stringID="MAP_CLKOUT1_PHASE" value="180.0"/>
+        <item stringID="MAP_CLKOUT2_DIVIDE" value="1"/>
+        <item stringID="MAP_CLKOUT2_DUTY_CYCLE" value="0.5"/>
+        <item stringID="MAP_CLKOUT2_PHASE" value="0.0"/>
+        <item stringID="MAP_CLKOUT3_DIVIDE" value="1"/>
+        <item stringID="MAP_CLKOUT3_DUTY_CYCLE" value="0.5"/>
+        <item stringID="MAP_CLKOUT3_PHASE" value="0.0"/>
+        <item stringID="MAP_CLKOUT4_DIVIDE" value="1"/>
+        <item stringID="MAP_CLKOUT4_DUTY_CYCLE" value="0.5"/>
+        <item stringID="MAP_CLKOUT4_PHASE" value="0.0"/>
+        <item stringID="MAP_CLKOUT5_DIVIDE" value="1"/>
+        <item stringID="MAP_CLKOUT5_DUTY_CYCLE" value="0.5"/>
+        <item stringID="MAP_CLKOUT5_PHASE" value="0.0"/>
+        <item stringID="MAP_DIVCLK_DIVIDE" value="1"/>
       </section>
       <section stringID="MAP_CONTROL_SET_INFORMATION">
         <item dataType="int" label="Number of unique control sets" stringID="MAP_NUM_CONTROL_SETS" value="0"/>
@@ -310,21 +333,21 @@
       <item AVAILABLE="2" dataType="int" stringID="MAP_NUM_MCB" value="0"/>
       <item AVAILABLE="1" dataType="int" stringID="MAP_NUM_PCIE_A1" value="0"/>
       <item AVAILABLE="2" dataType="int" stringID="MAP_NUM_PCILOGICSE" value="0"/>
-      <item AVAILABLE="2" dataType="int" stringID="MAP_NUM_PLL_ADV" value="0"/>
+      <item AVAILABLE="2" dataType="int" stringID="MAP_NUM_PLL_ADV" value="1"/>
       <item AVAILABLE="1" dataType="int" stringID="MAP_NUM_PMV" value="0"/>
       <item AVAILABLE="1" dataType="int" stringID="MAP_NUM_STARTUP" value="0"/>
       <item AVAILABLE="1" dataType="int" stringID="MAP_NUM_SUSPEND_SYNC" value="0"/>
     </section>
     <section stringID="MAP_BUFG_DATA">
-      <item dataType="int" label="Number used as BUFGs" stringID="MAP_NUM_BUFG" value="0"/>
-      <item dataType="int" label="Number of BUFGMUXs" stringID="MAP_NUM_BUFGMUX" value="0"/>
+      <item dataType="int" label="Number used as BUFGs" stringID="MAP_NUM_BUFG" value="4"/>
+      <item dataType="int" label="Number of BUFGMUXs" stringID="MAP_NUM_BUFGMUX" value="3"/>
       <item dataType="int" stringID="MAP_AVAILABLE" value="16"/>
       <item dataType="int" stringID="MAP_HARD_MACROS" value="0"/>
       <item dataType="int" stringID="MAP_RPMS" value="0"/>
       <item stringID="MAP_CLKDV_DIVIDE" value="2.0"/>
-      <item stringID="MAP_CLKIN_DIVIDE_BY_2" value="FALSE"/>
+      <item stringID="MAP_CLKIN_DIVIDE_BY_2" value="TRUE"/>
       <item stringID="MAP_CLKOUT_PHASE_SHIFT" value="NONE"/>
-      <item stringID="MAP_CLK_FEEDBACK" value="1X"/>
+      <item stringID="MAP_CLK_FEEDBACK" value="CLKFBOUT"/>
       <item stringID="MAP_DESKEW_ADJUST" value="5"/>
       <item stringID="MAP_DFS_FREQUENCY_MODE" value="LOW"/>
       <item stringID="MAP_DLL_FREQUENCY_MODE" value="LOW"/>
@@ -336,6 +359,29 @@
       <item stringID="MAP_CLKFX_MULTIPLY" value="4"/>
       <item stringID="MAP_CLKIN_PERIOD" value="10.000000"/>
       <item stringID="MAP_PHASE_SHIFT" value="0"/>
+      <item stringID="MAP_BANDWIDTH" value="OPTIMIZED"/>
+      <item stringID="MAP_COMPENSATION" value="SYSTEM_SYNCHRONOUS"/>
+      <item stringID="MAP_CLKFBOUT_PHASE" value="0.0"/>
+      <item stringID="MAP_CLKIN1_PERIOD" value="20"/>
+      <item stringID="MAP_CLKIN2_PERIOD" value="20"/>
+      <item stringID="MAP_CLKOUT0_DUTY_CYCLE" value="0.389"/>
+      <item stringID="MAP_CLKOUT0_PHASE" value="0.0"/>
+      <item stringID="MAP_CLKOUT1_DIVIDE" value="9"/>
+      <item stringID="MAP_CLKOUT1_DUTY_CYCLE" value="0.389"/>
+      <item stringID="MAP_CLKOUT1_PHASE" value="180.0"/>
+      <item stringID="MAP_CLKOUT2_DIVIDE" value="1"/>
+      <item stringID="MAP_CLKOUT2_DUTY_CYCLE" value="0.5"/>
+      <item stringID="MAP_CLKOUT2_PHASE" value="0.0"/>
+      <item stringID="MAP_CLKOUT3_DIVIDE" value="1"/>
+      <item stringID="MAP_CLKOUT3_DUTY_CYCLE" value="0.5"/>
+      <item stringID="MAP_CLKOUT3_PHASE" value="0.0"/>
+      <item stringID="MAP_CLKOUT4_DIVIDE" value="1"/>
+      <item stringID="MAP_CLKOUT4_DUTY_CYCLE" value="0.5"/>
+      <item stringID="MAP_CLKOUT4_PHASE" value="0.0"/>
+      <item stringID="MAP_CLKOUT5_DIVIDE" value="1"/>
+      <item stringID="MAP_CLKOUT5_DUTY_CYCLE" value="0.5"/>
+      <item stringID="MAP_CLKOUT5_PHASE" value="0.0"/>
+      <item stringID="MAP_DIVCLK_DIVIDE" value="1"/>
     </section>
   </application>
 

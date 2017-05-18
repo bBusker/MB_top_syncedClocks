@@ -24,13 +24,19 @@ module twophase_nonoverlap(
     output CLK_OUT_N
     );
 
-	wire PHI1, PHI2, ORR1, ORR2;
+	wire PHI1, PHI2, ORR1, ORR2, B1, B2;
 	
 	norr norr1(CLK_IN, PHI2, ORR1);
 	norr norr2(!CLK_IN, PHI1, ORR2);
 	
-	assign PHI1 = !ORR1;
-	assign PHI2 = !ORR2;
+//	inv inv1(ORR1, B1);
+//	inv inv2(ORR2, B2);
+//	
+//	inv inv3(B1, PHI1);
+//	inv inv4(B2, PHI2);
+	
+	assign #2 PHI1 = ORR1;
+	assign #2 PHI2 = ORR2;
 	
 	assign CLK_OUT = PHI1;
 	assign CLK_OUT_N = PHI2;
@@ -44,4 +50,12 @@ module norr(
 	);
 	
 	assign O = !(I1|I2);
+endmodule
+
+module inv(
+	input I,
+	output O
+	);
+	
+	assign O = !I;
 endmodule
