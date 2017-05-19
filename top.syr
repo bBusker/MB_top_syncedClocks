@@ -114,16 +114,17 @@ Parsing module <top>.
 *                            HDL Elaboration                            *
 =========================================================================
 WARNING:HDLCompiler:1016 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 43: Port CLKDV is not connected to this instance
-WARNING:HDLCompiler:1016 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 104: Port RESET is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 100: Port RESET is not connected to this instance
 
 Elaborating module <top>.
 
 Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=1,CLKFX_MULTIPLY=4,CLKIN_DIVIDE_BY_2="TRUE",CLKIN_PERIOD=10.0,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",DLL_FREQUENCY_MODE="LOW",DUTY_CYCLE_CORRECTION="TRUE",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
-WARNING:HDLCompiler:1127 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 62: Assignment to CLK2X ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 63: Assignment to CLK2X180 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 61: Assignment to CLK2X ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 62: Assignment to CLK2X180 ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
 
 Elaborating module <BUFGMUX>.
-WARNING:HDLCompiler:1127 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 101: Assignment to W_CLK_MOD ignored, since the identifier is never used
 
 Elaborating module <nonoverlap_clkgen>.
 
@@ -133,12 +134,9 @@ WARNING:HDLCompiler:1127 - "D:\Shichen Lu\MB_top_syncedClocks\nonoverlap_clkgen.
 WARNING:HDLCompiler:1127 - "D:\Shichen Lu\MB_top_syncedClocks\nonoverlap_clkgen.v" Line 125: Assignment to clkout4_unused ignored, since the identifier is never used
 WARNING:HDLCompiler:1127 - "D:\Shichen Lu\MB_top_syncedClocks\nonoverlap_clkgen.v" Line 126: Assignment to clkout5_unused ignored, since the identifier is never used
 
-Elaborating module <BUFG>.
-
 Elaborating module <ODDR2(DDR_ALIGNMENT="NONE",INIT=1'b0,SRTYPE="SYNC")>.
-WARNING:HDLCompiler:634 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 78: Net <CLK_MOD_PHASE_SEL1> does not have a driver.
-WARNING:HDLCompiler:634 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 92: Net <CLK_MOD_PHASE_SEL2> does not have a driver.
-WARNING:HDLCompiler:552 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 104: Input port RESET is not connected on this instance
+WARNING:HDLCompiler:634 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 97: Net <CLK_MOD_PHASE_SEL2> does not have a driver.
+WARNING:HDLCompiler:552 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 100: Input port RESET is not connected on this instance
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -147,8 +145,7 @@ WARNING:HDLCompiler:552 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 104: In
 Synthesizing Unit <top>.
     Related source file is "D:\Shichen Lu\MB_top_syncedClocks\top.v".
 WARNING:Xst:2898 - Port 'RESET', unconnected in block instance 'nocg', is tied to GND.
-INFO:Xst:3210 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" line 104: Output port <LOCKED> of the instance <nocg> is unconnected or connected to loadless signal.
-WARNING:Xst:653 - Signal <CLK_MOD_PHASE_SEL1> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+INFO:Xst:3210 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" line 100: Output port <LOCKED> of the instance <nocg> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <CLK_MOD_PHASE_SEL2> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
@@ -327,14 +324,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.38 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.84 secs
  
 --> 
 
-Total memory usage is 253152 kilobytes
+Total memory usage is 256112 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   16 (   0 filtered)
+Number of warnings :   13 (   0 filtered)
 Number of infos    :    2 (   0 filtered)
 

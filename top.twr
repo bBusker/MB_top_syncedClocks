@@ -36,23 +36,23 @@ Clock USER_CLOCK to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-MBI_CLKL_MOD|         3.145(R)|      SLOW  |         1.872(R)|      FAST  |W_PHASE0          |   0.000|
-            |         3.160(F)|      SLOW  |         1.794(F)|      FAST  |W_PHASE0          |   0.000|
-MBI_CLKN_MOD|         6.731(R)|      SLOW  |         3.712(R)|      FAST  |W_CLKN_OUT        |   0.000|
-            |         6.751(F)|      SLOW  |         3.706(F)|      FAST  |W_CLKN_OUT        |   0.000|
-MBI_CLK_MOD |         6.813(R)|      SLOW  |         3.861(R)|      FAST  |W_CLK_OUT         |   0.000|
-            |         6.833(F)|      SLOW  |         3.855(F)|      FAST  |W_CLK_OUT         |   0.000|
+MBI_CLKL_MOD|         3.436(R)|      SLOW  |         2.141(R)|      FAST  |W_PHASE0          |   0.000|
+            |         3.451(F)|      SLOW  |         2.063(F)|      FAST  |W_PHASE0          |   0.000|
+MBI_CLKN_MOD|         6.635(R)|      SLOW  |         3.616(R)|      FAST  |W_CLKN_MOD        |   0.000|
+            |         6.655(F)|      SLOW  |         3.610(F)|      FAST  |W_CLKN_MOD        |   0.000|
+MBI_CLK_MOD |         6.688(R)|      SLOW  |         3.736(R)|      FAST  |W_CLK_MOD         |   0.000|
+            |         6.708(F)|      SLOW  |         3.730(F)|      FAST  |W_CLK_MOD         |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 
-Analysis completed Thu May 18 17:50:25 2017 
+Analysis completed Fri May 19 15:18:47 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 234 MB
+Peak Memory Usage: 237 MB
 
 
 

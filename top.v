@@ -53,8 +53,7 @@ module top(
 		.DUTY_CYCLE_CORRECTION("TRUE"),
 		.PHASE_SHIFT(0),
 		.STARTUP_WAIT("FALSE")
-	)
-	DCM_phaseselect (
+		) DCM_phaseselect (
 		.CLK0(W_PHASE0),
 		.CLK90(W_PHASE90),
 		.CLK180(W_PHASE180),
@@ -67,6 +66,11 @@ module top(
 		.PSCLK(1'b0),
 		.PSINCDEC(1'b0),
 		.RST(1'b0)
+	);
+	
+	BUFG dcmfb_buf (
+		.O (W_PHASE0_BUF),
+		.I (W_PHASE0)
 	);
 	
 	assign W_CLKL_MOD = W_PHASE0;
@@ -92,102 +96,55 @@ module top(
 		.S(CLK_MOD_PHASE_SEL2) // Clock select input
 	);
 	
-//	twophase_nonoverlap tpno(
-//		.CLK_IN(W_TPNO_IN),
-//		.CLK_OUT(W_CLK_MOD),
-//		.CLK_OUT_N(W_CLKN_MOD)
-//	);
-	
-	assign W_CLK_MOD = W_TPNO_IN;
-//	assign W_CLKN_MOD = !W_TPNO_IN;
-	
 	nonoverlap_clkgen nocg(
 		.CLK_IN(W_TPNO_IN),
-		.CLK_OUT_PPS(W_CLK_OUT),
-		.CLK_OUT_NPS(W_CLKN_OUT)
+		.CLK_OUT_PPS(W_CLK_MOD),
+		.CLK_OUT_NPS(W_CLKN_MOD)
 	);
 	
 	ODDR2 #(
-	.DDR_ALIGNMENT("NONE"), // Sets output alignment to "NONE", "C0" or "C1"
-	.INIT(1'b0), // Sets initial state of the Q output to 1'b0 or 1'b1
-	.SRTYPE("SYNC") // Specifies "SYNC" or "ASYNC" set/reset
-	) ODDR2_CLK_MOD_buf (
-	.Q(MBI_CLK_MOD), // 1-bit DDR output data
-	.C0(~W_CLK_OUT), // 1-bit clock input
-	.C1(W_CLK_OUT), // 1-bit clock input
-	.CE(1'b1), // 1-bit clock enable input
-	.D0(1'b0), // 1-bit data input (associated with C0)
-	.D1(1'b1), // 1-bit data input (associated with C1)
-	.R(1'b0), // 1-bit reset input
-	.S(1'b0) // 1-bit set input
+		.DDR_ALIGNMENT("NONE"), // Sets output alignment to "NONE", "C0" or "C1"
+		.INIT(1'b0), // Sets initial state of the Q output to 1'b0 or 1'b1
+		.SRTYPE("SYNC") // Specifies "SYNC" or "ASYNC" set/reset
+		) ODDR2_CLK_MOD_buf (
+		.Q(MBI_CLK_MOD), // 1-bit DDR output data
+		.C0(~W_CLK_MOD), // 1-bit clock input
+		.C1(W_CLK_MOD), // 1-bit clock input
+		.CE(1'b1), // 1-bit clock enable input
+		.D0(1'b0), // 1-bit data input (associated with C0)
+		.D1(1'b1), // 1-bit data input (associated with C1)
+		.R(1'b0), // 1-bit reset input
+		.S(1'b0) // 1-bit set input
 	);
 
 	ODDR2 #(
-	.DDR_ALIGNMENT("NONE"), // Sets output alignment to "NONE", "C0" or "C1"
-	.INIT(1'b0), // Sets initial state of the Q output to 1'b0 or 1'b1
-	.SRTYPE("SYNC") // Specifies "SYNC" or "ASYNC" set/reset
-	) ODDR2_CLKN_MOD_buf (
-	.Q(MBI_CLKN_MOD), // 1-bit DDR output data
-	.C0(~W_CLKN_OUT), // 1-bit clock input
-	.C1(W_CLKN_OUT), // 1-bit clock input
-	.CE(1'b1), // 1-bit clock enable input
-	.D0(1'b0), // 1-bit data input (associated with C0)
-	.D1(1'b1), // 1-bit data input (associated with C1)
-	.R(1'b0), // 1-bit reset input
-	.S(1'b0) // 1-bit set input
+		.DDR_ALIGNMENT("NONE"), // Sets output alignment to "NONE", "C0" or "C1"
+		.INIT(1'b0), // Sets initial state of the Q output to 1'b0 or 1'b1
+		.SRTYPE("SYNC") // Specifies "SYNC" or "ASYNC" set/reset
+		) ODDR2_CLKN_MOD_buf (
+		.Q(MBI_CLKN_MOD), // 1-bit DDR output data
+		.C0(~W_CLKN_MOD), // 1-bit clock input
+		.C1(W_CLKN_MOD), // 1-bit clock input
+		.CE(1'b1), // 1-bit clock enable input
+		.D0(1'b0), // 1-bit data input (associated with C0)
+		.D1(1'b1), // 1-bit data input (associated with C1)
+		.R(1'b0), // 1-bit reset input
+		.S(1'b0) // 1-bit set input
 	);
 	
 	ODDR2 #(
-	.DDR_ALIGNMENT("NONE"), // Sets output alignment to "NONE", "C0" or "C1"
-	.INIT(1'b0), // Sets initial state of the Q output to 1'b0 or 1'b1
-	.SRTYPE("SYNC") // Specifies "SYNC" or "ASYNC" set/reset
-	) ODDR2_CLKL_MOD_buf (
-	.Q(MBI_CLKL_MOD), // 1-bit DDR output data
-	.C0(~W_CLKL_MOD), // 1-bit clock input
-	.C1(W_CLKL_MOD), // 1-bit clock input
-	.CE(1'b1), // 1-bit clock enable input
-	.D0(1'b0), // 1-bit data input (associated with C0)
-	.D1(1'b1), // 1-bit data input (associated with C1)
-	.R(1'b0), // 1-bit reset input
-	.S(1'b0) // 1-bit set input
+		.DDR_ALIGNMENT("NONE"), // Sets output alignment to "NONE", "C0" or "C1"
+		.INIT(1'b0), // Sets initial state of the Q output to 1'b0 or 1'b1
+		.SRTYPE("SYNC") // Specifies "SYNC" or "ASYNC" set/reset
+		) ODDR2_CLKL_MOD_buf (
+		.Q(MBI_CLKL_MOD), // 1-bit DDR output data
+		.C0(~W_CLKL_MOD), // 1-bit clock input
+		.C1(W_CLKL_MOD), // 1-bit clock input
+		.CE(1'b1), // 1-bit clock enable input
+		.D0(1'b0), // 1-bit data input (associated with C0)
+		.D1(1'b1), // 1-bit data input (associated with C1)
+		.R(1'b0), // 1-bit reset input
+		.S(1'b0) // 1-bit set input
 	);
 	
-	BUFG dcmfb_buf
-   (.O (W_PHASE0_BUF),
-    .I (W_PHASE0));
-	 
-//	PLL_BASE#(
-//	.BANDWIDTH              ("OPTIMIZED"),
-//	.CLK_FEEDBACK           ("CLKFBOUT"),
-//	.COMPENSATION           ("SYSTEM_SYNCHRONOUS"),
-//	.DIVCLK_DIVIDE          (1),
-//	.CLKFBOUT_MULT          (10),
-//	.CLKFBOUT_PHASE         (0.000),
-//	.CLKOUT0_DIVIDE         (10),
-//	.CLKOUT0_PHASE          (20.000),
-//	.CLKOUT0_DUTY_CYCLE     (0.500),
-//	.CLKOUT1_DIVIDE         (10),
-//	.CLKOUT1_PHASE          (-20.000),
-//	.CLKOUT1_DUTY_CYCLE     (0.500),
-//	.CLKIN_PERIOD           (20.000),
-//	.REF_JITTER             (0.010)
-//	)  PLL_tpno(
-//	.CLKFBOUT              (W_PLL_FBOUT),
-//	.CLKOUT0               (W_TPNO_OUT1),
-//	.CLKOUT1               (W_TPNO_OUT2),
-//	.CLKOUT2               (clkout2_unused),
-//	.CLKOUT3               (clkout3_unused),
-//	.CLKOUT4               (clkout4_unused),
-//	.CLKOUT5               (clkout5_unused),
-//	// Status and control signals
-//	.LOCKED                (LOCKED),
-//	.RST                   (1'b0),
-//	// Input clock control
-//	.CLKFBIN               (W_PLL_FBOUT_BUF),
-//	.CLKIN                 (W_TPNO_IN));
-//	 
-//	 BUFG clkf_buf
-//   (.O (W_PLL_FBOUT_BUF),
-//    .I (W_PLL_FBOUT));
-
 endmodule
