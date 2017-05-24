@@ -28,78 +28,42 @@ module top(
 	wire			W_CLK_MOD;
 	wire			W_CLKN_MOD;
 	wire			W_CLKL_MOD;
-	wire			W_FREQ_CHNG;
-	wire 			W_PHASE0;
+	wire	[5:0]	W_FREQ;
+	wire	[3:0]	W_FREQ_SEL;
+	wire	[3:0]	W_PHASE;
+	wire	[1:0]	W_PHASE_SEL;
 	wire			W_PHASE0_BUF;
-	wire			W_PHASE90;
-	wire			W_PHASE180;
-	wire			W_PHASE270;
-	wire			W_TPNO_IN;
-	wire			W_TPNO_OUT1;
-	wire			W_TPNO_OUT2;
 	wire			W_MUX1;
 	wire			W_MUX2;
 	
-	DCM_SP #(
-		.CLKDV_DIVIDE(2.0),
-		.CLKFX_DIVIDE(1),
-		.CLKFX_MULTIPLY(4),
-		.CLKIN_DIVIDE_BY_2("TRUE"),
-		.CLKIN_PERIOD(10.0),
-		.CLKOUT_PHASE_SHIFT("NONE"),
-		.CLK_FEEDBACK("1X"),
-		.DESKEW_ADJUST("SYSTEM_SYNCHRONOUS"),
-		.DLL_FREQUENCY_MODE("LOW"),
-		.DUTY_CYCLE_CORRECTION("TRUE"),
-		.PHASE_SHIFT(0),
-		.STARTUP_WAIT("FALSE")
-		) DCM_phaseselect (
-		.CLK0(W_PHASE0),
-		.CLK90(W_PHASE90),
-		.CLK180(W_PHASE180),
-		.CLK270(W_PHASE270),
-		.CLK2X(CLK2X),
-		.CLK2X180(CLK2X180),
-		.CLKIN(USER_CLOCK),
-		.CLKFB(W_PHASE0_BUF),
-		.PSEN(1'b0),
-		.PSCLK(1'b0),
-		.PSINCDEC(1'b0),
-		.RST(1'b0)
+	parameter SR_MOD_INIT_1 = 16'h0FFF;			//changes non-overlap delay
+	parameter SR_MOD_INIT_2	= 16'h0000;
+	parameter SR_MODL_INIT = 32'hFFFF0000;		//changes clk_modl to clk_mod phase shift
+	
+	assign W_PHASE_SEL = 2'b00;
+	assign W_FREQ_SEL = 3'b001;
+	
+	assign USR_CLK = USER_CLOCK;
+	
+	freqchng_clkgen freqchng(
+		.CLK_IN(USER_CLOCK),
+		.CLK_OUT_100khz(W_FREQ[0]),
+		.CLK_OUT_200khz(W_FREQ[1]),
+		.CLK_OUT_500khz(W_FREQ[2]),
+		.CLK_OUT_1mhz(W_FREQ[3]),
+		.CLK_OUT_2mhz(W_FREQ[4]),
+		.CLK_OUT_4mhz(W_FREQ[5])
 	);
 	
-	BUFG dcmfb_buf (
-		.O (W_PHASE0_BUF),
-		.I (W_PHASE0)
-	);
-	
-	assign W_CLKL_MOD = W_PHASE0;
-		
-	BUFGMUX BUFGMUX_inst_1 (
-		.O(W_MUX1), // Clock MUX output
-		.I0(W_PHASE0), // Clock0 input
-		.I1(W_PHASE90), // Clock1 input
-		.S(CLK_MOD_PHASE_SEL1) // Clock select input
-	);
-	
-	BUFGMUX BUFGMUX_inst_2(
-		.O(W_MUX2), // Clock MUX output
-		.I0(W_PHASE180), // Clock0 input
-		.I1(W_PHASE270), // Clock1 input
-		.S(CLK_MOD_PHASE_SEL1) // Clock select input
-	);
-	
-	BUFGMUX BUFGMUX_inst_3(
-		.O(W_TPNO_IN), // Clock MUX output
-		.I0(W_MUX1), // Clock0 input
-		.I1(W_MUX2), // Clock1 input
-		.S(CLK_MOD_PHASE_SEL2) // Clock select input
-	);
-	
-	nonoverlap_clkgen nocg(
-		.CLK_IN(W_TPNO_IN),
-		.CLK_OUT_PPS(W_CLK_MOD),
-		.CLK_OUT_NPS(W_CLKN_MOD)
+	shiftreg_nonoverlap_clkgen #(
+		.SR_MOD_INIT_1(SR_MOD_INIT_1),
+		.SR_MOD_INIT_2(SR_MOD_INIT_2),
+		.SR_MODL_INIT(SR_MODL_INIT)
+		) tpno (
+		.CLK_IN(W_FREQ[W_FREQ_SEL]),
+		.CLK_OUT_MOD(W_CLK_MOD),
+		.CLK_OUT_MODN(W_CLKN_MOD),
+		.CLK_OUT_MODL(W_CLKL_MOD)
 	);
 	
 	ODDR2 #(

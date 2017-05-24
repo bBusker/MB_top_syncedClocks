@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: top.prj
 
@@ -105,233 +105,20 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "D:\Shichen Lu\MB_top_syncedClocks\nonoverlap_clkgen.v" into library work
-Parsing module <nonoverlap_clkgen>.
+Analyzing Verilog file "D:\Shichen Lu\MB_top_syncedClocks\shiftreg_nonoverlap_clkgen.v" into library work
+Parsing module <shiftreg_nonoverlap_clkgen>.
+Analyzing Verilog file "D:\Shichen Lu\MB_top_syncedClocks\freqchng_clkgen.v" into library work
+Parsing module <freqchng_clkgen>.
 Analyzing Verilog file "D:\Shichen Lu\MB_top_syncedClocks\top.v" into library work
 Parsing module <top>.
-
-=========================================================================
-*                            HDL Elaboration                            *
-=========================================================================
-WARNING:HDLCompiler:1016 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 43: Port CLKDV is not connected to this instance
-WARNING:HDLCompiler:1016 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 100: Port RESET is not connected to this instance
-
-Elaborating module <top>.
-
-Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=1,CLKFX_MULTIPLY=4,CLKIN_DIVIDE_BY_2="TRUE",CLKIN_PERIOD=10.0,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",DLL_FREQUENCY_MODE="LOW",DUTY_CYCLE_CORRECTION="TRUE",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
-WARNING:HDLCompiler:1127 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 61: Assignment to CLK2X ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 62: Assignment to CLK2X180 ignored, since the identifier is never used
-
-Elaborating module <BUFG>.
-
-Elaborating module <BUFGMUX>.
-
-Elaborating module <nonoverlap_clkgen>.
-
-Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=9,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=9,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.389,CLKOUT1_DIVIDE=9,CLKOUT1_PHASE=180.0,CLKOUT1_DUTY_CYCLE=0.389,CLKIN_PERIOD=20.0,REF_JITTER=0.01)>.
-WARNING:HDLCompiler:1127 - "D:\Shichen Lu\MB_top_syncedClocks\nonoverlap_clkgen.v" Line 123: Assignment to clkout2_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\Shichen Lu\MB_top_syncedClocks\nonoverlap_clkgen.v" Line 124: Assignment to clkout3_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\Shichen Lu\MB_top_syncedClocks\nonoverlap_clkgen.v" Line 125: Assignment to clkout4_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\Shichen Lu\MB_top_syncedClocks\nonoverlap_clkgen.v" Line 126: Assignment to clkout5_unused ignored, since the identifier is never used
-
-Elaborating module <ODDR2(DDR_ALIGNMENT="NONE",INIT=1'b0,SRTYPE="SYNC")>.
-WARNING:HDLCompiler:634 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 97: Net <CLK_MOD_PHASE_SEL2> does not have a driver.
-WARNING:HDLCompiler:552 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 100: Input port RESET is not connected on this instance
-
-=========================================================================
-*                           HDL Synthesis                               *
-=========================================================================
-
-Synthesizing Unit <top>.
-    Related source file is "D:\Shichen Lu\MB_top_syncedClocks\top.v".
-WARNING:Xst:2898 - Port 'RESET', unconnected in block instance 'nocg', is tied to GND.
-INFO:Xst:3210 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" line 100: Output port <LOCKED> of the instance <nocg> is unconnected or connected to loadless signal.
-WARNING:Xst:653 - Signal <CLK_MOD_PHASE_SEL2> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-    Summary:
-	no macro.
-Unit <top> synthesized.
-
-Synthesizing Unit <nonoverlap_clkgen>.
-    Related source file is "D:\Shichen Lu\MB_top_syncedClocks\nonoverlap_clkgen.v".
-WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Summary:
-	no macro.
-Unit <nonoverlap_clkgen> synthesized.
-
-=========================================================================
-HDL Synthesis Report
-
-Found no macro
-=========================================================================
-
-=========================================================================
-*                       Advanced HDL Synthesis                          *
-=========================================================================
-
-
-=========================================================================
-Advanced HDL Synthesis Report
-
-Found no macro
-=========================================================================
-
-=========================================================================
-*                         Low Level Synthesis                           *
-=========================================================================
-INFO:Xst:1901 - Instance nocg/pll_base_inst in unit nocg/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
-
-Optimizing unit <top> ...
-
-Mapping all equations...
-Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 0.
-
-Final Macro Processing ...
-
-=========================================================================
-Final Register Report
-
-Found no macro
-=========================================================================
-
-=========================================================================
-*                           Partition Report                            *
-=========================================================================
-
-Partition Implementation Status
--------------------------------
-
-  No Partitions were found in this design.
-
--------------------------------
-
-=========================================================================
-*                            Design Summary                             *
-=========================================================================
-
-Top Level Output File Name         : top.ngc
-
-Primitive and Black Box Usage:
-------------------------------
-# BELS                             : 5
-#      GND                         : 1
-#      INV                         : 3
-#      VCC                         : 1
-# FlipFlops/Latches                : 3
-#      ODDR2                       : 3
-# Clock Buffers                    : 7
-#      BUFG                        : 4
-#      BUFGMUX                     : 3
-# IO Buffers                       : 4
-#      IBUFG                       : 1
-#      OBUF                        : 3
-# DCMs                             : 1
-#      DCM_SP                      : 1
-# Others                           : 1
-#      PLL_ADV                     : 1
-
-Device utilization summary:
----------------------------
-
-Selected Device : 6slx25tfgg484-3 
-
-
-Slice Logic Utilization: 
- Number of Slice Registers:               3  out of  30064     0%  
- Number of Slice LUTs:                    3  out of  15032     0%  
-    Number used as Logic:                 3  out of  15032     0%  
-
-Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      6
-   Number with an unused Flip Flop:       3  out of      6    50%  
-   Number with an unused LUT:             3  out of      6    50%  
-   Number of fully used LUT-FF pairs:     0  out of      6     0%  
-   Number of unique control sets:         0
-
-IO Utilization: 
- Number of IOs:                           4
- Number of bonded IOBs:                   4  out of    250     1%  
-
-Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                7  out of     16    43%  
- Number of PLL_ADVs:                      1  out of      2    50%  
-
----------------------------
-Partition Resource Summary:
----------------------------
-
-  No Partitions were found in this design.
-
----------------------------
-
-
-=========================================================================
-Timing Report
-
-NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
-      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
-      GENERATED AFTER PLACE-and-ROUTE.
-
-Clock Information:
-------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-USER_CLOCK                         | DCM_SP:CLK0            | 2     |
-nocg/pll_base_inst/CLKOUT0         | BUFG                   | 2     |
-nocg/pll_base_inst/CLKOUT1         | BUFG                   | 2     |
------------------------------------+------------------------+-------+
-
-Asynchronous Control Signals Information:
-----------------------------------------
-No asynchronous control signals found in this design
-
-Timing Summary:
----------------
-Speed Grade: -3
-
-   Minimum period: No path found
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
-   Maximum combinational path delay: 0.000ns
-
-Timing Details:
----------------
-All values displayed in nanoseconds (ns)
-
-=========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 2 / 2
--------------------------------------------------------------------------
-Delay:               0.000ns (Levels of Logic = 0)
-  Source:            BUFGMUX_inst_1:O (PAD)
-  Destination:       BUFGMUX_inst_3:I0 (PAD)
-
-  Data Path: BUFGMUX_inst_1:O to BUFGMUX_inst_3:I0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-    BUFGMUX:O              0   0.000   0.000  BUFGMUX_inst_1 (W_MUX1)
-    BUFGMUX:I0                 0.000          BUFGMUX_inst_3
-    ----------------------------------------
-    Total                      0.000ns (0.000ns logic, 0.000ns route)
-
-=========================================================================
-
-Cross Clock Domains Report:
---------------------------
-
-=========================================================================
-
-
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.84 secs
- 
+ERROR:HDLCompiler:44 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 40: testwire is not a constant
+ERROR:HDLCompiler:598 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 21: Module <top> ignored due to previous errors.
+Verilog file D:\Shichen Lu\MB_top_syncedClocks\top.v ignored due to errors
 --> 
 
-Total memory usage is 256112 kilobytes
+Total memory usage is 204148 kilobytes
 
-Number of errors   :    0 (   0 filtered)
-Number of warnings :   13 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of errors   :    2 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 

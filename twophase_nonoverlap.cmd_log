@@ -1,2 +1,0 @@
-xst -intstyle ise -ifn "D:/Shichen Lu/MB_top_syncedClocks/twophase_nonoverlap.xst" -ofn "D:/Shichen Lu/MB_top_syncedClocks/twophase_nonoverlap.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc6slx25t-fgg484-3 "twophase_nonoverlap.ngc" twophase_nonoverlap.ngd  

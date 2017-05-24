@@ -1,0 +1,2 @@
+verilog work ../../freqchng_clkgen.v
+verilog work ../example_design/freqchng_clkgen_exdes.v

@@ -1,0 +1,95 @@
+#:C29    
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.20131013
+#Current Working Directory:
+#:D   D:\Shichen Lu\MB_top_syncedClocks
+#Date/Time:
+#:T   Tue May 23 17:55:45 2017
+#------------------------------
+	#Reading top_map.ncd...
+	#Loading device for application Rf_Device from file '6slx25t.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+	#   "top" is an NCD, version 3.2, device xc6slx25t, package fgg484, speed -3
+	#Design creation date: 2017.05.23.21.47.53
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+unselect -all
+	#3
+select site 'SLICE_X34Y47'
+	#site "SLICE_X34Y47",  type = SLICEM  (RPM grid X97Y188)
+	#4
+unselect -all
+	#5
+select site 'TIEOFF_X12Y98'
+	#site "TIEOFF_X12Y98",  type = TIEOFF  (RPM grid X28Y196)
+	#6
+unselect -all
+	#7
+select site 'RAMB8_X0Y26'
+	#site "RAMB8_X0Y26",  type = RAMB8BWER  (RPM grid X14Y208)
+	#8
+post find
+	#9
+setattr find  type site  name bufgmux
+	#10
+unselect -all
+	#11
+select -k site bufgmux
+	#WARNING:FPGAEditor:46 - No site has a name that matches the pattern "bufgmux".
+	#12
+setattr find  type net
+	#13
+unselect -all
+	#14
+select -k net bufgmux
+	#WARNING:FPGAEditor:46 - No net has a name that matches the pattern "bufgmux".
+	#15
+setattr find  type wire
+	#16
+unselect -all
+	#17
+select -k wire bufgmux
+	#WARNING:FPGAEditor:46 - No wire has a name that matches the pattern "bufgmux".
+	#18
+setattr find  type arc
+	#19
+unselect -all
+	#20
+select -k arc bufgmux
+	#WARNING:FPGAEditor:46 - No arc has a name that matches the pattern "bufgmux".
+	#21
+post find
+	#22
+unpost find
+	#23
+unselect -all
+	#24
+select site BUFG
+	#WARNING:FPGAEditor:46 - No site has a name that matches the pattern "BUFG".
+	#25
+unselect -all
+	#26
+select site BUFG*
+	#27
+unselect -all
+	#28
+select comp 'freqchng/clkout2_buf'
+	#comp "freqchng/clkout2_buf",  site "BUFGMUX_X2Y2",  type = BUFG  (RPM grid X85Y166)
+	#29
+unselect -all
+	#30
+select comp 'freqchng/clkf_buf'
+	#comp "freqchng/clkf_buf",  site "BUFGMUX_X2Y3",  type = BUFG  (RPM grid X85Y165)
+	#31
+unselect -all
+	#32
+select site 'BUFGMUX_X2Y4'
+	#site "BUFGMUX_X2Y4",  type = BUFGMUX  (RPM grid X85Y164)
+	#33
+unselect -all
+	#34
+select site 'BUFGMUX_X3Y5'
+	#site "BUFGMUX_X3Y5",  type = BUFGMUX  (RPM grid X85Y163)

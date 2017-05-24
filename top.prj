@@ -1,2 +1,3 @@
-verilog work "nonoverlap_clkgen.v"
+verilog work "shiftreg_nonoverlap_clkgen.v"
+verilog work "freqchng_clkgen.v"
 verilog work "top.v"
