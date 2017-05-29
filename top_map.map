@@ -10,7 +10,7 @@ Target Device  : xc6slx25t
 Target Package : fgg484
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Tue May 23 17:47:51 2017
+Mapped Date    : Mon May 29 13:52:05 2017
 
 Mapping design into LUTs...
 Running directed packing...
@@ -50,19 +50,19 @@ Phase 8.5  Local Placement Optimization (Checksum:c0342e32) REAL time: 5 secs
 
 Phase 9.8  Global Placement
 ..
-Phase 9.8  Global Placement (Checksum:f97781d8) REAL time: 5 secs 
+Phase 9.8  Global Placement (Checksum:f51ea578) REAL time: 5 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:f97781d8) REAL time: 5 secs 
+Phase 10.5  Local Placement Optimization (Checksum:f51ea578) REAL time: 5 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:3de430c8) REAL time: 5 secs 
+Phase 11.18  Placement Optimization (Checksum:3992ec68) REAL time: 5 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:3de430c8) REAL time: 5 secs 
+Phase 12.5  Local Placement Optimization (Checksum:3992ec68) REAL time: 5 secs 
 
 Phase 13.34  Placement Validation
-Phase 13.34  Placement Validation (Checksum:3de430c8) REAL time: 5 secs 
+Phase 13.34  Placement Validation (Checksum:3992ec68) REAL time: 5 secs 
 
 Total REAL time to Placer completion: 5 secs 
 Total CPU  time to Placer completion: 5 secs 
@@ -149,8 +149,8 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                1.00
 
-Peak Memory Usage:  386 MB
-Total REAL time to MAP completion:  6 secs 
+Peak Memory Usage:  374 MB
+Total REAL time to MAP completion:  5 secs 
 Total CPU time to MAP completion:   5 secs 
 
 Mapping completed.

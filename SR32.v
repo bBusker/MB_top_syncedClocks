@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    16:12:04 05/23/2017 
+// Create Date:    16:29:46 05/25/2017 
 // Design Name: 
-// Module Name:    dflipflop 
+// Module Name:    SR32 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,20 +18,34 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module dflipflop(
-	input D,
-	input RESET,
-	input SET,
-	input CLK,
-	output reg Q
-    );
+module SR32(
+	input  [31:0]	SET,
+	input 			D,
+	input				CLK,
+	input				RESET,
+	output [31:0]	Q
+);
+
+	dflipflop ff0 (
+		.D(D),
+		.RESET(RESET),
+		.SET(SET[0]),
+		.CLK(CLK),
+		.Q(Q[0])
+	);
 	
-	always @ (posedge CLK) begin
-		if (RESET) begin
-			Q <= SET;
-		end
-		else begin
-			Q <= D;
-		end
+	genvar i;
+	generate
+	for (i=1;i<32;i=i+1) begin: ff_gen
+		dflipflop ff (
+			.D(Q[i-1]),
+			.RESET(RESET),
+			.SET(SET[i]),
+			.CLK(CLK),
+			.Q(Q[i])
+		);
 	end
+	endgenerate
+	
+	
 endmodule
