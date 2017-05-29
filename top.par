@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-MBIMAGER-PC::  Mon May 29 13:52:13 2017
+MBIMAGER-PC::  Mon May 29 14:09:49 2017
 
 par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
 
@@ -103,7 +103,7 @@ Phase  2  : 16 unrouted;      REAL time: 5 secs
 
 Phase  3  : 0 unrouted;      REAL time: 5 secs 
 
-Phase  4  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  4  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
 
 Updating file: top.ncd with current fully routed design.
 
@@ -119,7 +119,7 @@ Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 6
 
 Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
 Total REAL time to Router completion: 6 secs 
-Total CPU time to Router completion: 5 secs 
+Total CPU time to Router completion: 6 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -139,8 +139,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net W_F | SETUP       |         N/A|     1.639ns|     N/A|           0
-  REQ<1>                                    | HOLD        |     0.733ns|            |       0|           0
+  Autotimespec constraint for clock net W_F | SETUP       |         N/A|     1.576ns|     N/A|           0
+  REQ<5>                                    | HOLD        |     0.733ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -159,7 +159,7 @@ All signals are completely routed.
 Total REAL time to PAR completion: 6 secs 
 Total CPU time to PAR completion: 6 secs 
 
-Peak Memory Usage:  368 MB
+Peak Memory Usage:  367 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

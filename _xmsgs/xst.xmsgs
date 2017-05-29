@@ -11,25 +11,16 @@
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Shichen Lu\MB_top_syncedClocks\shiftreg_nonoverlap_clkgen.v" Line 55: Assignment to <arg fmt="%s" index="1">Q15</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="old" >"D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 64: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">SR_SET</arg>&gt;. Formal port size is <arg fmt="%d" index="2">4</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 63: Net &lt;<arg fmt="%s" index="1">RESET</arg>&gt; does not have a driver.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 64: Net &lt;<arg fmt="%s" index="1">SR_SET</arg>&gt; does not have a driver.
-</msg>
-
 <msg type="warning" file="HDLCompiler" num="552" delta="old" >"D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 39: Input port <arg fmt="%s" index="1">RESET</arg> is not connected on this instance
 </msg>
 
 <msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">RESET</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">freqchng</arg>&apos;, is tied to GND.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">W_FREQ_SEL</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Shichen Lu\MB_top_syncedClocks\top.v</arg>&quot; line <arg fmt="%s" index="2">39</arg>: Output port &lt;<arg fmt="%s" index="3">CLK_OUT_100khz</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">freqchng</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Shichen Lu\MB_top_syncedClocks\top.v</arg>&quot; line <arg fmt="%s" index="2">39</arg>: Output port &lt;<arg fmt="%s" index="3">CLK_OUT_100khz</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">freqchng</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Shichen Lu\MB_top_syncedClocks\top.v</arg>&quot; line <arg fmt="%s" index="2">39</arg>: Output port &lt;<arg fmt="%s" index="3">CLK_OUT_200khz</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">freqchng</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Shichen Lu\MB_top_syncedClocks\top.v</arg>&quot; line <arg fmt="%s" index="2">39</arg>: Output port &lt;<arg fmt="%s" index="3">CLK_OUT_500khz</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">freqchng</arg>&gt; is unconnected or connected to loadless signal.
@@ -41,22 +32,7 @@
 <msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Shichen Lu\MB_top_syncedClocks\top.v</arg>&quot; line <arg fmt="%s" index="2">39</arg>: Output port &lt;<arg fmt="%s" index="3">CLK_OUT_2mhz</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">freqchng</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Shichen Lu\MB_top_syncedClocks\top.v</arg>&quot; line <arg fmt="%s" index="2">39</arg>: Output port &lt;<arg fmt="%s" index="3">CLK_OUT_4mhz</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">freqchng</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
 <msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Shichen Lu\MB_top_syncedClocks\top.v</arg>&quot; line <arg fmt="%s" index="2">39</arg>: Output port &lt;<arg fmt="%s" index="3">LOCKED</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">freqchng</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">RESET</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">SR_SET</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">RESET</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SR_SET</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">RESET</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.

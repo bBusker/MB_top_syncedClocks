@@ -3,13 +3,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: top.prj
@@ -133,11 +133,8 @@ Elaborating module <SRLC16E(INIT=16'b0)>.
 WARNING:HDLCompiler:1127 - "D:\Shichen Lu\MB_top_syncedClocks\shiftreg_nonoverlap_clkgen.v" Line 55: Assignment to Q15 ignored, since the identifier is never used
 
 Elaborating module <SRLC32E(INIT=32'b11111111111111110000000000000000)>.
-WARNING:HDLCompiler:189 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 64: Size mismatch in connection of port <SR_SET>. Formal port size is 4-bit while actual signal size is 1-bit.
 
 Elaborating module <ODDR2(DDR_ALIGNMENT="NONE",INIT=1'b0,SRTYPE="SYNC")>.
-WARNING:HDLCompiler:634 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 63: Net <RESET> does not have a driver.
-WARNING:HDLCompiler:634 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 64: Net <SR_SET> does not have a driver.
 WARNING:HDLCompiler:552 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 39: Input port RESET is not connected on this instance
 
 =========================================================================
@@ -150,15 +147,12 @@ Synthesizing Unit <top>.
         SR_MOD_INIT_2 = 16'b0000000000000000
         SR_MODL_INIT = 32'b11111111111111110000000000000000
 WARNING:Xst:2898 - Port 'RESET', unconnected in block instance 'freqchng', is tied to GND.
-WARNING:Xst:647 - Input <W_FREQ_SEL> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 INFO:Xst:3210 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" line 39: Output port <CLK_OUT_100khz> of the instance <freqchng> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" line 39: Output port <CLK_OUT_200khz> of the instance <freqchng> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" line 39: Output port <CLK_OUT_500khz> of the instance <freqchng> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" line 39: Output port <CLK_OUT_1mhz> of the instance <freqchng> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" line 39: Output port <CLK_OUT_2mhz> of the instance <freqchng> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" line 39: Output port <CLK_OUT_4mhz> of the instance <freqchng> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" line 39: Output port <LOCKED> of the instance <freqchng> is unconnected or connected to loadless signal.
-WARNING:Xst:653 - Signal <RESET> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <SR_SET> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
 Unit <top> synthesized.
@@ -175,8 +169,6 @@ Synthesizing Unit <shiftreg_nonoverlap_clkgen>.
         SR_MOD_INIT_1 = 16'b1111111111110000
         SR_MOD_INIT_2 = 16'b0000000000000000
         SR_MODL_INIT = 32'b11111111111111110000000000000000
-WARNING:Xst:647 - Input <SR_SET> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
 	no macro.
 Unit <shiftreg_nonoverlap_clkgen> synthesized.
@@ -276,7 +268,7 @@ Slice Logic Distribution:
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                           7
+ Number of IOs:                           4
  Number of bonded IOBs:                   4  out of    250     1%  
 
 Specific Feature Utilization:
@@ -307,7 +299,7 @@ Clock Signal                       | Clock buffer(FF name)   | Load  |
 W_CLK_MOD                          | NONE(ODDR2_CLK_MOD_buf) | 2     |
 W_CLKN_MOD                         | NONE(ODDR2_CLKN_MOD_buf)| 2     |
 W_CLKL_MOD                         | NONE(ODDR2_CLKL_MOD_buf)| 2     |
-freqchng/pll_base_inst/CLKOUT1     | BUFG                    | 3     |
+freqchng/pll_base_inst/CLKOUT5     | BUFG                    | 3     |
 -----------------------------------+-------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -329,15 +321,15 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'freqchng/pll_base_inst/CLKOUT1'
+Timing constraint: Default period analysis for Clock 'freqchng/pll_base_inst/CLKOUT5'
   Clock period: 1.313ns (frequency: 761.615MHz)
   Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
 Delay:               1.313ns (Levels of Logic = 0)
   Source:            tpno/shiftreg_mod1 (FF)
   Destination:       tpno/shiftreg_mod2 (FF)
-  Source Clock:      freqchng/pll_base_inst/CLKOUT1 rising
-  Destination Clock: freqchng/pll_base_inst/CLKOUT1 rising
+  Source Clock:      freqchng/pll_base_inst/CLKOUT5 rising
+  Destination Clock: freqchng/pll_base_inst/CLKOUT5 rising
 
   Data Path: tpno/shiftreg_mod1 to tpno/shiftreg_mod2
                                 Gate     Net
@@ -354,25 +346,25 @@ Delay:               1.313ns (Levels of Logic = 0)
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock freqchng/pll_base_inst/CLKOUT1
+Clock to Setup on destination clock freqchng/pll_base_inst/CLKOUT5
 ------------------------------+---------+---------+---------+---------+
                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------+---------+---------+---------+---------+
-freqchng/pll_base_inst/CLKOUT1|    1.313|         |         |         |
+freqchng/pll_base_inst/CLKOUT5|    1.313|         |         |         |
 ------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.94 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.62 secs
  
 --> 
 
 Total memory usage is 255664 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   13 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
 Number of infos    :    8 (   0 filtered)
 

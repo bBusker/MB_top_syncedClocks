@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module top(
 	input 			USER_CLOCK,
-	input	[2:0] 	W_FREQ_SEL,
+//	input	[2:0] 	W_FREQ_SEL,
 	output 			MBI_CLK_MOD,
 	output 			MBI_CLKN_MOD,
 	output 			MBI_CLKL_MOD
@@ -52,16 +52,16 @@ module top(
 //		.FREQ_OUT(W_SELECTED_FREQ)
 //	);
 	
-	assign W_SELECTED_FREQ = W_FREQ[5];
+//	assign W_SELECTED_FREQ = W_FREQ[5];
 	
 	shiftreg_nonoverlap_clkgen #(
 		.SR_MOD_INIT_1(SR_MOD_INIT_1),
 		.SR_MOD_INIT_2(SR_MOD_INIT_2),
 		.SR_MODL_INIT(SR_MODL_INIT)
 		) tpno (
-		.CLK_IN(W_SELECTED_FREQ),
-		.RESET(RESET),
-		.SR_SET(SR_SET),
+		.CLK_IN(W_FREQ[5]),
+//		.RESET(RESET),
+//		.SR_SET(SR_SET),
 		.CLK_OUT_MOD(W_CLK_MOD),
 		.CLK_OUT_MODN(W_CLKN_MOD),
 		.CLK_OUT_MODL(W_CLKL_MOD)

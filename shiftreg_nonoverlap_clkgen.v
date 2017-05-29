@@ -20,8 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 module shiftreg_nonoverlap_clkgen(
 	input CLK_IN,
-	input RESET,
-	input [3:0] SR_SET,
+//	input RESET,
+//	input [3:0] SR_SET,
 	output CLK_OUT_MOD,
 	output CLK_OUT_MODN,
 	output CLK_OUT_MODL
