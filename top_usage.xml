@@ -4,164 +4,182 @@
      changes made to this file may result in unpredictable
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
-<DeviceUsageSummary rev="82">
-<DesignStatistics TimeStamp="Mon May 29 14:10:12 2017"><group name="NetStatistics">
-<item name="NumNets_Active" rev="82">
-<attrib name="value" value="18"/></item>
-<item name="NumNets_Gnd" rev="82">
+<DeviceUsageSummary rev="92">
+<DesignStatistics TimeStamp="Mon May 29 15:24:53 2017"><group name="NetStatistics">
+<item name="NumNets_Active" rev="92">
+<attrib name="value" value="43"/></item>
+<item name="NumNets_Gnd" rev="92">
 <attrib name="value" value="1"/></item>
-<item name="NumNets_Vcc" rev="82">
+<item name="NumNets_Vcc" rev="92">
 <attrib name="value" value="1"/></item>
-<item name="NumNodesOfType_Active_BUFGOUT" rev="82">
-<attrib name="value" value="3"/></item>
-<item name="NumNodesOfType_Active_BUFHINP2OUT" rev="82">
-<attrib name="value" value="3"/></item>
-<item name="NumNodesOfType_Active_CLKPIN" rev="82">
-<attrib name="value" value="10"/></item>
-<item name="NumNodesOfType_Active_CLKPINFEED" rev="82">
-<attrib name="value" value="9"/></item>
-<item name="NumNodesOfType_Active_DOUBLE" rev="82">
+<item name="NumNodesOfType_Active_BOUNCEACROSS" rev="92">
 <attrib name="value" value="2"/></item>
-<item name="NumNodesOfType_Active_GENERIC" rev="82">
-<attrib name="value" value="5"/></item>
-<item name="NumNodesOfType_Active_GLOBAL" rev="82">
-<attrib name="value" value="19"/></item>
-<item name="NumNodesOfType_Active_INPUT" rev="82">
+<item name="NumNodesOfType_Active_BOUNCEIN" rev="92">
 <attrib name="value" value="4"/></item>
-<item name="NumNodesOfType_Active_IOBOUTPUT" rev="82">
-<attrib name="value" value="3"/></item>
-<item name="NumNodesOfType_Active_OUTBOUND" rev="82">
-<attrib name="value" value="5"/></item>
-<item name="NumNodesOfType_Active_OUTPUT" rev="82">
-<attrib name="value" value="10"/></item>
-<item name="NumNodesOfType_Active_PADINPUT" rev="82">
-<attrib name="value" value="3"/></item>
-<item name="NumNodesOfType_Active_PADOUTPUT" rev="82">
-<attrib name="value" value="1"/></item>
-<item name="NumNodesOfType_Active_PINBOUNCE" rev="82">
-<attrib name="value" value="8"/></item>
-<item name="NumNodesOfType_Active_PINFEED" rev="82">
-<attrib name="value" value="20"/></item>
-<item name="NumNodesOfType_Active_PINFEED1" rev="82">
-<attrib name="value" value="3"/></item>
-<item name="NumNodesOfType_Active_PINFEED2" rev="82">
-<attrib name="value" value="6"/></item>
-<item name="NumNodesOfType_Active_REGINPUT" rev="82">
-<attrib name="value" value="2"/></item>
-<item name="NumNodesOfType_Active_SINGLE" rev="82">
-<attrib name="value" value="3"/></item>
-<item name="NumNodesOfType_Gnd_CNTRLPIN" rev="82">
-<attrib name="value" value="4"/></item>
-<item name="NumNodesOfType_Gnd_DOUBLE" rev="82">
-<attrib name="value" value="2"/></item>
-<item name="NumNodesOfType_Gnd_HGNDOUT" rev="82">
-<attrib name="value" value="3"/></item>
-<item name="NumNodesOfType_Gnd_IOBIN2OUT" rev="82">
-<attrib name="value" value="3"/></item>
-<item name="NumNodesOfType_Gnd_OUTBOUND" rev="82">
-<attrib name="value" value="4"/></item>
-<item name="NumNodesOfType_Gnd_OUTPUT" rev="82">
+<item name="NumNodesOfType_Active_BUFGOUT" rev="92">
 <attrib name="value" value="7"/></item>
-<item name="NumNodesOfType_Gnd_PINBOUNCE" rev="82">
+<item name="NumNodesOfType_Active_BUFHINP2OUT" rev="92">
+<attrib name="value" value="7"/></item>
+<item name="NumNodesOfType_Active_CLKPIN" rev="92">
+<attrib name="value" value="10"/></item>
+<item name="NumNodesOfType_Active_CLKPINFEED" rev="92">
+<attrib name="value" value="44"/></item>
+<item name="NumNodesOfType_Active_CNTRLPIN" rev="92">
+<attrib name="value" value="5"/></item>
+<item name="NumNodesOfType_Active_DOUBLE" rev="92">
+<attrib name="value" value="9"/></item>
+<item name="NumNodesOfType_Active_GENERIC" rev="92">
+<attrib name="value" value="21"/></item>
+<item name="NumNodesOfType_Active_GLOBAL" rev="92">
+<attrib name="value" value="39"/></item>
+<item name="NumNodesOfType_Active_INPUT" rev="92">
+<attrib name="value" value="13"/></item>
+<item name="NumNodesOfType_Active_IOBIN2OUT" rev="92">
+<attrib name="value" value="8"/></item>
+<item name="NumNodesOfType_Active_IOBOUTPUT" rev="92">
+<attrib name="value" value="11"/></item>
+<item name="NumNodesOfType_Active_LUTINPUT" rev="92">
+<attrib name="value" value="5"/></item>
+<item name="NumNodesOfType_Active_OUTBOUND" rev="92">
+<attrib name="value" value="21"/></item>
+<item name="NumNodesOfType_Active_OUTPUT" rev="92">
+<attrib name="value" value="19"/></item>
+<item name="NumNodesOfType_Active_PADINPUT" rev="92">
+<attrib name="value" value="3"/></item>
+<item name="NumNodesOfType_Active_PADOUTPUT" rev="92">
+<attrib name="value" value="9"/></item>
+<item name="NumNodesOfType_Active_PINBOUNCE" rev="92">
+<attrib name="value" value="14"/></item>
+<item name="NumNodesOfType_Active_PINFEED" rev="92">
+<attrib name="value" value="40"/></item>
+<item name="NumNodesOfType_Active_PINFEED1" rev="92">
+<attrib name="value" value="3"/></item>
+<item name="NumNodesOfType_Active_PINFEED2" rev="92">
+<attrib name="value" value="6"/></item>
+<item name="NumNodesOfType_Active_QUAD" rev="92">
+<attrib name="value" value="32"/></item>
+<item name="NumNodesOfType_Active_REGINPUT" rev="92">
+<attrib name="value" value="2"/></item>
+<item name="NumNodesOfType_Active_SINGLE" rev="92">
+<attrib name="value" value="8"/></item>
+<item name="NumNodesOfType_Gnd_CNTRLPIN" rev="92">
+<attrib name="value" value="4"/></item>
+<item name="NumNodesOfType_Gnd_DOUBLE" rev="92">
+<attrib name="value" value="2"/></item>
+<item name="NumNodesOfType_Gnd_HGNDOUT" rev="92">
+<attrib name="value" value="3"/></item>
+<item name="NumNodesOfType_Gnd_IOBIN2OUT" rev="92">
+<attrib name="value" value="3"/></item>
+<item name="NumNodesOfType_Gnd_OUTBOUND" rev="92">
+<attrib name="value" value="4"/></item>
+<item name="NumNodesOfType_Gnd_OUTPUT" rev="92">
+<attrib name="value" value="7"/></item>
+<item name="NumNodesOfType_Gnd_PINBOUNCE" rev="92">
 <attrib name="value" value="1"/></item>
-<item name="NumNodesOfType_Gnd_PINFEED" rev="82">
+<item name="NumNodesOfType_Gnd_PINFEED" rev="92">
 <attrib name="value" value="3"/></item>
-<item name="NumNodesOfType_Gnd_SINGLE" rev="82">
+<item name="NumNodesOfType_Gnd_SINGLE" rev="92">
 <attrib name="value" value="2"/></item>
-<item name="NumNodesOfType_Vcc_CNTRLPIN" rev="82">
+<item name="NumNodesOfType_Vcc_CNTRLPIN" rev="92">
 <attrib name="value" value="5"/></item>
-<item name="NumNodesOfType_Vcc_HVCCOUT" rev="82">
-<attrib name="value" value="5"/></item>
-<item name="NumNodesOfType_Vcc_IOBINPUT" rev="82">
+<item name="NumNodesOfType_Vcc_HVCCOUT" rev="92">
+<attrib name="value" value="4"/></item>
+<item name="NumNodesOfType_Vcc_IOBINPUT" rev="92">
 <attrib name="value" value="3"/></item>
-<item name="NumNodesOfType_Vcc_KVCCOUT" rev="82">
+<item name="NumNodesOfType_Vcc_KVCCOUT" rev="92">
 <attrib name="value" value="5"/></item>
-<item name="NumNodesOfType_Vcc_LUTINPUT" rev="82">
-<attrib name="value" value="12"/></item>
-<item name="NumNodesOfType_Vcc_PINBOUNCE" rev="82">
+<item name="NumNodesOfType_Vcc_LUTINPUT" rev="92">
+<attrib name="value" value="7"/></item>
+<item name="NumNodesOfType_Vcc_PINBOUNCE" rev="92">
 <attrib name="value" value="2"/></item>
-<item name="NumNodesOfType_Vcc_PINFEED" rev="82">
-<attrib name="value" value="18"/></item>
+<item name="NumNodesOfType_Vcc_PINFEED" rev="92">
+<attrib name="value" value="13"/></item>
 </group>
 <group name="SiteStatistics">
-<item name="BUFG-BUFGMUX" rev="82">
-<attrib name="value" value="3"/></item>
-<item name="IOB-IOBM" rev="82">
+<item name="BUFG-BUFGMUX" rev="92">
 <attrib name="value" value="2"/></item>
-<item name="IOB-IOBS" rev="82">
-<attrib name="value" value="2"/></item>
+<item name="IOB-IOBM" rev="92">
+<attrib name="value" value="7"/></item>
+<item name="IOB-IOBS" rev="92">
+<attrib name="value" value="5"/></item>
 </group>
 <group name="MiscellaneousStatistics">
-<item name="AGG_BONDED_IO" rev="81">
-<attrib name="value" value="4"/></item>
-<item name="AGG_IO" rev="81">
-<attrib name="value" value="4"/></item>
-<item name="AGG_LOCED_IO" rev="81">
-<attrib name="value" value="4"/></item>
-<item name="AGG_SLICE" rev="81">
+<item name="AGG_BONDED_IO" rev="91">
+<attrib name="value" value="12"/></item>
+<item name="AGG_IO" rev="91">
+<attrib name="value" value="12"/></item>
+<item name="AGG_LOCED_IO" rev="91">
+<attrib name="value" value="12"/></item>
+<item name="AGG_SLICE" rev="91">
 <attrib name="value" value="2"/></item>
-<item name="NUM_BONDED_IOB" rev="81">
-<attrib name="value" value="4"/></item>
-<item name="NUM_BSLUTONLY" rev="81">
+<item name="NUM_BONDED_IOB" rev="91">
+<attrib name="value" value="12"/></item>
+<item name="NUM_BSLUTONLY" rev="91">
 <attrib name="value" value="2"/></item>
-<item name="NUM_BSUSED" rev="81">
+<item name="NUM_BSUSED" rev="91">
 <attrib name="value" value="2"/></item>
-<item name="NUM_BUFG" rev="81">
-<attrib name="value" value="3"/></item>
-<item name="NUM_IOB_FF" rev="81">
-<attrib name="value" value="3"/></item>
-<item name="NUM_LOCED_IOB" rev="81">
-<attrib name="value" value="4"/></item>
-<item name="NUM_OLOGIC2" rev="81">
-<attrib name="value" value="3"/></item>
-<item name="NUM_PLL_ADV" rev="81">
-<attrib name="value" value="1"/></item>
-<item name="NUM_SLICEM" rev="81">
+<item name="NUM_BUFG" rev="91">
 <attrib name="value" value="2"/></item>
-<item name="NUM_SLICE_CONTROLSET" rev="81">
-<attrib name="value" value="1"/></item>
-<item name="NUM_SLICE_CYINIT" rev="81">
+<item name="NUM_BUFGMUX" rev="91">
+<attrib name="value" value="5"/></item>
+<item name="NUM_IOB_FF" rev="91">
 <attrib name="value" value="3"/></item>
-<item name="NUM_SRL_O5ANDO6" rev="81">
+<item name="NUM_LOCED_IOB" rev="91">
+<attrib name="value" value="12"/></item>
+<item name="NUM_OLOGIC2" rev="91">
+<attrib name="value" value="3"/></item>
+<item name="NUM_PLL_ADV" rev="91">
 <attrib name="value" value="1"/></item>
-<item name="NUM_SRL_O6ONLY" rev="81">
+<item name="NUM_SLICEM" rev="91">
+<attrib name="value" value="2"/></item>
+<item name="NUM_SLICE_CONTROLSET" rev="91">
 <attrib name="value" value="1"/></item>
-<item name="NUM_UNUSABLE_FF_BELS" rev="81">
+<item name="NUM_SLICE_CYINIT" rev="91">
+<attrib name="value" value="3"/></item>
+<item name="NUM_SRL_O5ANDO6" rev="91">
+<attrib name="value" value="1"/></item>
+<item name="NUM_SRL_O6ONLY" rev="91">
+<attrib name="value" value="1"/></item>
+<item name="NUM_UNUSABLE_FF_BELS" rev="91">
 <attrib name="value" value="5"/></item>
 </group>
 </DesignStatistics>
-<DeviceUsage TimeStamp="Mon May 29 14:10:12 2017"><group name="SiteSummary">
-<item name="BUFG" rev="82">
-<attrib name="total" value="1000000"/><attrib name="used" value="3"/></item>
-<item name="BUFG_BUFG" rev="82">
-<attrib name="total" value="1000000"/><attrib name="used" value="3"/></item>
-<item name="IOB" rev="82">
-<attrib name="total" value="1000000"/><attrib name="used" value="4"/></item>
-<item name="IOB_IMUX" rev="82">
-<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
-<item name="IOB_INBUF" rev="82">
-<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
-<item name="IOB_OUTBUF" rev="82">
-<attrib name="total" value="1000000"/><attrib name="used" value="3"/></item>
-<item name="LUT_OR_MEM5" rev="82">
-<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
-<item name="LUT_OR_MEM6" rev="82">
+<DeviceUsage TimeStamp="Mon May 29 15:24:53 2017"><group name="SiteSummary">
+<item name="BUFG" rev="92">
 <attrib name="total" value="1000000"/><attrib name="used" value="2"/></item>
-<item name="OLOGIC2" rev="82">
+<item name="BUFGMUX" rev="92">
+<attrib name="total" value="1000000"/><attrib name="used" value="5"/></item>
+<item name="BUFGMUX_BUFGMUX" rev="92">
+<attrib name="total" value="1000000"/><attrib name="used" value="5"/></item>
+<item name="BUFG_BUFG" rev="92">
+<attrib name="total" value="1000000"/><attrib name="used" value="2"/></item>
+<item name="IOB" rev="92">
+<attrib name="total" value="1000000"/><attrib name="used" value="12"/></item>
+<item name="IOB_IMUX" rev="92">
+<attrib name="total" value="1000000"/><attrib name="used" value="9"/></item>
+<item name="IOB_INBUF" rev="92">
+<attrib name="total" value="1000000"/><attrib name="used" value="9"/></item>
+<item name="IOB_OUTBUF" rev="92">
 <attrib name="total" value="1000000"/><attrib name="used" value="3"/></item>
-<item name="OLOGIC2_OUTFF" rev="82">
+<item name="LUT_OR_MEM5" rev="92">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="LUT_OR_MEM6" rev="92">
+<attrib name="total" value="1000000"/><attrib name="used" value="2"/></item>
+<item name="OLOGIC2" rev="92">
 <attrib name="total" value="1000000"/><attrib name="used" value="3"/></item>
-<item name="PAD" rev="82">
-<attrib name="total" value="1000000"/><attrib name="used" value="4"/></item>
-<item name="PLL_ADV" rev="82">
+<item name="OLOGIC2_OUTFF" rev="92">
+<attrib name="total" value="1000000"/><attrib name="used" value="3"/></item>
+<item name="PAD" rev="92">
+<attrib name="total" value="1000000"/><attrib name="used" value="12"/></item>
+<item name="PLL_ADV" rev="92">
 <attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
-<item name="PLL_ADV_PLL_ADV" rev="82">
+<item name="PLL_ADV_PLL_ADV" rev="92">
 <attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
-<item name="SLICEM" rev="82">
+<item name="SLICEM" rev="92">
 <attrib name="total" value="1000000"/><attrib name="used" value="2"/></item>
 </group>
 </DeviceUsage>
-<ReportConfigData TimeStamp="Mon May 29 14:10:12 2017"><group name="REG_SR">
+<ReportConfigData TimeStamp="Mon May 29 15:24:53 2017"><group name="REG_SR">
 <item name="CK" rev="70">
 <attrib name="CK" value="2"/><attrib name="CK_INV" value="0"/></item>
 <item name="LATCH_OR_FF" rev="70">
@@ -172,209 +190,209 @@
 <attrib name="ASYNC" value="2"/></item>
 </group>
 <group name="LUT_OR_MEM5">
-<item name="CLK" rev="82">
+<item name="CLK" rev="92">
 <attrib name="CLK" value="1"/><attrib name="CLK_INV" value="0"/></item>
-<item name="LUT_OR_MEM" rev="82">
+<item name="LUT_OR_MEM" rev="92">
 <attrib name="RAM" value="1"/></item>
-<item name="RAMMODE" rev="82">
+<item name="RAMMODE" rev="92">
 <attrib name="SRL16" value="1"/></item>
 </group>
 <group name="LUT_OR_MEM6">
-<item name="CLK" rev="82">
+<item name="CLK" rev="92">
 <attrib name="CLK" value="2"/><attrib name="CLK_INV" value="0"/></item>
-<item name="LUT_OR_MEM" rev="82">
+<item name="LUT_OR_MEM" rev="92">
 <attrib name="RAM" value="2"/></item>
-<item name="RAMMODE" rev="82">
+<item name="RAMMODE" rev="92">
 <attrib name="SRL16" value="1"/><attrib name="SRL32" value="1"/></item>
 </group>
 <group name="BUFGMUX_BUFGMUX">
-<item name="CLK_SEL_TYPE" rev="68">
+<item name="CLK_SEL_TYPE" rev="92">
 <attrib name="SYNC" value="5"/></item>
-<item name="DISABLE_ATTR" rev="68">
+<item name="DISABLE_ATTR" rev="92">
 <attrib name="LOW" value="5"/></item>
-<item name="S" rev="68">
+<item name="S" rev="92">
 <attrib name="S_INV" value="0"/><attrib name="S" value="5"/></item>
 </group>
 <group name="PLL_ADV_PLL_ADV">
-<item name="BANDWIDTH" rev="82">
+<item name="BANDWIDTH" rev="92">
 <attrib name="OPTIMIZED" value="1"/></item>
-<item name="CLK_FEEDBACK" rev="82">
+<item name="CLK_FEEDBACK" rev="92">
 <attrib name="CLKFBOUT" value="1"/></item>
-<item name="COMPENSATION" rev="82">
+<item name="COMPENSATION" rev="92">
 <attrib name="SYSTEM_SYNCHRONOUS" value="1"/></item>
-<item name="PLL_ADD_LEAKAGE" rev="82">
+<item name="PLL_ADD_LEAKAGE" rev="92">
 <attrib name="2" value="1"/></item>
-<item name="PLL_AVDD_COMP_SET" rev="82">
+<item name="PLL_AVDD_COMP_SET" rev="92">
 <attrib name="2" value="1"/></item>
-<item name="PLL_CLAMP_BYPASS" rev="82">
+<item name="PLL_CLAMP_BYPASS" rev="92">
 <attrib name="FALSE" value="1"/></item>
-<item name="PLL_CLAMP_REF_SEL" rev="82">
+<item name="PLL_CLAMP_REF_SEL" rev="92">
 <attrib name="1" value="1"/></item>
-<item name="PLL_CLK0MX" rev="82">
+<item name="PLL_CLK0MX" rev="92">
 <attrib name="0" value="1"/></item>
-<item name="PLL_CLK1MX" rev="82">
+<item name="PLL_CLK1MX" rev="92">
 <attrib name="0" value="1"/></item>
-<item name="PLL_CLK2MX" rev="82">
+<item name="PLL_CLK2MX" rev="92">
 <attrib name="0" value="1"/></item>
-<item name="PLL_CLK3MX" rev="82">
+<item name="PLL_CLK3MX" rev="92">
 <attrib name="0" value="1"/></item>
-<item name="PLL_CLK4MX" rev="82">
+<item name="PLL_CLK4MX" rev="92">
 <attrib name="0" value="1"/></item>
-<item name="PLL_CLK5MX" rev="82">
+<item name="PLL_CLK5MX" rev="92">
 <attrib name="0" value="1"/></item>
-<item name="PLL_CLKBURST_CNT" rev="82">
+<item name="PLL_CLKBURST_CNT" rev="92">
 <attrib name="0" value="1"/></item>
-<item name="PLL_CLKBURST_ENABLE" rev="82">
+<item name="PLL_CLKBURST_ENABLE" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_CLKCNTRL" rev="82">
+<item name="PLL_CLKCNTRL" rev="92">
 <attrib name="0" value="1"/></item>
-<item name="PLL_CLKFBMX" rev="82">
+<item name="PLL_CLKFBMX" rev="92">
 <attrib name="0" value="1"/></item>
-<item name="PLL_CLKFBOUT2_EDGE" rev="82">
+<item name="PLL_CLKFBOUT2_EDGE" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_CLKFBOUT2_NOCOUNT" rev="82">
+<item name="PLL_CLKFBOUT2_NOCOUNT" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_CLKFBOUT_EDGE" rev="82">
+<item name="PLL_CLKFBOUT_EDGE" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_CLKFBOUT_EN" rev="82">
+<item name="PLL_CLKFBOUT_EN" rev="92">
 <attrib name="FALSE" value="1"/></item>
-<item name="PLL_CLKFBOUT_NOCOUNT" rev="82">
+<item name="PLL_CLKFBOUT_NOCOUNT" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_CLKOUT0_EDGE" rev="82">
+<item name="PLL_CLKOUT0_EDGE" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_CLKOUT0_EN" rev="82">
+<item name="PLL_CLKOUT0_EN" rev="92">
 <attrib name="FALSE" value="1"/></item>
-<item name="PLL_CLKOUT0_NOCOUNT" rev="82">
+<item name="PLL_CLKOUT0_NOCOUNT" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_CLKOUT1_EDGE" rev="82">
+<item name="PLL_CLKOUT1_EDGE" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_CLKOUT1_EN" rev="82">
+<item name="PLL_CLKOUT1_EN" rev="92">
 <attrib name="FALSE" value="1"/></item>
-<item name="PLL_CLKOUT1_NOCOUNT" rev="82">
+<item name="PLL_CLKOUT1_NOCOUNT" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_CLKOUT2_EDGE" rev="82">
+<item name="PLL_CLKOUT2_EDGE" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_CLKOUT2_EN" rev="82">
+<item name="PLL_CLKOUT2_EN" rev="92">
 <attrib name="FALSE" value="1"/></item>
-<item name="PLL_CLKOUT2_NOCOUNT" rev="82">
+<item name="PLL_CLKOUT2_NOCOUNT" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_CLKOUT3_EDGE" rev="82">
+<item name="PLL_CLKOUT3_EDGE" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_CLKOUT3_EN" rev="82">
+<item name="PLL_CLKOUT3_EN" rev="92">
 <attrib name="FALSE" value="1"/></item>
-<item name="PLL_CLKOUT3_NOCOUNT" rev="82">
+<item name="PLL_CLKOUT3_NOCOUNT" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_CLKOUT4_EDGE" rev="82">
+<item name="PLL_CLKOUT4_EDGE" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_CLKOUT4_EN" rev="82">
+<item name="PLL_CLKOUT4_EN" rev="92">
 <attrib name="FALSE" value="1"/></item>
-<item name="PLL_CLKOUT4_NOCOUNT" rev="82">
+<item name="PLL_CLKOUT4_NOCOUNT" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_CLKOUT5_EDGE" rev="82">
+<item name="PLL_CLKOUT5_EDGE" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_CLKOUT5_EN" rev="82">
+<item name="PLL_CLKOUT5_EN" rev="92">
 <attrib name="FALSE" value="1"/></item>
-<item name="PLL_CLKOUT5_NOCOUNT" rev="82">
+<item name="PLL_CLKOUT5_NOCOUNT" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_CLK_LOST_DETECT" rev="82">
+<item name="PLL_CLK_LOST_DETECT" rev="92">
 <attrib name="FALSE" value="1"/></item>
-<item name="PLL_CP" rev="82">
+<item name="PLL_CP" rev="92">
 <attrib name="1" value="1"/></item>
-<item name="PLL_CP_BIAS_TRIP_SHIFT" rev="82">
+<item name="PLL_CP_BIAS_TRIP_SHIFT" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_CP_REPL" rev="82">
+<item name="PLL_CP_REPL" rev="92">
 <attrib name="1" value="1"/></item>
-<item name="PLL_CP_RES" rev="82">
+<item name="PLL_CP_RES" rev="92">
 <attrib name="0" value="1"/></item>
-<item name="PLL_DIRECT_PATH_CNTRL" rev="82">
+<item name="PLL_DIRECT_PATH_CNTRL" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_DIVCLK_EDGE" rev="82">
+<item name="PLL_DIVCLK_EDGE" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_DIVCLK_NOCOUNT" rev="82">
+<item name="PLL_DIVCLK_NOCOUNT" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_DVDD_COMP_SET" rev="82">
+<item name="PLL_DVDD_COMP_SET" rev="92">
 <attrib name="2" value="1"/></item>
-<item name="PLL_EN" rev="82">
+<item name="PLL_EN" rev="92">
 <attrib name="FALSE" value="1"/></item>
-<item name="PLL_EN_DLY" rev="82">
+<item name="PLL_EN_DLY" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_EN_LEAKAGE" rev="82">
+<item name="PLL_EN_LEAKAGE" rev="92">
 <attrib name="2" value="1"/></item>
-<item name="PLL_EN_TCLK0" rev="82">
+<item name="PLL_EN_TCLK0" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_EN_TCLK1" rev="82">
+<item name="PLL_EN_TCLK1" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_EN_TCLK2" rev="82">
+<item name="PLL_EN_TCLK2" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_EN_TCLK3" rev="82">
+<item name="PLL_EN_TCLK3" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_EN_VCO0" rev="82">
+<item name="PLL_EN_VCO0" rev="92">
 <attrib name="FALSE" value="1"/></item>
-<item name="PLL_EN_VCO1" rev="82">
+<item name="PLL_EN_VCO1" rev="92">
 <attrib name="FALSE" value="1"/></item>
-<item name="PLL_EN_VCO2" rev="82">
+<item name="PLL_EN_VCO2" rev="92">
 <attrib name="FALSE" value="1"/></item>
-<item name="PLL_EN_VCO3" rev="82">
+<item name="PLL_EN_VCO3" rev="92">
 <attrib name="FALSE" value="1"/></item>
-<item name="PLL_EN_VCO4" rev="82">
+<item name="PLL_EN_VCO4" rev="92">
 <attrib name="FALSE" value="1"/></item>
-<item name="PLL_EN_VCO5" rev="82">
+<item name="PLL_EN_VCO5" rev="92">
 <attrib name="FALSE" value="1"/></item>
-<item name="PLL_EN_VCO6" rev="82">
+<item name="PLL_EN_VCO6" rev="92">
 <attrib name="FALSE" value="1"/></item>
-<item name="PLL_EN_VCO7" rev="82">
+<item name="PLL_EN_VCO7" rev="92">
 <attrib name="FALSE" value="1"/></item>
-<item name="PLL_EN_VCO_DIV1" rev="82">
+<item name="PLL_EN_VCO_DIV1" rev="92">
 <attrib name="FALSE" value="1"/></item>
-<item name="PLL_EN_VCO_DIV6" rev="82">
+<item name="PLL_EN_VCO_DIV6" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_INTFB" rev="82">
+<item name="PLL_INTFB" rev="92">
 <attrib name="0" value="1"/></item>
-<item name="PLL_IO_CLKSRC" rev="82">
+<item name="PLL_IO_CLKSRC" rev="92">
 <attrib name="0" value="1"/></item>
-<item name="PLL_LFHF" rev="82">
+<item name="PLL_LFHF" rev="92">
 <attrib name="3" value="1"/></item>
-<item name="PLL_LOCK_FB_DLY" rev="82">
+<item name="PLL_LOCK_FB_DLY" rev="92">
 <attrib name="3" value="1"/></item>
-<item name="PLL_LOCK_REF_DLY" rev="82">
+<item name="PLL_LOCK_REF_DLY" rev="92">
 <attrib name="5" value="1"/></item>
-<item name="PLL_MAN_LF_EN" rev="82">
+<item name="PLL_MAN_LF_EN" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_NBTI_EN" rev="82">
+<item name="PLL_NBTI_EN" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_PFD_CNTRL" rev="82">
+<item name="PLL_PFD_CNTRL" rev="92">
 <attrib name="8" value="1"/></item>
-<item name="PLL_PFD_DLY" rev="82">
+<item name="PLL_PFD_DLY" rev="92">
 <attrib name="1" value="1"/></item>
-<item name="PLL_PWRD_CFG" rev="82">
+<item name="PLL_PWRD_CFG" rev="92">
 <attrib name="FALSE" value="1"/></item>
-<item name="PLL_REG_INPUT" rev="82">
+<item name="PLL_REG_INPUT" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="PLL_RES" rev="82">
+<item name="PLL_RES" rev="92">
 <attrib name="1" value="1"/></item>
-<item name="PLL_SEL_SLIPD" rev="82">
+<item name="PLL_SEL_SLIPD" rev="92">
 <attrib name="FALSE" value="1"/></item>
-<item name="PLL_SKEW_CNTRL" rev="82">
+<item name="PLL_SKEW_CNTRL" rev="92">
 <attrib name="0" value="1"/></item>
-<item name="PLL_TEST_IN_WINDOW" rev="82">
+<item name="PLL_TEST_IN_WINDOW" rev="92">
 <attrib name="FALSE" value="1"/></item>
-<item name="PLL_VDD_SEL" rev="82">
+<item name="PLL_VDD_SEL" rev="92">
 <attrib name="0" value="1"/></item>
-<item name="PLL_VLFHIGH_DIS" rev="82">
+<item name="PLL_VLFHIGH_DIS" rev="92">
 <attrib name="TRUE" value="1"/></item>
-<item name="RST" rev="82">
+<item name="RST" rev="92">
 <attrib name="RST" value="1"/><attrib name="RST_INV" value="0"/></item>
 </group>
 <group name="SLICEM">
-<item name="CLK" rev="82">
+<item name="CLK" rev="92">
 <attrib name="CLK" value="2"/><attrib name="CLK_INV" value="0"/></item>
 </group>
 <group name="IOB_OUTBUF">
-<item name="DRIVEATTRBOX" rev="82">
+<item name="DRIVEATTRBOX" rev="92">
 <attrib name="12" value="3"/></item>
-<item name="SLEW" rev="82">
+<item name="SLEW" rev="92">
 <attrib name="SLOW" value="3"/></item>
-<item name="SUSPEND" rev="82">
+<item name="SUSPEND" rev="92">
 <attrib name="3STATE" value="3"/></item>
 </group>
 <group name="BUFIO2FB_BUFIO2FB">
@@ -384,13 +402,13 @@
 <attrib name="FALSE" value="1"/></item>
 </group>
 <group name="PLL_ADV">
-<item name="RST" rev="82">
+<item name="RST" rev="92">
 <attrib name="RST" value="1"/><attrib name="RST_INV" value="0"/></item>
 </group>
 <group name="OLOGIC2">
-<item name="CLK0" rev="82">
+<item name="CLK0" rev="92">
 <attrib name="CLK0_INV" value="3"/><attrib name="CLK0" value="0"/></item>
-<item name="CLK1" rev="82">
+<item name="CLK1" rev="92">
 <attrib name="CLK1" value="3"/><attrib name="CLK1_INV" value="0"/></item>
 </group>
 <group name="BUFIO2_BUFIO2">
@@ -402,17 +420,17 @@
 <attrib name="FALSE" value="1"/></item>
 </group>
 <group name="OLOGIC2_OUTFF">
-<item name="CK0" rev="82">
+<item name="CK0" rev="92">
 <attrib name="CK0_INV" value="3"/><attrib name="CK0" value="0"/></item>
-<item name="CK1" rev="82">
+<item name="CK1" rev="92">
 <attrib name="CK1_INV" value="0"/><attrib name="CK1" value="3"/></item>
-<item name="DDR_ALIGNMENT" rev="82">
+<item name="DDR_ALIGNMENT" rev="92">
 <attrib name="NONE" value="3"/></item>
-<item name="OUTFFTYPE" rev="82">
+<item name="OUTFFTYPE" rev="92">
 <attrib name="DDR" value="3"/></item>
-<item name="SRINIT_OQ" rev="82">
+<item name="SRINIT_OQ" rev="92">
 <attrib name="0" value="3"/></item>
-<item name="SRTYPE_OQ" rev="82">
+<item name="SRTYPE_OQ" rev="92">
 <attrib name="SYNC" value="3"/></item>
 </group>
 <group name="DCM_DCM">
@@ -448,7 +466,7 @@
 <attrib name="FALSE" value="1"/></item>
 </group>
 <group name="BUFGMUX">
-<item name="S" rev="68">
+<item name="S" rev="92">
 <attrib name="S_INV" value="0"/><attrib name="S" value="5"/></item>
 </group>
 <group name="DCM">
@@ -462,7 +480,7 @@
 <attrib name="RST" value="1"/><attrib name="RST_INV" value="0"/></item>
 </group>
 </ReportConfigData>
-<ReportPinData TimeStamp="Mon May 29 14:10:12 2017"><group name="BUFIO2">
+<ReportPinData TimeStamp="Mon May 29 15:24:53 2017"><group name="BUFIO2">
 <item name="DIVCLK" rev="74">
 <attrib name="value" value="1"/></item>
 <item name="I" rev="74">
@@ -477,105 +495,115 @@
 <attrib name="value" value="2"/></item>
 </group>
 <group name="LUT_OR_MEM5">
-<item name="A1" rev="82">
+<item name="A1" rev="92">
 <attrib name="value" value="1"/></item>
-<item name="A2" rev="82">
+<item name="A2" rev="92">
 <attrib name="value" value="1"/></item>
-<item name="A3" rev="82">
+<item name="A3" rev="92">
 <attrib name="value" value="1"/></item>
-<item name="A4" rev="82">
+<item name="A4" rev="92">
 <attrib name="value" value="1"/></item>
-<item name="A5" rev="82">
+<item name="A5" rev="92">
 <attrib name="value" value="1"/></item>
-<item name="CLK" rev="82">
+<item name="CLK" rev="92">
 <attrib name="value" value="1"/></item>
-<item name="DI1" rev="82">
+<item name="DI1" rev="92">
 <attrib name="value" value="1"/></item>
-<item name="O5" rev="82">
+<item name="O5" rev="92">
 <attrib name="value" value="1"/></item>
-<item name="WE" rev="82">
+<item name="WE" rev="92">
 <attrib name="value" value="1"/></item>
 </group>
 <group name="LUT_OR_MEM6">
-<item name="A1" rev="82">
+<item name="A1" rev="92">
 <attrib name="value" value="2"/></item>
-<item name="A2" rev="82">
+<item name="A2" rev="92">
 <attrib name="value" value="2"/></item>
-<item name="A3" rev="82">
+<item name="A3" rev="92">
 <attrib name="value" value="2"/></item>
-<item name="A4" rev="82">
+<item name="A4" rev="92">
 <attrib name="value" value="2"/></item>
-<item name="A5" rev="82">
+<item name="A5" rev="92">
 <attrib name="value" value="2"/></item>
-<item name="A6" rev="82">
+<item name="A6" rev="92">
 <attrib name="value" value="2"/></item>
-<item name="CLK" rev="82">
+<item name="CLK" rev="92">
 <attrib name="value" value="2"/></item>
-<item name="DI1" rev="82">
+<item name="DI1" rev="92">
 <attrib name="value" value="1"/></item>
-<item name="DI2" rev="82">
+<item name="DI2" rev="92">
 <attrib name="value" value="1"/></item>
-<item name="MC31" rev="82">
+<item name="MC31" rev="92">
 <attrib name="value" value="2"/></item>
-<item name="O6" rev="82">
+<item name="O6" rev="92">
 <attrib name="value" value="2"/></item>
-<item name="WE" rev="82">
+<item name="WE" rev="92">
 <attrib name="value" value="2"/></item>
 </group>
 <group name="BUFGMUX_BUFGMUX">
-<item name="I0" rev="68">
+<item name="I0" rev="92">
 <attrib name="value" value="5"/></item>
-<item name="I1" rev="68">
+<item name="I1" rev="92">
 <attrib name="value" value="5"/></item>
-<item name="O" rev="68">
+<item name="O" rev="92">
 <attrib name="value" value="5"/></item>
-<item name="S" rev="68">
+<item name="S" rev="92">
 <attrib name="value" value="5"/></item>
 </group>
 <group name="PLL_ADV_PLL_ADV">
-<item name="CLKFBIN" rev="82">
+<item name="CLKFBIN" rev="92">
 <attrib name="value" value="1"/></item>
-<item name="CLKFBOUT" rev="82">
+<item name="CLKFBOUT" rev="92">
 <attrib name="value" value="1"/></item>
-<item name="CLKIN1" rev="82">
+<item name="CLKIN1" rev="92">
 <attrib name="value" value="1"/></item>
-<item name="CLKOUT5" rev="82">
+<item name="CLKOUT0" rev="92">
 <attrib name="value" value="1"/></item>
-<item name="RST" rev="82">
+<item name="CLKOUT1" rev="92">
+<attrib name="value" value="1"/></item>
+<item name="CLKOUT2" rev="92">
+<attrib name="value" value="1"/></item>
+<item name="CLKOUT3" rev="92">
+<attrib name="value" value="1"/></item>
+<item name="CLKOUT4" rev="92">
+<attrib name="value" value="1"/></item>
+<item name="CLKOUT5" rev="92">
+<attrib name="value" value="1"/></item>
+<item name="RST" rev="92">
 <attrib name="value" value="1"/></item>
 </group>
 <group name="SLICEM">
-<item name="A" rev="82">
+<item name="A" rev="92">
 <attrib name="value" value="2"/></item>
-<item name="A1" rev="82">
+<item name="A1" rev="92">
 <attrib name="value" value="2"/></item>
-<item name="A2" rev="82">
+<item name="A2" rev="92">
 <attrib name="value" value="2"/></item>
-<item name="A3" rev="82">
+<item name="A3" rev="92">
 <attrib name="value" value="2"/></item>
-<item name="A4" rev="82">
+<item name="A4" rev="92">
 <attrib name="value" value="2"/></item>
-<item name="A5" rev="82">
+<item name="A5" rev="92">
 <attrib name="value" value="2"/></item>
-<item name="A6" rev="82">
+<item name="A6" rev="92">
 <attrib name="value" value="2"/></item>
-<item name="AI" rev="82">
+<item name="AI" rev="92">
 <attrib name="value" value="1"/></item>
-<item name="AMUX" rev="82">
+<item name="AMUX" rev="92">
 <attrib name="value" value="1"/></item>
-<item name="AX" rev="82">
+<item name="AX" rev="92">
 <attrib name="value" value="2"/></item>
-<item name="CE" rev="82">
+<item name="CE" rev="92">
 <attrib name="value" value="2"/></item>
-<item name="CLK" rev="82">
+<item name="CLK" rev="92">
 <attrib name="value" value="2"/></item>
-<item name="DMUX" rev="82">
+<item name="DMUX" rev="92">
 <attrib name="value" value="2"/></item>
 </group>
 <group name="IOB_OUTBUF">
-<item name="IN" rev="82">
+<item name="IN" rev="92">
 <attrib name="value" value="3"/></item>
-<item name="OUT" rev="82">
+<item name="OUT" rev="92">
 <attrib name="value" value="3"/></item>
 </group>
 <group name="SLICEX">
@@ -607,14 +635,14 @@
 <attrib name="value" value="1"/></item>
 </group>
 <group name="BUFG_BUFG">
-<item name="I0" rev="82">
-<attrib name="value" value="3"/></item>
-<item name="O" rev="82">
-<attrib name="value" value="3"/></item>
+<item name="I0" rev="92">
+<attrib name="value" value="2"/></item>
+<item name="O" rev="92">
+<attrib name="value" value="2"/></item>
 </group>
 <group name="PAD">
-<item name="PAD" rev="82">
-<attrib name="value" value="4"/></item>
+<item name="PAD" rev="92">
+<attrib name="value" value="12"/></item>
 </group>
 <group name="BUFIO2FB">
 <item name="I" rev="74">
@@ -629,37 +657,47 @@
 <attrib name="value" value="1"/></item>
 </group>
 <group name="IOB_INBUF">
-<item name="OUT" rev="82">
-<attrib name="value" value="1"/></item>
-<item name="PAD" rev="82">
-<attrib name="value" value="1"/></item>
+<item name="OUT" rev="92">
+<attrib name="value" value="9"/></item>
+<item name="PAD" rev="92">
+<attrib name="value" value="9"/></item>
 </group>
 <group name="PLL_ADV">
-<item name="CLKFBIN" rev="82">
+<item name="CLKFBIN" rev="92">
 <attrib name="value" value="1"/></item>
-<item name="CLKFBOUT" rev="82">
+<item name="CLKFBOUT" rev="92">
 <attrib name="value" value="1"/></item>
-<item name="CLKIN1" rev="82">
+<item name="CLKIN1" rev="92">
 <attrib name="value" value="1"/></item>
-<item name="CLKOUT5" rev="82">
+<item name="CLKOUT0" rev="92">
 <attrib name="value" value="1"/></item>
-<item name="RST" rev="82">
+<item name="CLKOUT1" rev="92">
+<attrib name="value" value="1"/></item>
+<item name="CLKOUT2" rev="92">
+<attrib name="value" value="1"/></item>
+<item name="CLKOUT3" rev="92">
+<attrib name="value" value="1"/></item>
+<item name="CLKOUT4" rev="92">
+<attrib name="value" value="1"/></item>
+<item name="CLKOUT5" rev="92">
+<attrib name="value" value="1"/></item>
+<item name="RST" rev="92">
 <attrib name="value" value="1"/></item>
 </group>
 <group name="OLOGIC2">
-<item name="CLK0" rev="82">
+<item name="CLK0" rev="92">
 <attrib name="value" value="3"/></item>
-<item name="CLK1" rev="82">
+<item name="CLK1" rev="92">
 <attrib name="value" value="3"/></item>
-<item name="D1" rev="82">
+<item name="D1" rev="92">
 <attrib name="value" value="3"/></item>
-<item name="D2" rev="82">
+<item name="D2" rev="92">
 <attrib name="value" value="3"/></item>
-<item name="OCE" rev="82">
+<item name="OCE" rev="92">
 <attrib name="value" value="3"/></item>
-<item name="OQ" rev="82">
+<item name="OQ" rev="92">
 <attrib name="value" value="3"/></item>
-<item name="SR" rev="82">
+<item name="SR" rev="92">
 <attrib name="value" value="3"/></item>
 </group>
 <group name="BUFIO2_BUFIO2">
@@ -669,19 +707,19 @@
 <attrib name="value" value="1"/></item>
 </group>
 <group name="OLOGIC2_OUTFF">
-<item name="CE" rev="82">
+<item name="CE" rev="92">
 <attrib name="value" value="3"/></item>
-<item name="CK0" rev="82">
+<item name="CK0" rev="92">
 <attrib name="value" value="3"/></item>
-<item name="CK1" rev="82">
+<item name="CK1" rev="92">
 <attrib name="value" value="3"/></item>
-<item name="D1" rev="82">
+<item name="D1" rev="92">
 <attrib name="value" value="3"/></item>
-<item name="D2" rev="82">
+<item name="D2" rev="92">
 <attrib name="value" value="3"/></item>
-<item name="Q" rev="82">
+<item name="Q" rev="92">
 <attrib name="value" value="3"/></item>
-<item name="SR" rev="82">
+<item name="SR" rev="92">
 <attrib name="value" value="3"/></item>
 </group>
 <group name="LUT6">
@@ -701,18 +739,18 @@
 <attrib name="value" value="2"/></item>
 </group>
 <group name="IOB_IMUX">
-<item name="I" rev="82">
-<attrib name="value" value="1"/></item>
-<item name="OUT" rev="82">
-<attrib name="value" value="1"/></item>
+<item name="I" rev="92">
+<attrib name="value" value="9"/></item>
+<item name="OUT" rev="92">
+<attrib name="value" value="9"/></item>
 </group>
 <group name="IOB">
-<item name="I" rev="82">
-<attrib name="value" value="1"/></item>
-<item name="O" rev="82">
+<item name="I" rev="92">
+<attrib name="value" value="9"/></item>
+<item name="O" rev="92">
 <attrib name="value" value="3"/></item>
-<item name="PAD" rev="82">
-<attrib name="value" value="4"/></item>
+<item name="PAD" rev="92">
+<attrib name="value" value="12"/></item>
 </group>
 <group name="DCM_DCM">
 <item name="CLK0" rev="24">
@@ -733,20 +771,20 @@
 <attrib name="value" value="1"/></item>
 </group>
 <group name="BUFGMUX">
-<item name="I0" rev="68">
+<item name="I0" rev="92">
 <attrib name="value" value="5"/></item>
-<item name="I1" rev="68">
+<item name="I1" rev="92">
 <attrib name="value" value="5"/></item>
-<item name="O" rev="68">
+<item name="O" rev="92">
 <attrib name="value" value="5"/></item>
-<item name="S" rev="68">
+<item name="S" rev="92">
 <attrib name="value" value="5"/></item>
 </group>
 <group name="BUFG">
-<item name="I0" rev="82">
-<attrib name="value" value="3"/></item>
-<item name="O" rev="82">
-<attrib name="value" value="3"/></item>
+<item name="I0" rev="92">
+<attrib name="value" value="2"/></item>
+<item name="O" rev="92">
+<attrib name="value" value="2"/></item>
 </group>
 <group name="DCM">
 <item name="CLK0" rev="24">

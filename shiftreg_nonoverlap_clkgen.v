@@ -20,6 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module shiftreg_nonoverlap_clkgen(
 	input CLK_IN,
+	input [4:0] PHASE_SEL,
 //	input RESET,
 //	input [3:0] SR_SET,
 	output CLK_OUT_MOD,
@@ -85,7 +86,7 @@ module shiftreg_nonoverlap_clkgen(
 	) shiftreg_modl (
 	.Q(CLK_OUT_MODL), // SRL data output
 	.Q31(W_SRL_FEEDBACK), // SRL cascade output pin
-	.A(5'b11111), // 5-bit shift depth select input
+	.A(PHASE_SEL), // 5-bit shift depth select input
 	.CE(1'b1), // Clock enable input
 	.CLK(CLK_IN), // Clock input
 	.D(W_SRL_FEEDBACK) // SRL data input

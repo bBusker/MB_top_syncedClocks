@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-MBIMAGER-PC::  Mon May 29 14:09:49 2017
+MBIMAGER-PC::  Mon May 29 15:24:29 2017
 
 par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
 
@@ -54,8 +54,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                         4 out of     250    1%
-    Number of LOCed IOBs:                        4 out of       4  100%
+  Number of bonded IOBs:                        12 out of     250    4%
+    Number of LOCed IOBs:                       12 out of      12  100%
     IOB Flip Flops:                              3
 
 Specific Feature Utilization:
@@ -63,9 +63,9 @@ Specific Feature Utilization:
   Number of RAMB8BWERs:                          0 out of     104    0%
   Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
   Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
-  Number of BUFG/BUFGMUXs:                       3 out of      16   18%
-    Number used as BUFGs:                        3
-    Number used as BUFGMUX:                      0
+  Number of BUFG/BUFGMUXs:                       7 out of      16   43%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      5
   Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
   Number of ILOGIC2/ISERDES2s:                   0 out of     272    0%
   Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     272    0%
@@ -97,29 +97,29 @@ Finished initial Timing Analysis.  REAL time: 4 secs
 Starting Router
 
 
-Phase  1  : 46 unrouted;      REAL time: 4 secs 
+Phase  1  : 60 unrouted;      REAL time: 4 secs 
 
-Phase  2  : 16 unrouted;      REAL time: 5 secs 
+Phase  2  : 35 unrouted;      REAL time: 5 secs 
 
-Phase  3  : 0 unrouted;      REAL time: 5 secs 
+Phase  3  : 24 unrouted;      REAL time: 5 secs 
 
-Phase  4  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  4  : 24 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
 
 Updating file: top.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
-Total REAL time to Router completion: 6 secs 
-Total CPU time to Router completion: 6 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
+Total REAL time to Router completion: 7 secs 
+Total CPU time to Router completion: 7 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -139,8 +139,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net W_F | SETUP       |         N/A|     1.576ns|     N/A|           0
-  REQ<5>                                    | HOLD        |     0.733ns|            |       0|           0
+  Autotimespec constraint for clock net W_S | SETUP       |         N/A|     1.780ns|     N/A|           0
+  ELECTED_FREQ                              | HOLD        |     0.733ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -156,10 +156,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 6 secs 
-Total CPU time to PAR completion: 6 secs 
+Total REAL time to PAR completion: 7 secs 
+Total CPU time to PAR completion: 7 secs 
 
-Peak Memory Usage:  367 MB
+Peak Memory Usage:  369 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

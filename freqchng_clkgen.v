@@ -153,35 +153,35 @@ module freqchng_clkgen
    (.O (clkfbout_buf),
     .I (clkfbout));
 
-  BUFG clkout1_buf
-   (.O   (CLK_OUT_100khz),
-    .I   (clkout0));
+//  BUFG clkout1_buf
+//   (.O   (CLK_OUT_100khz),
+//    .I   (clkout0));
+//
+//  BUFG clkout2_buf
+//   (.O   (CLK_OUT_200khz),
+//    .I   (clkout1));
+//
+//  BUFG clkout3_buf
+//   (.O   (CLK_OUT_500khz),
+//    .I   (clkout2));
+//
+//  BUFG clkout4_buf
+//   (.O   (CLK_OUT_1mhz),
+//    .I   (clkout3));
+//
+//  BUFG clkout5_buf
+//   (.O   (CLK_OUT_2mhz),
+//    .I   (clkout4));
+//
+//  BUFG clkout6_buf
+//   (.O   (CLK_OUT_4mhz),
+//    .I   (clkout5));
 
-  BUFG clkout2_buf
-   (.O   (CLK_OUT_200khz),
-    .I   (clkout1));
-
-  BUFG clkout3_buf
-   (.O   (CLK_OUT_500khz),
-    .I   (clkout2));
-
-  BUFG clkout4_buf
-   (.O   (CLK_OUT_1mhz),
-    .I   (clkout3));
-
-  BUFG clkout5_buf
-   (.O   (CLK_OUT_2mhz),
-    .I   (clkout4));
-
-  BUFG clkout6_buf
-   (.O   (CLK_OUT_4mhz),
-    .I   (clkout5));
-
-//	assign CLK_OUT_100khz = clkout0;
-//	assign CLK_OUT_200khz = clkout1;
-//	assign CLK_OUT_500khz = clkout2;
-//	assign CLK_OUT_1mhz = clkout3;
-//	assign CLK_OUT_2mhz = clkout4;
-//	assign CLK_OUT_4mhz = clkout5;
+	assign CLK_OUT_100khz = clkout0;
+	assign CLK_OUT_200khz = clkout1;
+	assign CLK_OUT_500khz = clkout2;
+	assign CLK_OUT_1mhz = clkout3;
+	assign CLK_OUT_2mhz = clkout4;
+	assign CLK_OUT_4mhz = clkout5;
 
 endmodule

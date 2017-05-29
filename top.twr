@@ -31,23 +31,85 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
+Setup/Hold to clock USER_CLOCK
+-------------+------------+------------+------------+------------+---------------------+--------+
+             |Max Setup to|  Process   |Max Hold to |  Process   |                     | Clock  |
+Source       | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)    | Phase  |
+-------------+------------+------------+------------+------------+---------------------+--------+
+W_FREQ_SEL<0>|    4.170(R)|      SLOW  |   -1.892(R)|      FAST  |W_FREQ<0>            |   0.000|
+             |    4.170(R)|      SLOW  |   -1.892(R)|      FAST  |W_FREQ<1>            |   0.000|
+             |    4.170(R)|      SLOW  |   -1.892(R)|      FAST  |W_FREQ<2>            |   0.000|
+             |    4.170(R)|      SLOW  |   -1.892(R)|      FAST  |W_FREQ<3>            |   0.000|
+             |    4.170(R)|      SLOW  |   -1.892(R)|      FAST  |W_FREQ<4>            |   0.000|
+             |    4.170(R)|      SLOW  |   -1.892(R)|      FAST  |W_FREQ<5>            |   0.000|
+W_FREQ_SEL<1>|    2.636(R)|      SLOW  |   -1.027(R)|      FAST  |freqmux/W_freq0_freq1|   0.000|
+             |    2.847(R)|      SLOW  |   -1.128(R)|      FAST  |freqmux/W_freq2_freq3|   0.000|
+W_FREQ_SEL<2>|    1.222(R)|      FAST  |    0.914(R)|      SLOW  |freqmux/W_freq0123   |   0.000|
+             |    2.405(R)|      SLOW  |   -0.850(R)|      FAST  |freqmux/W_freq4_freq5|   0.000|
+-------------+------------+------------+------------+------------+---------------------+--------+
+
+Clock W_PHASE_SEL<0> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+MBI_CLKL_MOD|         8.008(R)|      SLOW  |         4.864(R)|      FAST  |W_CLKL_MOD        |   0.000|
+            |         8.028(F)|      SLOW  |         4.858(F)|      FAST  |W_CLKL_MOD        |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock W_PHASE_SEL<1> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+MBI_CLKL_MOD|         7.945(R)|      SLOW  |         4.833(R)|      FAST  |W_CLKL_MOD        |   0.000|
+            |         7.965(F)|      SLOW  |         4.827(F)|      FAST  |W_CLKL_MOD        |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock W_PHASE_SEL<2> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+MBI_CLKL_MOD|         8.105(R)|      SLOW  |         4.920(R)|      FAST  |W_CLKL_MOD        |   0.000|
+            |         8.125(F)|      SLOW  |         4.914(F)|      FAST  |W_CLKL_MOD        |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock W_PHASE_SEL<3> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+MBI_CLKL_MOD|         8.224(R)|      SLOW  |         5.033(R)|      FAST  |W_CLKL_MOD        |   0.000|
+            |         8.244(F)|      SLOW  |         5.027(F)|      FAST  |W_CLKL_MOD        |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock W_PHASE_SEL<4> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+MBI_CLKL_MOD|         8.056(R)|      SLOW  |         4.971(R)|      FAST  |W_CLKL_MOD        |   0.000|
+            |         8.076(F)|      SLOW  |         4.965(F)|      FAST  |W_CLKL_MOD        |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
 Clock to Setup on destination clock USER_CLOCK
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-USER_CLOCK     |    1.576|         |         |         |
+USER_CLOCK     |    1.780|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Mon May 29 14:10:03 2017 
+Analysis completed Mon May 29 15:24:43 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 237 MB
+Peak Memory Usage: 239 MB
 
 
 

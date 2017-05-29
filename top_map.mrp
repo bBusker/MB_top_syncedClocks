@@ -10,7 +10,7 @@ Target Device  : xc6slx25t
 Target Package : fgg484
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Mon May 29 14:09:40 2017
+Mapped Date    : Mon May 29 15:24:20 2017
 
 Design Summary
 --------------
@@ -46,8 +46,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                         4 out of     250    1%
-    Number of LOCed IOBs:                        4 out of       4  100%
+  Number of bonded IOBs:                        12 out of     250    4%
+    Number of LOCed IOBs:                       12 out of      12  100%
     IOB Flip Flops:                              3
 
 Specific Feature Utilization:
@@ -55,9 +55,9 @@ Specific Feature Utilization:
   Number of RAMB8BWERs:                          0 out of     104    0%
   Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
   Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
-  Number of BUFG/BUFGMUXs:                       3 out of      16   18%
-    Number used as BUFGs:                        3
-    Number used as BUFGMUX:                      0
+  Number of BUFG/BUFGMUXs:                       7 out of      16   43%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      5
   Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
   Number of ILOGIC2/ISERDES2s:                   0 out of     272    0%
   Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     272    0%
@@ -79,11 +79,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                1.00
+Average Fanout of Non-Clock Nets:                1.12
 
-Peak Memory Usage:  375 MB
+Peak Memory Usage:  376 MB
 Total REAL time to MAP completion:  6 secs 
-Total CPU time to MAP completion:   6 secs 
+Total CPU time to MAP completion:   5 secs 
 
 Table of Contents
 -----------------
@@ -132,33 +132,10 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   5 block(s) removed
    2 block(s) optimized away
-   5 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
-
-The trimmed logic report below shows the logic removed from your design due to
-sourceless or loadless signals, and VCC or ground connections.  If the removal
-of a signal or symbol results in the subsequent removal of an additional signal
-or symbol, the message explaining that second removal will be indented.  This
-indentation will be repeated as a chain of related logic is removed.
-
-To quickly locate the original cause for the removal of a chain of logic, look
-above the place where that logic is listed in the trimming report, then locate
-the lines that are least indented (begin at the leftmost edge).
-
-Loadless block "freqchng/clkout1_buf" (CKBUF) removed.
- The signal "freqchng/clkout0" is loadless and has been removed.
-Loadless block "freqchng/clkout2_buf" (CKBUF) removed.
- The signal "freqchng/clkout1" is loadless and has been removed.
-Loadless block "freqchng/clkout3_buf" (CKBUF) removed.
- The signal "freqchng/clkout2" is loadless and has been removed.
-Loadless block "freqchng/clkout4_buf" (CKBUF) removed.
- The signal "freqchng/clkout3" is loadless and has been removed.
-Loadless block "freqchng/clkout5_buf" (CKBUF) removed.
- The signal "freqchng/clkout4" is loadless and has been removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
@@ -179,6 +156,14 @@ Section 6 - IOB Properties
 | MBI_CLKN_MOD                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
 | MBI_CLK_MOD                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
 | USER_CLOCK                         | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| W_FREQ_SEL<0>                      | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| W_FREQ_SEL<1>                      | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| W_FREQ_SEL<2>                      | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| W_PHASE_SEL<0>                     | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| W_PHASE_SEL<1>                     | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| W_PHASE_SEL<2>                     | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| W_PHASE_SEL<3>                     | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| W_PHASE_SEL<4>                     | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

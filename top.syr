@@ -107,6 +107,8 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 Analyzing Verilog file "D:\Shichen Lu\MB_top_syncedClocks\shiftreg_nonoverlap_clkgen.v" into library work
 Parsing module <shiftreg_nonoverlap_clkgen>.
+Analyzing Verilog file "D:\Shichen Lu\MB_top_syncedClocks\freqchng_mux.v" into library work
+Parsing module <freqchng_mux>.
 Analyzing Verilog file "D:\Shichen Lu\MB_top_syncedClocks\freqchng_clkgen.v" into library work
 Parsing module <freqchng_clkgen>.
 Analyzing Verilog file "D:\Shichen Lu\MB_top_syncedClocks\top.v" into library work
@@ -115,7 +117,7 @@ Parsing module <top>.
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 39: Port RESET is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 40: Port RESET is not connected to this instance
 
 Elaborating module <top>.
 
@@ -125,17 +127,21 @@ Elaborating module <BUFG>.
 
 Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=4,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=125,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=63,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT2_DIVIDE=25,CLKOUT2_PHASE=0.0,CLKOUT2_DUTY_CYCLE=0.5,CLKOUT3_DIVIDE=13,CLKOUT3_PHASE=0.0,CLKOUT3_DUTY_CYCLE=0.5,CLKOUT4_DIVIDE=6,CLKOUT4_PHASE=0.0,CLKOUT4_DUTY_CYCLE=0.5,CLKOUT5_DIVIDE=3,CLKOUT5_PHASE=0.0,CLKOUT5_DUTY_CYCLE=0.5,CLKIN_PERIOD=10.0,REF_JITTER=0.01)>.
 
+Elaborating module <freqchng_mux>.
+
+Elaborating module <BUFGMUX(CLK_SEL_TYPE="SYNC")>.
+
 Elaborating module <shiftreg_nonoverlap_clkgen(SR_MOD_INIT_1=16'b1111111111110000,SR_MOD_INIT_2=16'b0,SR_MODL_INIT=32'b11111111111111110000000000000000)>.
 
 Elaborating module <SRLC16E(INIT=16'b1111111111110000)>.
 
 Elaborating module <SRLC16E(INIT=16'b0)>.
-WARNING:HDLCompiler:1127 - "D:\Shichen Lu\MB_top_syncedClocks\shiftreg_nonoverlap_clkgen.v" Line 55: Assignment to Q15 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Shichen Lu\MB_top_syncedClocks\shiftreg_nonoverlap_clkgen.v" Line 56: Assignment to Q15 ignored, since the identifier is never used
 
 Elaborating module <SRLC32E(INIT=32'b11111111111111110000000000000000)>.
 
 Elaborating module <ODDR2(DDR_ALIGNMENT="NONE",INIT=1'b0,SRTYPE="SYNC")>.
-WARNING:HDLCompiler:552 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 39: Input port RESET is not connected on this instance
+WARNING:HDLCompiler:552 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 40: Input port RESET is not connected on this instance
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -147,12 +153,7 @@ Synthesizing Unit <top>.
         SR_MOD_INIT_2 = 16'b0000000000000000
         SR_MODL_INIT = 32'b11111111111111110000000000000000
 WARNING:Xst:2898 - Port 'RESET', unconnected in block instance 'freqchng', is tied to GND.
-INFO:Xst:3210 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" line 39: Output port <CLK_OUT_100khz> of the instance <freqchng> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" line 39: Output port <CLK_OUT_200khz> of the instance <freqchng> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" line 39: Output port <CLK_OUT_500khz> of the instance <freqchng> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" line 39: Output port <CLK_OUT_1mhz> of the instance <freqchng> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" line 39: Output port <CLK_OUT_2mhz> of the instance <freqchng> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" line 39: Output port <LOCKED> of the instance <freqchng> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" line 40: Output port <LOCKED> of the instance <freqchng> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <top> synthesized.
@@ -163,6 +164,12 @@ WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and l
     Summary:
 	no macro.
 Unit <freqchng_clkgen> synthesized.
+
+Synthesizing Unit <freqchng_mux>.
+    Related source file is "D:\Shichen Lu\MB_top_syncedClocks\freqchng_mux.v".
+    Summary:
+	no macro.
+Unit <freqchng_mux> synthesized.
 
 Synthesizing Unit <shiftreg_nonoverlap_clkgen>.
     Related source file is "D:\Shichen Lu\MB_top_syncedClocks\shiftreg_nonoverlap_clkgen.v".
@@ -193,9 +200,7 @@ Found no macro
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:1901 - Instance pll_base_inst in unit pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
-
-Optimizing unit <freqchng_clkgen> ...
+INFO:Xst:1901 - Instance freqchng/pll_base_inst in unit freqchng/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
 
 Optimizing unit <top> ...
 
@@ -239,9 +244,11 @@ Primitive and Black Box Usage:
 # Shift Registers                  : 3
 #      SRLC16E                     : 2
 #      SRLC32E                     : 1
-# Clock Buffers                    : 8
-#      BUFG                        : 8
-# IO Buffers                       : 4
+# Clock Buffers                    : 7
+#      BUFG                        : 2
+#      BUFGMUX                     : 5
+# IO Buffers                       : 12
+#      IBUF                        : 8
 #      IBUFG                       : 1
 #      OBUF                        : 3
 # Others                           : 1
@@ -268,11 +275,11 @@ Slice Logic Distribution:
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                           4
- Number of bonded IOBs:                   4  out of    250     1%  
+ Number of IOs:                          12
+ Number of bonded IOBs:                  12  out of    250     4%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                8  out of     16    50%  
+ Number of BUFG/BUFGCTRLs:                7  out of     16    43%  
  Number of PLL_ADVs:                      1  out of      2    50%  
 
 ---------------------------
@@ -299,7 +306,7 @@ Clock Signal                       | Clock buffer(FF name)   | Load  |
 W_CLK_MOD                          | NONE(ODDR2_CLK_MOD_buf) | 2     |
 W_CLKN_MOD                         | NONE(ODDR2_CLKN_MOD_buf)| 2     |
 W_CLKL_MOD                         | NONE(ODDR2_CLKL_MOD_buf)| 2     |
-freqchng/pll_base_inst/CLKOUT5     | BUFG                    | 3     |
+freqmux/W_freq0123                 | BUFGMUX                 | 3     |
 -----------------------------------+-------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -312,24 +319,24 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 1.313ns (Maximum Frequency: 761.615MHz)
-   Minimum input arrival time before clock: No path found
+   Minimum input arrival time before clock: 1.801ns
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: No path found
+   Maximum combinational path delay: 1.872ns
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'freqchng/pll_base_inst/CLKOUT5'
+Timing constraint: Default period analysis for Clock 'freqmux/W_freq0123'
   Clock period: 1.313ns (frequency: 761.615MHz)
   Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
 Delay:               1.313ns (Levels of Logic = 0)
   Source:            tpno/shiftreg_mod1 (FF)
   Destination:       tpno/shiftreg_mod2 (FF)
-  Source Clock:      freqchng/pll_base_inst/CLKOUT5 rising
-  Destination Clock: freqchng/pll_base_inst/CLKOUT5 rising
+  Source Clock:      freqmux/W_freq0123 rising
+  Destination Clock: freqmux/W_freq0123 rising
 
   Data Path: tpno/shiftreg_mod1 to tpno/shiftreg_mod2
                                 Gate     Net
@@ -342,29 +349,66 @@ Delay:               1.313ns (Levels of Logic = 0)
                                        (100.0% logic, 0.0% route)
 
 =========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'freqmux/W_freq0123'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              1.801ns (Levels of Logic = 1)
+  Source:            W_PHASE_SEL<4> (PAD)
+  Destination:       tpno/shiftreg_modl (FF)
+  Destination Clock: freqmux/W_freq0123 rising
+
+  Data Path: W_PHASE_SEL<4> to tpno/shiftreg_modl
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  W_PHASE_SEL_4_IBUF (W_PHASE_SEL_4_IBUF)
+     SRLC32E:A4                0.000          tpno/shiftreg_modl
+    ----------------------------------------
+    Total                      1.801ns (1.222ns logic, 0.579ns route)
+                                       (67.9% logic, 32.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Delay:               1.872ns (Levels of Logic = 1)
+  Source:            W_FREQ_SEL<0> (PAD)
+  Destination:       freqmux/MUX_0c:S (PAD)
+
+  Data Path: W_FREQ_SEL<0> to freqmux/MUX_0c:S
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.222   0.650  W_FREQ_SEL_0_IBUF (W_FREQ_SEL_0_IBUF)
+    BUFGMUX:S                  0.000          freqmux/MUX_0c
+    ----------------------------------------
+    Total                      1.872ns (1.222ns logic, 0.650ns route)
+                                       (65.3% logic, 34.7% route)
+
+=========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock freqchng/pll_base_inst/CLKOUT5
-------------------------------+---------+---------+---------+---------+
-                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-------------------------------+---------+---------+---------+---------+
-freqchng/pll_base_inst/CLKOUT5|    1.313|         |         |         |
-------------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock freqmux/W_freq0123
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+freqmux/W_freq0123|    1.313|         |         |         |
+------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.62 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.76 secs
  
 --> 
 
-Total memory usage is 255664 kilobytes
+Total memory usage is 256176 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    5 (   0 filtered)
-Number of infos    :    8 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 
