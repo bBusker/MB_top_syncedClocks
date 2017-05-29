@@ -91,6 +91,7 @@ module freqchng_clkgen
    (.O (clkin1),
     .I (CLK_IN));
 
+//	assign clkin1 = CLK_IN;
 
   // Clocking primitive
   //------------------------------------

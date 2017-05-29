@@ -124,15 +124,14 @@
 <LI><xtag-item1>NumNodesOfType_Active_REGINPUT=2</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Active_SINGLE=8</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Gnd_CNTRLPIN=4</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Gnd_DOUBLE=1</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Gnd_HGNDOUT=4</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Gnd_INPUT=1</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Gnd_DOUBLE=2</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Gnd_HGNDOUT=3</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Gnd_IOBIN2OUT=3</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Gnd_OUTBOUND=4</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Gnd_OUTPUT=6</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Gnd_PINBOUNCE=2</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Gnd_OUTPUT=7</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Gnd_PINBOUNCE=1</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Gnd_PINFEED=3</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Gnd_SINGLE=3</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Gnd_SINGLE=2</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Vcc_CNTRLPIN=5</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Vcc_HVCCOUT=4</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Vcc_IOBINPUT=3</xtag-item1></LI>
@@ -180,6 +179,18 @@
 <TR ALIGN=CENTER BGCOLOR='#99CCFF'><TD COLSPAN=4><B>Configuration Data</B></TD></TR><TR VALIGN=TOP>
 <xtag-section name="ReportConfigData">
 <TD>
+<xtag-group><xtag-group-name name="BUFGMUX">BUFGMUX</xtag-group-name>
+<UL>
+<LI><xtag-item3>S=[S_INV:0] [S:5]</xtag-item3></LI>
+</UL>
+</xtag-group>
+<xtag-group><xtag-group-name name="BUFGMUX_BUFGMUX">BUFGMUX_BUFGMUX</xtag-group-name>
+<UL>
+<LI><xtag-item3>CLK_SEL_TYPE=[SYNC:5]</xtag-item3></LI>
+<LI><xtag-item3>DISABLE_ATTR=[LOW:5]</xtag-item3></LI>
+<LI><xtag-item3>S=[S_INV:0] [S:5]</xtag-item3></LI>
+</UL>
+</xtag-group>
 <xtag-group><xtag-group-name name="BUFIO2FB_BUFIO2FB">BUFIO2FB_BUFIO2FB</xtag-group-name>
 <UL>
 <LI><xtag-item3>DIVIDE_BYPASS=[TRUE:1]</xtag-item3></LI>
@@ -222,9 +233,9 @@
 </xtag-group>
 <xtag-group><xtag-group-name name="IOB_OUTBUF">IOB_OUTBUF</xtag-group-name>
 <UL>
-<LI><xtag-item3>DRIVEATTRBOX=[12:4]</xtag-item3></LI>
-<LI><xtag-item3>SLEW=[SLOW:4]</xtag-item3></LI>
-<LI><xtag-item3>SUSPEND=[3STATE:4]</xtag-item3></LI>
+<LI><xtag-item3>DRIVEATTRBOX=[12:3]</xtag-item3></LI>
+<LI><xtag-item3>SLEW=[SLOW:3]</xtag-item3></LI>
+<LI><xtag-item3>SUSPEND=[3STATE:3]</xtag-item3></LI>
 </UL>
 </xtag-group>
 <xtag-group><xtag-group-name name="LUT_OR_MEM5">LUT_OR_MEM5</xtag-group-name>
@@ -233,6 +244,8 @@
 <LI><xtag-item3>LUT_OR_MEM=[RAM:1]</xtag-item3></LI>
 <LI><xtag-item3>RAMMODE=[SRL16:1]</xtag-item3></LI>
 </UL>
+</TD>
+<TD>
 </xtag-group>
 <xtag-group><xtag-group-name name="LUT_OR_MEM6">LUT_OR_MEM6</xtag-group-name>
 <UL>
@@ -240,8 +253,6 @@
 <LI><xtag-item3>LUT_OR_MEM=[RAM:2]</xtag-item3></LI>
 <LI><xtag-item3>RAMMODE=[SRL16:1] [SRL32:1]</xtag-item3></LI>
 </UL>
-</TD>
-<TD>
 </xtag-group>
 <xtag-group><xtag-group-name name="OLOGIC2">OLOGIC2</xtag-group-name>
 <UL>
@@ -354,6 +365,14 @@
 </TD>
 <TD>
 </xtag-group>
+<xtag-group><xtag-group-name name="REG_SR">REG_SR</xtag-group-name>
+<UL>
+<LI><xtag-item3>CK=[CK:2] [CK_INV:0]</xtag-item3></LI>
+<LI><xtag-item3>LATCH_OR_FF=[FF:2]</xtag-item3></LI>
+<LI><xtag-item3>SRINIT=[SRINIT0:2]</xtag-item3></LI>
+<LI><xtag-item3>SYNC_ATTR=[ASYNC:2]</xtag-item3></LI>
+</UL>
+</xtag-group>
 <xtag-group><xtag-group-name name="SLICEM">SLICEM</xtag-group-name>
 <UL>
 <LI><xtag-item3>CLK=[CLK:2] [CLK_INV:0]</xtag-item3></LI>
@@ -370,6 +389,22 @@
 <UL>
 <LI><xtag-item1>I0=2</xtag-item1></LI>
 <LI><xtag-item1>O=2</xtag-item1></LI>
+</UL>
+</xtag-group>
+<xtag-group><xtag-group-name name="BUFGMUX">BUFGMUX</xtag-group-name>
+<UL>
+<LI><xtag-item1>I0=5</xtag-item1></LI>
+<LI><xtag-item1>I1=5</xtag-item1></LI>
+<LI><xtag-item1>O=5</xtag-item1></LI>
+<LI><xtag-item1>S=5</xtag-item1></LI>
+</UL>
+</xtag-group>
+<xtag-group><xtag-group-name name="BUFGMUX_BUFGMUX">BUFGMUX_BUFGMUX</xtag-group-name>
+<UL>
+<LI><xtag-item1>I0=5</xtag-item1></LI>
+<LI><xtag-item1>I1=5</xtag-item1></LI>
+<LI><xtag-item1>O=5</xtag-item1></LI>
+<LI><xtag-item1>S=5</xtag-item1></LI>
 </UL>
 </xtag-group>
 <xtag-group><xtag-group-name name="BUFG_BUFG">BUFG_BUFG</xtag-group-name>
@@ -449,8 +484,19 @@
 </xtag-group>
 <xtag-group><xtag-group-name name="IOB_OUTBUF">IOB_OUTBUF</xtag-group-name>
 <UL>
-<LI><xtag-item1>IN=4</xtag-item1></LI>
-<LI><xtag-item1>OUT=4</xtag-item1></LI>
+<LI><xtag-item1>IN=3</xtag-item1></LI>
+<LI><xtag-item1>OUT=3</xtag-item1></LI>
+</UL>
+</xtag-group>
+<xtag-group><xtag-group-name name="LUT6">LUT6</xtag-group-name>
+<UL>
+<LI><xtag-item1>A1=1</xtag-item1></LI>
+<LI><xtag-item1>A2=2</xtag-item1></LI>
+<LI><xtag-item1>A3=2</xtag-item1></LI>
+<LI><xtag-item1>A4=2</xtag-item1></LI>
+<LI><xtag-item1>A5=2</xtag-item1></LI>
+<LI><xtag-item1>A6=2</xtag-item1></LI>
+<LI><xtag-item1>O6=2</xtag-item1></LI>
 </UL>
 </xtag-group>
 <xtag-group><xtag-group-name name="LUT_OR_MEM5">LUT_OR_MEM5</xtag-group-name>
@@ -477,7 +523,7 @@
 <LI><xtag-item1>CLK=2</xtag-item1></LI>
 <LI><xtag-item1>DI1=1</xtag-item1></LI>
 <LI><xtag-item1>DI2=1</xtag-item1></LI>
-<LI><xtag-item1>MC31=1</xtag-item1></LI>
+<LI><xtag-item1>MC31=2</xtag-item1></LI>
 <LI><xtag-item1>O6=2</xtag-item1></LI>
 <LI><xtag-item1>WE=2</xtag-item1></LI>
 </UL>
@@ -969,8 +1015,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>ngc2edif</xtag-program-name></td>
-  <td><xtag-total-run-started>124</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>124</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>135</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>135</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -979,8 +1025,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>ngcbuild</xtag-program-name></td>
-  <td><xtag-total-run-started>152</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>151</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>153</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>152</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>

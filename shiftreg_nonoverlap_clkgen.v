@@ -26,13 +26,14 @@ module shiftreg_nonoverlap_clkgen(
 	output CLK_OUT_MOD,
 	output CLK_OUT_MODN,
 	output CLK_OUT_MODL
-   );
+);
 
 	parameter SR_MOD_INIT_1 = 16'hFFF0;
 	parameter SR_MOD_INIT_2 = 16'h0000;
 	parameter SR_MODL_INIT = 32'hFFFF0000;
 	
 	wire W_SRL_CASCADE;
+	wire W_SRL_FEEDBACK;
 
 	SRLC16E #(
 	.INIT(SR_MOD_INIT_1)// Initial Value of Shift Register
@@ -61,6 +62,24 @@ module shiftreg_nonoverlap_clkgen(
 	.CLK(CLK_IN), // Clock input
 	.D(W_SRL_CASCADE) // SRL data input
 	);
+
+
+// manual shift reg ------------------------------------------------------------
+	
+//	assign CLK_OUT_MOD = Q[15];
+//	assign CLK_OUT_MODN = Q[31];
+//
+//	wire [31:0] Q;
+//	
+//	SR32 clk_mod_sr (
+//		.D(Q[31]),
+//		.SET(SET),
+//		.CLK(CLK_IN),
+//		.Q(Q),
+//		.RESET(RESET)
+//	);
+	
+// -----------------------------------------------------------------------------
 	
 	SRLC32E #(
 	.INIT(SR_MODL_INIT)// Initial Value of Shift Register
@@ -70,7 +89,7 @@ module shiftreg_nonoverlap_clkgen(
 	.A(PHASE_SEL), // 5-bit shift depth select input
 	.CE(1'b1), // Clock enable input
 	.CLK(CLK_IN), // Clock input
-	.D(CLK_OUT_MODL) // SRL data input
+	.D(W_SRL_FEEDBACK) // SRL data input
 	);	
 
 endmodule

@@ -7,7 +7,7 @@
 // Design Name: 
 // Module Name:    top 
 // Project Name: 
-// Target Devices: 
+// Target Devices:	Spartan 6 lx25t
 // Tool versions: 
 // Description: 
 //
@@ -27,25 +27,15 @@ module top(
 	output 			MBI_CLKL_MOD
 );
 	
-	wire			W_CLK_MOD;
-	wire			W_CLKN_MOD;
-	wire			W_CLKL_MOD;
-	wire	[5:0]	W_FREQ;
-	wire	[3:0]	W_FREQ_SEL;
-	wire	[3:0]	W_PHASE;
-	wire	[1:0]	W_PHASE_SEL;
-	wire			W_PHASE0_BUF;
-	wire			W_MUX1;
-	wire			W_MUX2;
+	wire				W_CLK_MOD;
+	wire				W_CLKN_MOD;
+	wire				W_CLKL_MOD;
+	wire	[5:0]		W_FREQ;
+	wire				W_SELECTED_FREQ;
 	
-	parameter SR_MOD_INIT_1 = 16'h0FFF;			//changes non-overlap delay
+	parameter SR_MOD_INIT_1 = 16'hFFF0;			//changes non-overlap delay
 	parameter SR_MOD_INIT_2	= 16'h0000;
 	parameter SR_MODL_INIT = 32'hFFFF0000;		//changes clk_modl to clk_mod phase shift
-	
-	assign W_PHASE_SEL = 2'b00;
-	assign W_FREQ_SEL = 3'b001;
-	
-	assign USR_CLK = USER_CLOCK;
 	
 	freqchng_clkgen freqchng(
 		.CLK_IN(USER_CLOCK),
