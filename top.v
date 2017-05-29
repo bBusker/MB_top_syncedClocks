@@ -19,11 +19,13 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module top(
-	input USER_CLOCK,
-	output MBI_CLK_MOD,
-	output MBI_CLKN_MOD,
-	output MBI_CLKL_MOD
-    );
+	input 			USER_CLOCK,
+	input	[2:0] 	W_FREQ_SEL,
+	input [4:0]		W_PHASE_SEL,
+	output 			MBI_CLK_MOD,
+	output 			MBI_CLKN_MOD,
+	output 			MBI_CLKL_MOD
+);
 	
 	wire			W_CLK_MOD;
 	wire			W_CLKN_MOD;
@@ -55,12 +57,23 @@ module top(
 		.CLK_OUT_4mhz(W_FREQ[5])
 	);
 	
+	freqchng_mux freqmux(
+		.FREQ_IN(W_FREQ),
+		.FREQ_SEL(W_FREQ_SEL),
+		.FREQ_OUT(W_SELECTED_FREQ)
+	);
+	
+//	assign W_SELECTED_FREQ = W_FREQ[5];
+	
 	shiftreg_nonoverlap_clkgen #(
 		.SR_MOD_INIT_1(SR_MOD_INIT_1),
 		.SR_MOD_INIT_2(SR_MOD_INIT_2),
 		.SR_MODL_INIT(SR_MODL_INIT)
 		) tpno (
-		.CLK_IN(W_FREQ[W_FREQ_SEL]),
+		.CLK_IN(W_SELECTED_FREQ),
+		.PHASE_SEL(W_PHASE_SEL),
+//		.RESET(RESET),
+//		.SR_SET(SR_SET),
 		.CLK_OUT_MOD(W_CLK_MOD),
 		.CLK_OUT_MODN(W_CLKN_MOD),
 		.CLK_OUT_MODL(W_CLKL_MOD)
@@ -111,4 +124,5 @@ module top(
 		.S(1'b0) // 1-bit set input
 	);
 	
+	//test
 endmodule

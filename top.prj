@@ -1,3 +1,4 @@
 verilog work "shiftreg_nonoverlap_clkgen.v"
+verilog work "freqchng_mux.v"
 verilog work "freqchng_clkgen.v"
 verilog work "top.v"
