@@ -1,3 +1,5 @@
+verilog work "dflipflop.v"
+verilog work "SR32.v"
 verilog work "shiftreg_nonoverlap_clkgen.v"
 verilog work "freqchng_mux.v"
 verilog work "freqchng_clkgen.v"

@@ -91,8 +91,6 @@ module freqchng_clkgen
    (.O (clkin1),
     .I (CLK_IN));
 
-//	assign clkin1 = CLK_IN;
-
   // Clocking primitive
   //------------------------------------
   // Instantiation of the PLL primitive
@@ -141,7 +139,7 @@ module freqchng_clkgen
     .CLKOUT5               (clkout5),
     // Status and control signals
     .LOCKED                (LOCKED),
-    .RST                   (1'b0),
+    .RST                   (RESET),
      // Input clock control
     .CLKFBIN               (clkfbout_buf),
     .CLKIN                 (clkin1));

@@ -98,11 +98,11 @@ Clock to Setup on destination clock USER_CLOCK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-USER_CLOCK     |    1.780|         |         |         |
+USER_CLOCK     |    3.155|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Mon May 29 15:24:43 2017 
+Analysis completed Mon May 29 17:01:18 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:

@@ -33,12 +33,10 @@ module top(
 	wire	[5:0]		W_FREQ;
 	wire				W_SELECTED_FREQ;
 	
-	parameter SR_MOD_INIT_1 = 16'hFFF0;			//changes non-overlap delay
-	parameter SR_MOD_INIT_2	= 16'h0000;
-	parameter SR_MODL_INIT = 32'hFFFF0000;		//changes clk_modl to clk_mod phase shift
-	
 	freqchng_clkgen freqchng(
 		.CLK_IN(USER_CLOCK),
+		.RESET(1'b0),
+		.LOCKED(LOCKED),
 		.CLK_OUT_100khz(W_FREQ[0]),
 		.CLK_OUT_200khz(W_FREQ[1]),
 		.CLK_OUT_500khz(W_FREQ[2]),
@@ -53,13 +51,7 @@ module top(
 		.FREQ_OUT(W_SELECTED_FREQ)
 	);
 	
-//	assign W_SELECTED_FREQ = W_FREQ[5];
-	
-	shiftreg_nonoverlap_clkgen #(
-		.SR_MOD_INIT_1(SR_MOD_INIT_1),
-		.SR_MOD_INIT_2(SR_MOD_INIT_2),
-		.SR_MODL_INIT(SR_MODL_INIT)
-		) tpno (
+	shiftreg_nonoverlap_clkgen tpno (
 		.CLK_IN(W_SELECTED_FREQ),
 		.PHASE_SEL(W_PHASE_SEL),
 //		.RESET(RESET),

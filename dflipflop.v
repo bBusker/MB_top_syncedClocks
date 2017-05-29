@@ -27,11 +27,7 @@ module dflipflop(
     );
 	
 	always @ (posedge CLK) begin
-		if (RESET) begin
-			Q <= SET;
-		end
-		else begin
-			Q <= D;
-		end
+		if (RESET) Q <= SET;
+		else Q <= D;
 	end
 endmodule

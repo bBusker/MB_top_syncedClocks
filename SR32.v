@@ -47,5 +47,4 @@ module SR32(
 	end
 	endgenerate
 	
-	
 endmodule
