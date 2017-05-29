@@ -19,19 +19,19 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module dflipflop(
-	input D,
-	input RESET,
-	input SET,
-	input CLK,
-	output reg Q
+	input d,
+	input reset,
+	input set,
+	input clk,
+	output reg q
     );
 	
-	always @ (posedge CLK) begin
-		if (RESET) begin
-			Q <= SET;
+	always @ (posedge clk) begin
+		if (reset) begin
+			q <= set;
 		end
 		else begin
-			Q <= D;
+			q <= d;
 		end
 	end
 endmodule

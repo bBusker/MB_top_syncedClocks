@@ -10,7 +10,7 @@ Target Device  : xc6slx25t
 Target Package : fgg484
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Mon May 29 13:52:05 2017
+Mapped Date    : Tue May 23 17:47:51 2017
 
 Design Summary
 --------------
@@ -81,8 +81,8 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                1.00
 
-Peak Memory Usage:  374 MB
-Total REAL time to MAP completion:  5 secs 
+Peak Memory Usage:  386 MB
+Total REAL time to MAP completion:  6 secs 
 Total CPU time to MAP completion:   5 secs 
 
 Table of Contents
@@ -118,12 +118,6 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net W_CLK_MOD is sourced by a
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network W_FREQ_SEL<2> has no load.
-INFO:LIT:395 - The above info message is repeated 2 more times for the following
-   (max. 5 shown):
-   W_FREQ_SEL<1>,
-   W_FREQ_SEL<0>
-   To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs

@@ -91,7 +91,6 @@ module freqchng_clkgen
    (.O (clkin1),
     .I (CLK_IN));
 
-//	assign clkin1 = CLK_IN;
 
   // Clocking primitive
   //------------------------------------
@@ -157,6 +156,7 @@ module freqchng_clkgen
    (.O   (CLK_OUT_100khz),
     .I   (clkout0));
 
+
   BUFG clkout2_buf
    (.O   (CLK_OUT_200khz),
     .I   (clkout1));
@@ -177,11 +177,6 @@ module freqchng_clkgen
    (.O   (CLK_OUT_4mhz),
     .I   (clkout5));
 
-//	assign CLK_OUT_100khz = clkout0;
-//	assign CLK_OUT_200khz = clkout1;
-//	assign CLK_OUT_500khz = clkout2;
-//	assign CLK_OUT_1mhz = clkout3;
-//	assign CLK_OUT_2mhz = clkout4;
-//	assign CLK_OUT_4mhz = clkout5;
+
 
 endmodule
