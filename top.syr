@@ -99,6 +99,9 @@ DSP48 Utilization Ratio            : 100
 Auto BRAM Packing                  : NO
 Slice Utilization Ratio Delta      : 5
 
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
 =========================================================================
 
 
@@ -129,13 +132,13 @@ Elaborating module <freqchng_clkgen>.
 Elaborating module <BUFG>.
 
 Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=4,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=125,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=63,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT2_DIVIDE=25,CLKOUT2_PHASE=0.0,CLKOUT2_DUTY_CYCLE=0.5,CLKOUT3_DIVIDE=13,CLKOUT3_PHASE=0.0,CLKOUT3_DUTY_CYCLE=0.5,CLKOUT4_DIVIDE=6,CLKOUT4_PHASE=0.0,CLKOUT4_DUTY_CYCLE=0.5,CLKOUT5_DIVIDE=3,CLKOUT5_PHASE=0.0,CLKOUT5_DUTY_CYCLE=0.5,CLKIN_PERIOD=10.0,REF_JITTER=0.01)>.
-WARNING:HDLCompiler:1127 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 43: Assignment to LOCKED ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 77: Assignment to LOCKED ignored, since the identifier is never used
 
 Elaborating module <freqchng_mux>.
 
 Elaborating module <BUFGMUX(CLK_SEL_TYPE="SYNC")>.
 
-Elaborating module <shiftreg_nonoverlap_clkgen(SR_MOD_INIT_1=16'b1111111111110000,SR_MOD_INIT_2=16'b0,SR_MODL_INIT=32'b11111111111111110000000000000000)>.
+Elaborating module <shiftreg_nonoverlap_clkgen>.
 
 Elaborating module <SR32>.
 
@@ -144,6 +147,7 @@ Elaborating module <dflipflop>.
 Elaborating module <SRLC32E(INIT=32'b11111111111111110000000000000000)>.
 
 Elaborating module <ODDR2(DDR_ALIGNMENT="NONE",INIT=1'b0,SRTYPE="SYNC")>.
+WARNING:HDLCompiler:634 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 43: Net <SR_RESET> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -151,10 +155,8 @@ Elaborating module <ODDR2(DDR_ALIGNMENT="NONE",INIT=1'b0,SRTYPE="SYNC")>.
 
 Synthesizing Unit <top>.
     Related source file is "D:\Shichen Lu\MB_top_syncedClocks\top.v".
-        SR_MOD_INIT_1 = 16'b1111111111110000
-        SR_MOD_INIT_2 = 16'b0000000000000000
-        SR_MODL_INIT = 32'b11111111111111110000000000000000
-INFO:Xst:3210 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" line 40: Output port <LOCKED> of the instance <freqchng> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" line 74: Output port <LOCKED> of the instance <freqchng> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <SR_RESET> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
 Unit <top> synthesized.
@@ -173,12 +175,11 @@ Unit <freqchng_mux> synthesized.
 
 Synthesizing Unit <shiftreg_nonoverlap_clkgen>.
     Related source file is "D:\Shichen Lu\MB_top_syncedClocks\shiftreg_nonoverlap_clkgen.v".
-        SR_MOD_INIT_1 = 16'b1111111111110000
-        SR_MOD_INIT_2 = 16'b0000000000000000
         SR_MODL_INIT = 32'b11111111111111110000000000000000
-    Found 1-bit register for signal <RESET>.
+WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <temprst>.
     Found 32-bit register for signal <count>.
-    Found 32-bit subtractor for signal <count[31]_GND_7_o_sub_3_OUT> created at line 90.
+    Found 32-bit subtractor for signal <count[31]_GND_7_o_sub_3_OUT> created at line 47.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  33 D-type flip-flop(s).
@@ -412,8 +413,8 @@ Delay:               3.618ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDE:C->Q              2   0.447   0.961  tpno/count_3 (tpno/count_3)
-     LUT5:I0->O            3   0.203   0.651  tpno/_n0013<31>_SW0 (N3)
-     LUT6:I5->O            9   0.205   0.829  tpno/_n0013_inv1 (tpno/_n0013_inv)
+     LUT5:I0->O            3   0.203   0.651  tpno/_n0014<31>_SW0 (N3)
+     LUT6:I5->O            9   0.205   0.829  tpno/_n0014_inv1 (tpno/_n0014_inv)
      FDE:CE                    0.322          tpno/count_1
     ----------------------------------------
     Total                      3.618ns (1.177ns logic, 2.441ns route)
@@ -473,13 +474,13 @@ freqmux/W_freq0123|    3.618|         |         |         |
 
 
 Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.88 secs
+Total CPU time to Xst completion: 6.03 secs
  
 --> 
 
-Total memory usage is 257136 kilobytes
+Total memory usage is 258096 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   23 (   0 filtered)
+Number of warnings :   26 (   0 filtered)
 Number of infos    :    3 (   0 filtered)
 

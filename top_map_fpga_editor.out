@@ -1,0 +1,313 @@
+#:C119   
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.20131013
+#Current Working Directory:
+#:D   D:\Shichen Lu\MB_top_syncedClocks
+#Date/Time:
+#:T   Tue May 30 17:03:11 2017
+#------------------------------
+	#Reading top_map.ncd...
+	#Loading device for application Rf_Device from file '6slx25t.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+	#   "top" is an NCD, version 3.2, device xc6slx25t, package fgg484, speed -3
+	#Design creation date: 2017.05.30.21.02.59
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+select site BUFG*
+	#3
+unselect -all
+	#4
+select comp 'freqchng/clkin1_buf'
+	#comp "freqchng/clkin1_buf",  site "BUFGMUX_X2Y9",  type = BUFG  (RPM grid X85Y159)
+	#5
+unselect -all
+	#6
+select comp 'OK_FIFO_CLOCK_BUFGP/BUFG'
+	#comp "OK_FIFO_CLOCK_BUFGP/BUFG",  site "BUFGMUX_X2Y11",  type = BUFG  (RPM grid X85Y157)
+	#7
+unselect -all
+	#8
+select site 'BUFGMUX_X2Y10'
+	#site "BUFGMUX_X2Y10",  type = BUFGMUX  (RPM grid X85Y158)
+	#9
+unselect -all
+	#10
+select comp 'OK_FIFO_CLOCK_BUFGP/BUFG'
+	#comp "OK_FIFO_CLOCK_BUFGP/BUFG",  site "BUFGMUX_X2Y11",  type = BUFG  (RPM grid X85Y157)
+	#11
+unselect -all
+	#12
+select site 'BUFGMUX_X3Y5'
+	#site "BUFGMUX_X3Y5",  type = BUFGMUX  (RPM grid X85Y163)
+	#13
+unselect -all
+	#14
+select net 'freqmux/W_freq0123'
+	#net "freqmux/W_freq0123"
+	#15
+unselect -all
+	#16
+select comp 'OK_FIFO_CLOCK_BUFGP/BUFG'
+	#comp "OK_FIFO_CLOCK_BUFGP/BUFG",  site "BUFGMUX_X2Y11",  type = BUFG  (RPM grid X85Y157)
+	#17
+unselect -all
+	#18
+select pin 'BUFGMUX_X2Y11.I0'
+	#site.pin = BUFGMUX_X2Y11.I0, comp.pin = OK_FIFO_CLOCK_BUFGP/BUFG.I0, delay = ~4.475ns on net "OK_FIFO_CLOCK_BUFGP/IBUFG"
+	#19
+unselect -all
+	#20
+select comp 'OK_FIFO_CLOCK_BUFGP/BUFG'
+	#comp "OK_FIFO_CLOCK_BUFGP/BUFG",  site "BUFGMUX_X2Y11",  type = BUFG  (RPM grid X85Y157)
+	#21
+unselect -all
+	#22
+select pin 'BUFGMUX_X2Y11.I0'
+	#site.pin = BUFGMUX_X2Y11.I0, comp.pin = OK_FIFO_CLOCK_BUFGP/BUFG.I0, delay = ~4.475ns on net "OK_FIFO_CLOCK_BUFGP/IBUFG"
+	#23
+unselect -all
+	#24
+select pin 'BUFGMUX_X2Y11.I1'
+	#site.pin = BUFGMUX_X2Y11.I1
+	#25
+unselect -all
+	#26
+select pin 'BUFGMUX_X2Y11.I0'
+	#site.pin = BUFGMUX_X2Y11.I0, comp.pin = OK_FIFO_CLOCK_BUFGP/BUFG.I0, delay = ~4.475ns on net "OK_FIFO_CLOCK_BUFGP/IBUFG"
+	#27
+unselect -all
+	#28
+select wire 'BUFGOUT(12726,379)'
+	#node = BUFGOUT(12726,379)
+	#29
+unselect -all
+	#30
+select pin 'BUFGMUX_X2Y11.I0'
+	#site.pin = BUFGMUX_X2Y11.I0, comp.pin = OK_FIFO_CLOCK_BUFGP/BUFG.I0, delay = ~4.475ns on net "OK_FIFO_CLOCK_BUFGP/IBUFG"
+	#31
+unselect -all
+	#32
+select pin 'BUFGMUX_X3Y14.I0'
+	#site.pin = BUFGMUX_X3Y14.I0, comp.pin = freqmux/MUX_2.I0, delay = ~1.392ns on net "freqmux/W_freq0123"
+	#33
+unselect -all
+	#34
+select pin 'BUFGMUX_X2Y11.I0'
+	#site.pin = BUFGMUX_X2Y11.I0, comp.pin = OK_FIFO_CLOCK_BUFGP/BUFG.I0, delay = ~4.475ns on net "OK_FIFO_CLOCK_BUFGP/IBUFG"
+	#35
+unselect -all
+	#36
+select pin 'BUFGMUX_X3Y16.I0'
+	#site.pin = BUFGMUX_X3Y16.I0, comp.pin = freqchng/clkf_buf.I0, delay = ~0.422ns on net "freqchng/clkfbout"
+	#37
+unselect -all
+	#38
+select pin 'BUFGMUX_X3Y6.I0'
+	#site.pin = BUFGMUX_X3Y6.I0, comp.pin = freqmux/MUX_1.I0, delay = ~1.392ns on net "freqmux/W_freq0_freq1"
+	#39
+unselect -all
+	#40
+select pin 'BUFGMUX_X3Y6.S'
+	#site.pin = BUFGMUX_X3Y6.S, comp.pin = freqmux/MUX_1.S, delay = ~3.856ns on net "W_FREQ_SEL_1_IBUF"
+	#41
+unselect -all
+	#42
+select pin 'BUFGMUX_X3Y7.I0'
+	#site.pin = BUFGMUX_X3Y7.I0, comp.pin = freqmux/MUX_0c.I0, delay = ~0.422ns on net "W_FREQ<4>"
+	#43
+unselect -all
+	#44
+select pin 'BUFGMUX_X2Y11.I0'
+	#site.pin = BUFGMUX_X2Y11.I0, comp.pin = OK_FIFO_CLOCK_BUFGP/BUFG.I0, delay = ~4.475ns on net "OK_FIFO_CLOCK_BUFGP/IBUFG"
+	#45
+unselect -all
+	#46
+select net 'OK_FIFO_CLOCK_BUFGP/IBUFG'
+	#net "OK_FIFO_CLOCK_BUFGP/IBUFG"
+	#47
+unselect -all
+	#48
+select comp 'freqchng/clkf_buf'
+	#comp "freqchng/clkf_buf",  site "BUFGMUX_X3Y16",  type = BUFG  (RPM grid X85Y152)
+	#49
+unselect -all
+	#50
+select net 'freqchng/clkin1'
+	#net "freqchng/clkin1"
+	#51
+unselect -all
+	#52
+select pin 'BUFGMUX_X3Y14.I1'
+	#site.pin = BUFGMUX_X3Y14.I1, comp.pin = freqmux/MUX_2.I1, delay = ~1.392ns on net "freqmux/W_freq4_freq5"
+	#53
+unselect -all
+	#54
+select comp 'freqmux/MUX_2'
+	#comp "freqmux/MUX_2",  site "BUFGMUX_X3Y14",  type = BUFGMUX  (RPM grid X85Y154)
+	#55
+unselect -all
+	#56
+select pin 'BUFGMUX_X2Y11.I0'
+	#site.pin = BUFGMUX_X2Y11.I0, comp.pin = OK_FIFO_CLOCK_BUFGP/BUFG.I0, delay = ~4.475ns on net "OK_FIFO_CLOCK_BUFGP/IBUFG"
+	#57
+unselect -all
+	#58
+select pin 'BUFGMUX_X2Y11.S'
+	#site.pin = BUFGMUX_X2Y11.S
+	#59
+unselect -all
+	#60
+select comp 'OK_FIFO_CLOCK_BUFGP/BUFG'
+	#comp "OK_FIFO_CLOCK_BUFGP/BUFG",  site "BUFGMUX_X2Y11",  type = BUFG  (RPM grid X85Y157)
+	#61
+unselect -all
+	#62
+select comp 'freqchng/clkin1_buf'
+	#comp "freqchng/clkin1_buf",  site "BUFGMUX_X2Y9",  type = BUFG  (RPM grid X85Y159)
+	#63
+unselect -all
+	#64
+select pin 'BUFGMUX_X3Y14.I0'
+	#site.pin = BUFGMUX_X3Y14.I0, comp.pin = freqmux/MUX_2.I0, delay = ~1.392ns on net "freqmux/W_freq0123"
+	#65
+unselect -all
+	#66
+select net 'freqchng/clkin1'
+	#net "freqchng/clkin1"
+	#67
+unselect -all
+	#68
+select comp 'freqmux/MUX_2'
+	#comp "freqmux/MUX_2",  site "BUFGMUX_X3Y14",  type = BUFGMUX  (RPM grid X85Y154)
+	#69
+unselect -all
+	#70
+select pin 'BUFGMUX_X3Y7.I0'
+	#site.pin = BUFGMUX_X3Y7.I0, comp.pin = freqmux/MUX_0c.I0, delay = ~0.422ns on net "W_FREQ<4>"
+	#71
+unselect -all
+	#72
+select net 'W_FREQ_SEL_1_IBUF'
+	#net "W_FREQ_SEL_1_IBUF"
+	#73
+unselect -all
+	#74
+select pin 'BUFGMUX_X3Y7.I0'
+	#site.pin = BUFGMUX_X3Y7.I0, comp.pin = freqmux/MUX_0c.I0, delay = ~0.422ns on net "W_FREQ<4>"
+	#75
+unselect -all
+	#76
+select comp 'freqmux/MUX_0c'
+	#comp "freqmux/MUX_0c",  site "BUFGMUX_X3Y7",  type = BUFGMUX  (RPM grid X85Y161)
+	#77
+unselect -all
+	#78
+select pin 'BUFGMUX_X3Y7.I0'
+	#site.pin = BUFGMUX_X3Y7.I0, comp.pin = freqmux/MUX_0c.I0, delay = ~0.422ns on net "W_FREQ<4>"
+	#79
+unselect -all
+	#80
+select pin 'BUFGMUX_X3Y7.I0'
+	#site.pin = BUFGMUX_X3Y7.I0, comp.pin = freqmux/MUX_0c.I0, delay = ~0.422ns on net "W_FREQ<4>"
+	#81
+unselect -all
+	#82
+select comp 'freqmux/MUX_0c'
+	#comp "freqmux/MUX_0c",  site "BUFGMUX_X3Y7",  type = BUFGMUX  (RPM grid X85Y161)
+	#83
+unselect -all
+	#84
+select net 'freqmux/W_freq2_freq3'
+	#net "freqmux/W_freq2_freq3"
+	#85
+unselect -all
+	#86
+select net 'freqmux/W_freq2_freq3'
+	#net "freqmux/W_freq2_freq3"
+	#87
+unselect -all
+	#88
+select comp 'freqmux/MUX_1'
+	#comp "freqmux/MUX_1",  site "BUFGMUX_X3Y6",  type = BUFGMUX  (RPM grid X85Y162)
+	#89
+unselect -all
+	#90
+select comp 'freqmux/MUX_0b'
+	#comp "freqmux/MUX_0b",  site "BUFGMUX_X2Y4",  type = BUFGMUX  (RPM grid X85Y164)
+	#91
+unselect -all
+	#92
+select pin 'BUFGMUX_X2Y2.S'
+	#site.pin = BUFGMUX_X2Y2.S, comp.pin = freqmux/MUX_0a.S, delay = ~4.122ns on net "W_FREQ_SEL_0_IBUF"
+	#93
+unselect -all
+	#94
+select pin 'BUFGMUX_X2Y2.I0'
+	#site.pin = BUFGMUX_X2Y2.I0, comp.pin = freqmux/MUX_0a.I0, delay = ~0.422ns on net "W_FREQ<0>"
+	#95
+unselect -all
+	#96
+select pin 'BUFGMUX_X2Y2.I0'
+	#site.pin = BUFGMUX_X2Y2.I0, comp.pin = freqmux/MUX_0a.I0, delay = ~0.422ns on net "W_FREQ<0>"
+	#97
+unselect -all
+	#98
+select comp 'freqmux/MUX_0a'
+	#comp "freqmux/MUX_0a",  site "BUFGMUX_X2Y2",  type = BUFGMUX  (RPM grid X85Y166)
+	#99
+unselect -all
+	#100
+select comp 'OK_FIFO_CLOCK_BUFGP/BUFG'
+	#comp "OK_FIFO_CLOCK_BUFGP/BUFG",  site "BUFGMUX_X2Y11",  type = BUFG  (RPM grid X85Y157)
+	#101
+unselect -all
+	#102
+unselect -all
+	#103
+select site 'BUFGMUX_X2Y1'
+	#site "BUFGMUX_X2Y1",  type = BUFGMUX  (RPM grid X85Y167)
+	#104
+unselect -all
+	#105
+select site 'BUFGMUX_X3Y5'
+	#site "BUFGMUX_X3Y5",  type = BUFGMUX  (RPM grid X85Y163)
+	#106
+unselect -all
+	#107
+select site 'BUFGMUX_X2Y1'
+	#site "BUFGMUX_X2Y1",  type = BUFGMUX  (RPM grid X85Y167)
+	#108
+unselect -all
+	#109
+select site 'BUFGMUX_X2Y3'
+	#site "BUFGMUX_X2Y3",  type = BUFGMUX  (RPM grid X85Y165)
+	#110
+unselect -all
+	#111
+select net 'freqmux/W_freq0_freq1'
+	#net "freqmux/W_freq0_freq1"
+	#112
+unselect -all
+	#113
+select net 'freqmux/W_freq0_freq1'
+	#net "freqmux/W_freq0_freq1"
+	#114
+unselect -all
+	#115
+select pin 'BUFGMUX_X2Y4.O'
+	#site.pin = BUFGMUX_X2Y4.O, comp.pin = freqmux/MUX_0b.O, delay = driver on net "freqmux/W_freq2_freq3"
+	#116
+unselect -all
+	#117
+select comp 'freqmux/MUX_0b'
+	#comp "freqmux/MUX_0b",  site "BUFGMUX_X2Y4",  type = BUFGMUX  (RPM grid X85Y164)
+	#118
+unselect -all
+	#119
+select site 'BUFGMUX_X3Y5'
+	#site "BUFGMUX_X3Y5",  type = BUFGMUX  (RPM grid X85Y163)
+	#120
+unselect -all

@@ -21,8 +21,8 @@
 module shiftreg_nonoverlap_clkgen(
 	input CLK_IN,
 	input [4:0] PHASE_SEL,
-//	input RESET,
-//	input [31:0] SR_SET,
+	input RESET,
+	input [31:0] SET,
 	output CLK_OUT_MOD,
 	output CLK_OUT_MODN,
 	output CLK_OUT_MODL
@@ -33,27 +33,27 @@ module shiftreg_nonoverlap_clkgen(
 	wire W_SRL_FEEDBACK;
 	wire [31:0] Q;
 	reg [31:0] count;
-	reg RESET;
+	reg temprst;
 	
 	assign CLK_OUT_MOD = Q[15];
 	assign CLK_OUT_MODN = Q[31];
 	
 	initial begin
 		count = 1000;
-		RESET = 1;
+		temprst = 1;
 	end
 	
 	always @ (posedge CLK_IN) begin
 		if (count > 0) count <= count - 1;
-		else RESET <= 0;
+		else temprst <= 0;
 	end
 	
 	SR32 clk_mod_sr (
 		.D(Q[31]),
-		.SET(32'hFFF00000),
+		.SET(SET),
 		.CLK(CLK_IN),
 		.Q(Q),
-		.RESET(RESET)
+		.RESET(temprst)
 	);
 	
 	SRLC32E #(

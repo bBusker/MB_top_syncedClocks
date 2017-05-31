@@ -25,6 +25,10 @@ module top(
 	output 			MBI_CLK_MOD,
 	output 			MBI_CLKN_MOD,
 	output 			MBI_CLKL_MOD
+	
+//	input				OK_FIFO_WRITE,
+//	input				OK_FIFO_DATA,
+//	input				OK_FIFO_CLOCK
 );
 	
 	wire				W_CLK_MOD;
@@ -32,6 +36,40 @@ module top(
 	wire				W_CLKL_MOD;
 	wire	[5:0]		W_FREQ;
 	wire				W_SELECTED_FREQ;
+	wire				W_FIFO_FULL;
+	wire				W_FIFO_DATA;
+
+	reg	[31:0]	SR_SET;
+	reg				SR_RESET;
+	reg	[5:0]		COUNT;
+	reg				R_FIFO_READ;
+	
+//	always @ (posedge W_SELECTED_FREQ) begin
+//		if (W_FIFO_FULL) begin
+//			R_FIFO_READ <= 1;
+//			COUNT <= 6'b011111;
+//		end
+//		else if (COUNT > 0) begin
+//			SR_SET[COUNT] <= W_FIFO_DATA;	
+//			COUNT <= COUNT - 1;
+//			SR_RESET <= 1;
+//		end
+//		else begin
+//			SR_RESET <= 0;
+//			R_FIFO_READ <= 0;
+//		end
+//	end
+
+//	dutychng_fifo dutychng (
+//		.wr_clk(OK_FIFO_CLOCK),
+//		.din(OK_FIFO_DATA),
+//		.wr_en(OK_FIFO_WRITE),
+//		.rd_clk(W_SELECTED_FREQ),
+//		.dout(W_FIFO_DATA),
+//		.rd_en(R_FIFO_READ),
+//		.full(W_FIFO_FULL),
+//		.rst(1'b0)
+//	);
 	
 	freqchng_clkgen freqchng(
 		.CLK_IN(USER_CLOCK),
@@ -50,12 +88,11 @@ module top(
 		.FREQ_SEL(W_FREQ_SEL),
 		.FREQ_OUT(W_SELECTED_FREQ)
 	);
-	
+		
 	shiftreg_nonoverlap_clkgen tpno (
 		.CLK_IN(W_SELECTED_FREQ),
 		.PHASE_SEL(W_PHASE_SEL),
-//		.RESET(RESET),
-//		.SR_SET(SR_SET),
+		.RESET(SR_RESET),
 		.CLK_OUT_MOD(W_CLK_MOD),
 		.CLK_OUT_MODN(W_CLKN_MOD),
 		.CLK_OUT_MODL(W_CLKL_MOD)
