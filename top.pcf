@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue May 30 18:14:15 2017
+// Written by: Map P.20131013 on Wed May 31 17:23:45 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -9,7 +9,12 @@ COMP "W_PHASE_SEL<1>" LOCATE = SITE "AB12" LEVEL 1;
 COMP "W_PHASE_SEL<2>" LOCATE = SITE "AA12" LEVEL 1;
 COMP "W_PHASE_SEL<3>" LOCATE = SITE "U12" LEVEL 1;
 COMP "W_PHASE_SEL<4>" LOCATE = SITE "T12" LEVEL 1;
+COMP "SR_RESET" LOCATE = SITE "AA14" LEVEL 1;
+COMP "OK_SET<0>" LOCATE = SITE "AA18" LEVEL 1;
+COMP "OK_SET<1>" LOCATE = SITE "T14" LEVEL 1;
 COMP "MBI_CLKN_MOD" LOCATE = SITE "Y8" LEVEL 1;
+COMP "OK_SET<2>" LOCATE = SITE "AB14" LEVEL 1;
+COMP "OK_SET<3>" LOCATE = SITE "R13" LEVEL 1;
 COMP "USER_CLOCK" LOCATE = SITE "AB13" LEVEL 1;
 COMP "W_FREQ_SEL<0>" LOCATE = SITE "V11" LEVEL 1;
 COMP "MBI_CLK_MOD" LOCATE = SITE "AA6" LEVEL 1;

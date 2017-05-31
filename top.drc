@@ -1,20 +1,8 @@
 Release 14.7 Drc P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue May 30 18:14:37 2017
+Wed May 31 17:24:07 2017
 
 drc -z top.ncd top.pcf
 
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   tpno/clk_mod_sr/ff_gen[15].ff/Q is sourced by a combinatorial pin. This is
-   not good design practice. Use the CE pin to control the loading of data into
-   the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   tpno/clk_mod_sr/ff_gen[31].ff/Q is sourced by a combinatorial pin. This is
-   not good design practice. Use the CE pin to control the loading of data into
-   the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net W_CLKL_MOD is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
-DRC detected 0 errors and 3 warnings.  Please see the previously displayed
-individual error or warning messages for more details.
+DRC detected 0 errors and 0 warnings.

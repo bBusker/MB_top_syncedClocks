@@ -23,48 +23,58 @@ module shiftreg_nonoverlap_clkgen(
 	input [4:0] PHASE_SEL,
 	input RESET,
 	input [31:0] SET,
-	output CLK_OUT_MOD,
-	output CLK_OUT_MODN,
-	output CLK_OUT_MODL
+	output reg CLK_OUT_MOD,		//reg for testing
+	output reg CLK_OUT_MODN,
+	output reg CLK_OUT_MODL
 );
 	
 	parameter SR_MODL_INIT = 32'hFFFF0000;
 	
 	wire W_SRL_FEEDBACK;
 	wire [31:0] Q;
-	reg [31:0] count;
-	reg temprst;
+	reg [4:0] count;
+	reg temprst;		//for set initialization
 	
-	assign CLK_OUT_MOD = Q[15];
-	assign CLK_OUT_MODN = Q[31];
+//	assign CLK_OUT_MOD = Q[15];
+//	assign CLK_OUT_MODN = Q[31];
 	
-	initial begin
-		count = 1000;
-		temprst = 1;
-	end
+//	initial begin		//for set initialization
+//		count = 1000;
+//		temprst = 1;
+//	end
+//	
+//	always @ (posedge CLK_IN) begin
+//		if (count > 0) count <= count - 1;
+//		else temprst <= 0;
+//	end
+	
+//	SR32 clk_mod_sr (
+//		.D(Q[31]),
+//		.SET(SET),
+//		.CLK(CLK_IN),
+//		.Q(Q),
+//		.RESET(RESET)
+//	);
+//	
+//	SRLC32E #(
+//		.INIT(SR_MODL_INIT)// Initial Value of Shift Register
+//	) shiftreg_modl (
+//		.Q(CLK_OUT_MODL), // SRL data output
+//		.Q31(W_SRL_FEEDBACK), // SRL cascade output pin
+//		.A(PHASE_SEL), // 5-bit shift depth select input
+//		.CE(!RESET), // Clock enable input
+//		.CLK(CLK_IN), // Clock input
+//		.D(W_SRL_FEEDBACK) // SRL data input
+//	);	
 	
 	always @ (posedge CLK_IN) begin
-		if (count > 0) count <= count - 1;
-		else temprst <= 0;
+		if (count == 31) CLK_OUT_MODL = 1;
+		if (count == 15) CLK_OUT_MODL = 0;
+		if (count == PHASE_SEL) CLK_OUT_MOD = 1;
+		if (count == PHASE_SEL - 5'b10000 + SET[19:16]) CLK_OUT_MOD = 0;
+		if (count == PHASE_SEL - 5'b10000) CLK_OUT_MODN = 1;
+		if (count == PHASE_SEL - 5'b10000 - 5'b10000 + SET[19:16]) CLK_OUT_MODN = 0;
+		if (count == 0) count = 31;
+		else count = count - 1'b1;
 	end
-	
-	SR32 clk_mod_sr (
-		.D(Q[31]),
-		.SET(SET),
-		.CLK(CLK_IN),
-		.Q(Q),
-		.RESET(temprst)
-	);
-	
-	SRLC32E #(
-	.INIT(SR_MODL_INIT)// Initial Value of Shift Register
-	) shiftreg_modl (
-	.Q(CLK_OUT_MODL), // SRL data output
-	.Q31(W_SRL_FEEDBACK), // SRL cascade output pin
-	.A(PHASE_SEL), // 5-bit shift depth select input
-	.CE(1'b1), // Clock enable input
-	.CLK(CLK_IN), // Clock input
-	.D(W_SRL_FEEDBACK) // SRL data input
-	);	
-
 endmodule
