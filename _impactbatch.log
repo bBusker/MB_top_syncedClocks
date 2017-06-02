@@ -1,6 +1,6 @@
 iMPACT Version: Oct 13 2013 10:22:21
 
-iMPACT log file Started on Wed May 31 17:24:17 2017
+iMPACT log file Started on Fri Jun 02 15:08:46 2017
 
 Preference Table
 Name                 Setting             
@@ -120,6 +120,6 @@ INFO:iMPACT:188 - '2': Programming completed successfully.
 LCK cycle: NoWait
 INFO:iMPACT - '2': Checking done pin....done.
 '2': Programmed successfully.
-Elapsed time =      3 sec.
+Elapsed time =      2 sec.
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------

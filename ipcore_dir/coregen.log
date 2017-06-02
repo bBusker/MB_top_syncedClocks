@@ -1,5 +1,49 @@
 INFO:sim:172 - Generating IP...
 Applying current project options...
 Finished applying current project options.
-Cancelled executing Tcl generator.
-Wrote CGP file for project 'dutychng_fifo'.
+WARNING:sim - A core named 'freqchng_clkgen' already exists in the project.
+   Output products for this core may be overwritten.
+Resolving generics for 'freqchng_clkgen'...
+WARNING:sim - A core named 'freqchng_clkgen' already exists in the project.
+   Output products for this core may be overwritten.
+Applying external generics to 'freqchng_clkgen'...
+Delivering associated files for 'freqchng_clkgen'...
+WARNING:sim - Component clk_wiz_v3_6 does not have a valid model name for
+   Verilog synthesis
+Delivering EJava files for 'freqchng_clkgen'...
+Delivered 3 files into directory D:/Shichen
+Lu/MB_top_syncedClocks/ipcore_dir/tmp/_cg/freqchng_clkgen
+Delivered 1 file into directory D:/Shichen
+Lu/MB_top_syncedClocks/ipcore_dir/tmp/_cg/freqchng_clkgen
+Generating ASY schematic symbol...
+Loading device for application Rf_Device from file '6slx25t.nph' in environment
+C:\Xilinx\14.7\ISE_DS\ISE\.
+INFO:sim:949 - Finished generation of ASY schematic symbol.
+Generating SYM schematic symbol for 'freqchng_clkgen'...
+Generating ISE project...
+XCO file found: freqchng_clkgen.xco
+XMDF file found: freqchng_clkgen_xmdf.tcl
+Adding D:/Shichen Lu/MB_top_syncedClocks/ipcore_dir/tmp/_cg/freqchng_clkgen.asy
+-view all -origin_type imported
+Adding D:/Shichen Lu/MB_top_syncedClocks/ipcore_dir/tmp/_cg/freqchng_clkgen.ucf
+-view all -origin_type created
+Adding D:/Shichen Lu/MB_top_syncedClocks/ipcore_dir/tmp/_cg/freqchng_clkgen.v
+-view all -origin_type created
+INFO:HDLCompiler:1845 - Analyzing Verilog file "D:/Shichen
+   Lu/MB_top_syncedClocks/ipcore_dir/tmp/_cg/freqchng_clkgen.v" into library
+   work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding D:/Shichen Lu/MB_top_syncedClocks/ipcore_dir/tmp/_cg/freqchng_clkgen.veo
+-view all -origin_type imported
+INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
+   Please set the new top explicitly by running the "project set top" command.
+   To re-calculate the new top automatically, set the "Auto Implementation Top"
+   property to true.
+Top level has been set to "/freqchng_clkgen"
+Generating README file...
+Generating FLIST file...
+INFO:sim:948 - Finished FLIST file generation.
+Launching README viewer...
+Moving files to output directory...
+Finished moving files to output directory
+Wrote CGP file for project 'freqchng_clkgen'.

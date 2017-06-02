@@ -55,12 +55,9 @@
 // "Output    Output      Phase     Duty      Pk-to-Pk        Phase"
 // "Clock    Freq (MHz) (degrees) Cycle (%) Jitter (ps)  Error (ps)"
 //----------------------------------------------------------------------------
-// CLK_OUT1_____3.200______0.000______50.0______345.093____235.738
-// CLK_OUT2_____6.349______0.000______50.0______301.292____235.738
-// CLK_OUT3____16.000______0.000______50.0______250.390____235.738
-// CLK_OUT4____30.769______0.000______50.0______219.322____235.738
-// CLK_OUT5____66.667______0.000______50.0______187.234____235.738
-// CLK_OUT6___133.333______0.000______50.0______163.191____235.738
+// CLK_OUT1___160.000______0.000______50.0______169.398____177.296
+// CLK_OUT2___400.000______0.000______50.0______142.531____177.296
+// CLK_OUT3___400.000______0.000______50.0______142.531____177.296
 //
 //----------------------------------------------------------------------------
 // "Input Clock   Freq (MHz)    Input Jitter (UI)"
@@ -69,17 +66,14 @@
 
 `timescale 1ps/1ps
 
-(* CORE_GENERATION_INFO = "freqchng_clkgen,clk_wiz_v3_6,{component_name=freqchng_clkgen,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,feedback_source=FDBK_AUTO,primtype_sel=PLL_BASE,num_out_clk=6,clkin1_period=10.0,clkin2_period=10.0,use_power_down=false,use_reset=true,use_locked=true,use_inclk_stopped=false,use_status=false,use_freeze=false,use_clk_valid=false,feedback_type=SINGLE,clock_mgr_type=MANUAL,manual_override=false}" *)
+(* CORE_GENERATION_INFO = "freqchng_clkgen,clk_wiz_v3_6,{component_name=freqchng_clkgen,use_phase_alignment=false,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,feedback_source=FDBK_ONCHIP,primtype_sel=PLL_BASE,num_out_clk=3,clkin1_period=10.000,clkin2_period=10.000,use_power_down=false,use_reset=true,use_locked=true,use_inclk_stopped=false,use_status=false,use_freeze=false,use_clk_valid=false,feedback_type=SINGLE,clock_mgr_type=MANUAL,manual_override=false}" *)
 module freqchng_clkgen
  (// Clock in ports
   input         CLK_IN,
   // Clock out ports
-  output        CLK_OUT_100khz,
-  output        CLK_OUT_200khz,
-  output        CLK_OUT_500khz,
-  output        CLK_OUT_1mhz,
-  output        CLK_OUT_2mhz,
-  output        CLK_OUT_4mhz,
+  output        CLK_OUT_10MHz,
+  output        CLK_OUT_25MHz,
+  output        CLK_OUT_50MHz,
   // Status and control signals
   input         RESET,
   output        LOCKED
@@ -100,34 +94,27 @@ module freqchng_clkgen
   wire [15:0] do_unused;
   wire        drdy_unused;
   wire        clkfbout;
-  wire        clkfbout_buf;
+  wire        clkout3_unused;
+  wire        clkout4_unused;
+  wire        clkout5_unused;
 
   PLL_BASE
   #(.BANDWIDTH              ("OPTIMIZED"),
     .CLK_FEEDBACK           ("CLKFBOUT"),
-    .COMPENSATION           ("SYSTEM_SYNCHRONOUS"),
+    .COMPENSATION           ("INTERNAL"),
     .DIVCLK_DIVIDE          (1),
-    .CLKFBOUT_MULT          (4),
+    .CLKFBOUT_MULT          (8),
     .CLKFBOUT_PHASE         (0.000),
-    .CLKOUT0_DIVIDE         (125),
+    .CLKOUT0_DIVIDE         (5),
     .CLKOUT0_PHASE          (0.000),
     .CLKOUT0_DUTY_CYCLE     (0.500),
-    .CLKOUT1_DIVIDE         (63),
+    .CLKOUT1_DIVIDE         (2),
     .CLKOUT1_PHASE          (0.000),
     .CLKOUT1_DUTY_CYCLE     (0.500),
-    .CLKOUT2_DIVIDE         (25),
+    .CLKOUT2_DIVIDE         (2),
     .CLKOUT2_PHASE          (0.000),
     .CLKOUT2_DUTY_CYCLE     (0.500),
-    .CLKOUT3_DIVIDE         (13),
-    .CLKOUT3_PHASE          (0.000),
-    .CLKOUT3_DUTY_CYCLE     (0.500),
-    .CLKOUT4_DIVIDE         (6),
-    .CLKOUT4_PHASE          (0.000),
-    .CLKOUT4_DUTY_CYCLE     (0.500),
-    .CLKOUT5_DIVIDE         (3),
-    .CLKOUT5_PHASE          (0.000),
-    .CLKOUT5_DUTY_CYCLE     (0.500),
-    .CLKIN_PERIOD           (10.0),
+    .CLKIN_PERIOD           (10.000),
     .REF_JITTER             (0.010))
   pll_base_inst
     // Output clocks
@@ -135,47 +122,26 @@ module freqchng_clkgen
     .CLKOUT0               (clkout0),
     .CLKOUT1               (clkout1),
     .CLKOUT2               (clkout2),
-    .CLKOUT3               (clkout3),
-    .CLKOUT4               (clkout4),
-    .CLKOUT5               (clkout5),
+    .CLKOUT3               (clkout3_unused),
+    .CLKOUT4               (clkout4_unused),
+    .CLKOUT5               (clkout5_unused),
     // Status and control signals
     .LOCKED                (LOCKED),
     .RST                   (RESET),
      // Input clock control
-    .CLKFBIN               (clkfbout_buf),
+    .CLKFBIN               (clkfbout),
     .CLKIN                 (clkin1));
 
 
   // Output buffering
   //-----------------------------------
-  BUFG clkf_buf
-   (.O (clkfbout_buf),
-    .I (clkfbout));
 
-  BUFG clkout1_buf
-   (.O   (CLK_OUT_100khz),
-    .I   (clkout0));
+  assign CLK_OUT_10MHz = clkout0;
 
 
-  BUFG clkout2_buf
-   (.O   (CLK_OUT_200khz),
-    .I   (clkout1));
+  assign CLK_OUT_25MHz = clkout1;
 
-  BUFG clkout3_buf
-   (.O   (CLK_OUT_500khz),
-    .I   (clkout2));
-
-  BUFG clkout4_buf
-   (.O   (CLK_OUT_1mhz),
-    .I   (clkout3));
-
-  BUFG clkout5_buf
-   (.O   (CLK_OUT_2mhz),
-    .I   (clkout4));
-
-  BUFG clkout6_buf
-   (.O   (CLK_OUT_4mhz),
-    .I   (clkout5));
+  assign CLK_OUT_50MHz = clkout2;
 
 
 

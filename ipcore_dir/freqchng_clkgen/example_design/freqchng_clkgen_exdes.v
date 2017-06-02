@@ -64,9 +64,9 @@ module freqchng_clkgen_exdes
   input         CLK_IN1,
   // Reset that only drives logic in example design
   input         COUNTER_RESET,
-  output [6:1]  CLK_OUT,
+  output [3:1]  CLK_OUT,
   // High bits of counters driven by clocks
-  output [6:1]  COUNT,
+  output [3:1]  COUNT,
   // Status and control signals
   input         RESET,
   output        LOCKED
@@ -77,7 +77,7 @@ module freqchng_clkgen_exdes
   // Counter width
   localparam    C_W       = 16;
   // Number of counters
-  localparam    NUM_C     = 6;
+  localparam    NUM_C     = 3;
   genvar        count_gen;
   // When the clock goes out of lock, reset the counters
   wire          reset_int = !LOCKED || RESET || COUNTER_RESET;
@@ -100,12 +100,9 @@ module freqchng_clkgen_exdes
    (// Clock in ports
     .CLK_IN            (CLK_IN1),
     // Clock out ports
-    .CLK_OUT_100khz           (clk_int[1]),
-    .CLK_OUT_200khz           (clk_int[2]),
-    .CLK_OUT_500khz           (clk_int[3]),
-    .CLK_OUT_1mhz           (clk_int[4]),
-    .CLK_OUT_2mhz           (clk_int[5]),
-    .CLK_OUT_4mhz           (clk_int[6]),
+    .CLK_OUT_10MHz           (clk_int[1]),
+    .CLK_OUT_25MHz           (clk_int[2]),
+    .CLK_OUT_50MHz           (clk_int[3]),
     // Status and control signals
     .RESET              (RESET),
     .LOCKED             (LOCKED));
@@ -131,12 +128,15 @@ endgenerate
 
   // Connect the output clocks to the design
   //-----------------------------------------
-  assign clk[1] = clk_int[1];
-  assign clk[2] = clk_int[2];
-  assign clk[3] = clk_int[3];
-  assign clk[4] = clk_int[4];
-  assign clk[5] = clk_int[5];
-  assign clk[6] = clk_int[6];
+  BUFG clkout1_buf
+   (.O (clk[1]),
+    .I (clk_int[1]));
+  BUFG clkout2_buf
+   (.O (clk[2]),
+    .I (clk_int[2]));
+  BUFG clkout3_buf
+   (.O (clk[3]),
+    .I (clk_int[3]));
 
 
   // Reset synchronizer

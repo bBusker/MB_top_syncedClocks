@@ -54,12 +54,9 @@
 // "Output    Output      Phase     Duty      Pk-to-Pk        Phase"
 // "Clock    Freq (MHz) (degrees) Cycle (%) Jitter (ps)  Error (ps)"
 //----------------------------------------------------------------------------
-// CLK_OUT1_____3.200______0.000______50.0______345.093____235.738
-// CLK_OUT2_____6.349______0.000______50.0______301.292____235.738
-// CLK_OUT3____16.000______0.000______50.0______250.390____235.738
-// CLK_OUT4____30.769______0.000______50.0______219.322____235.738
-// CLK_OUT5____66.667______0.000______50.0______187.234____235.738
-// CLK_OUT6___133.333______0.000______50.0______163.191____235.738
+// CLK_OUT1___160.000______0.000______50.0______169.398____177.296
+// CLK_OUT2___400.000______0.000______50.0______142.531____177.296
+// CLK_OUT3___400.000______0.000______50.0______142.531____177.296
 //
 //----------------------------------------------------------------------------
 // "Input Clock   Freq (MHz)    Input Jitter (UI)"
@@ -76,12 +73,9 @@
    (// Clock in ports
     .CLK_IN(CLK_IN),      // IN
     // Clock out ports
-    .CLK_OUT_100khz(CLK_OUT_100khz),     // OUT
-    .CLK_OUT_200khz(CLK_OUT_200khz),     // OUT
-    .CLK_OUT_500khz(CLK_OUT_500khz),     // OUT
-    .CLK_OUT_1mhz(CLK_OUT_1mhz),     // OUT
-    .CLK_OUT_2mhz(CLK_OUT_2mhz),     // OUT
-    .CLK_OUT_4mhz(CLK_OUT_4mhz),     // OUT
+    .CLK_OUT_10MHz(CLK_OUT_10MHz),     // OUT
+    .CLK_OUT_25MHz(CLK_OUT_25MHz),     // OUT
+    .CLK_OUT_50MHz(CLK_OUT_50MHz),     // OUT
     // Status and control signals
     .RESET(RESET),// IN
     .LOCKED(LOCKED));      // OUT

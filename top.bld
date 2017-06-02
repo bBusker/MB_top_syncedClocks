@@ -2,8 +2,8 @@ Release 14.7 ngdbuild P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
--intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p
-xc6slx25t-fgg484-3 top.ngc top.ngd
+-intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc6slx25t-fgg484-3 top.ngc
+top.ngd
 
 Reading NGO file "D:/Shichen Lu/MB_top_syncedClocks/top.ngc" ...
 Gathering constraint information from source properties...

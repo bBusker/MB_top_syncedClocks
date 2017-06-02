@@ -74,12 +74,12 @@ module freqchng_clkgen
  (// Clock in ports
   input         CLK_IN,
   // Clock out ports
-  output        CLK_OUT_100khz,
-  output        CLK_OUT_200khz,
-  output        CLK_OUT_500khz,
-  output        CLK_OUT_1mhz,
-  output        CLK_OUT_2mhz,
-  output        CLK_OUT_4mhz,
+  output        CLK_OUT_100kHz,
+  output        CLK_OUT_200kHz,
+  output        CLK_OUT_500kHz,
+  output        CLK_OUT_1MHz,
+  output        CLK_OUT_2MHz,
+  output        CLK_OUT_4MHz,
   // Status and control signals
   input         RESET,
   output        LOCKED
@@ -175,11 +175,11 @@ module freqchng_clkgen
 //   (.O   (CLK_OUT_4mhz),
 //    .I   (clkout5));
 
-	assign CLK_OUT_100khz = clkout0;
-	assign CLK_OUT_200khz = clkout1;
-	assign CLK_OUT_500khz = clkout2;
-	assign CLK_OUT_1mhz = clkout3;
-	assign CLK_OUT_2mhz = clkout4;
-	assign CLK_OUT_4mhz = clkout5;
+	assign CLK_OUT_100kHz = clkout0;
+	assign CLK_OUT_200kHz = clkout1;
+	assign CLK_OUT_500kHz = clkout2;
+	assign CLK_OUT_1MHz = clkout3;
+	assign CLK_OUT_2MHz = clkout4;
+	assign CLK_OUT_4MHz = clkout5;
 
 endmodule

@@ -90,8 +90,7 @@ group clear 0 end
 
 group insert \
     {freqchng_clkgen_tb.dut.clk[1]} \
-    {freqchng_clkgen_tb.dut.clk[2]}  \     {freqchng_clkgen_tb.dut.clk[3]}  \     {freqchng_clkgen_tb.dut.clk[4]}  \  
-    {freqchng_clkgen_tb.dut.clk[5]}  \     {freqchng_clkgen_tb.dut.clk[6]} 
+    {freqchng_clkgen_tb.dut.clk[2]}  \     {freqchng_clkgen_tb.dut.clk[3]} 
 group using {Counters}
 group set -overlay 0
 group set -comment {}
@@ -99,8 +98,7 @@ group clear 0 end
 
 group insert \
     {freqchng_clkgen_tb.dut.counter[1]} \
-    {freqchng_clkgen_tb.dut.counter[2]}  \     {freqchng_clkgen_tb.dut.counter[3]}  \     {freqchng_clkgen_tb.dut.counter[4]}  \  
-    {freqchng_clkgen_tb.dut.counter[5]}  \     {freqchng_clkgen_tb.dut.counter[6]} 
+    {freqchng_clkgen_tb.dut.counter[2]}  \     {freqchng_clkgen_tb.dut.counter[3]} 
 group using {Status/control}
 group set -overlay 0
 group set -comment {}
