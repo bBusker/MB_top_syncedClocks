@@ -42,4 +42,6 @@ module freqchng_mux_highfreq(
 		.S(FREQ_SEL[1])
 	);
 
+//	assign FREQ_OUT = (FREQ_SEL[0]) ? FREQ_IN[1] : FREQ_IN [0];
+	
 endmodule

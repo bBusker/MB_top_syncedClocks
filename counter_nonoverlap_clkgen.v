@@ -23,7 +23,7 @@ module counter_nonoverlap_clkgen(
 	input [2:0] FREQ_SEL,
 	input [4:0] PHASE_SEL,
 	input [3:0] DUTY_SEL,
-	output reg CLK_OUT_MOD,		//reg for testing
+	output reg CLK_OUT_MOD,		
 	output reg CLK_OUT_MODN,
 	output reg CLK_OUT_MODL
 );

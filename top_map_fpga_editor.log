@@ -1,0 +1,39 @@
+#:C9     
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.20131013
+#Current Working Directory:
+#:D   D:\Shichen Lu\MB_top_syncedClocks
+#Date/Time:
+#:T   Fri Jun 02 17:03:44 2017
+#------------------------------
+	#Reading top_map.ncd...
+	#Loading device for application Rf_Device from file '6slx25t.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+	#   "top" is an NCD, version 3.2, device xc6slx25t, package fgg484, speed -3
+	#Design creation date: 2017.06.02.21.00.03
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+select site BUFG*
+	#3
+unselect -all
+	#4
+select comp 'freqmux/MUX_0c'
+	#comp "freqmux/MUX_0c",  site "BUFGMUX_X3Y5",  type = BUFGMUX  (RPM grid X85Y163)
+	#5
+unselect -all
+	#6
+select net 'W_FREQ_SEL_1_IBUF'
+	#net "W_FREQ_SEL_1_IBUF"
+	#7
+unselect -all
+	#8
+select comp 'freqmux/MUX_1'
+	#comp "freqmux/MUX_1",  site "BUFGMUX_X2Y2",  type = BUFGMUX  (RPM grid X85Y166)
+	#9
+unselect -all
+	#10
+select comp 'freqmux/MUX_0a'
+	#comp "freqmux/MUX_0a",  site "BUFGMUX_X2Y3",  type = BUFGMUX  (RPM grid X85Y165)

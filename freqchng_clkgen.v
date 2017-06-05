@@ -141,15 +141,15 @@ module freqchng_clkgen
     .LOCKED                (LOCKED),
     .RST                   (RESET),
      // Input clock control
-    .CLKFBIN               (clkfbout_buf),
+    .CLKFBIN               (clkfbout),
     .CLKIN                 (clkin1));
 
 
   // Output buffering
   //-----------------------------------
-  BUFG clkf_buf
-   (.O (clkfbout_buf),
-    .I (clkfbout));
+//  BUFG clkf_buf
+//   (.O (clkfbout_buf),
+//    .I (clkfbout));
 
 //  BUFG clkout1_buf
 //   (.O   (CLK_OUT_100khz),

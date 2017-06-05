@@ -3,13 +3,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: top.prj
@@ -105,8 +105,6 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "D:\Shichen Lu\MB_top_syncedClocks\freqchng_mux.v" into library work
-Parsing module <freqchng_mux>.
 Analyzing Verilog file "D:\Shichen Lu\MB_top_syncedClocks\freqchng_clkgen_highfreq.v" into library work
 Parsing module <freqchng_clkgen_highfreq>.
 Analyzing Verilog file "D:\Shichen Lu\MB_top_syncedClocks\counter_nonoverlap_clkgen_highfreq.v" into library work
@@ -130,10 +128,6 @@ WARNING:HDLCompiler:1127 - "D:\Shichen Lu\MB_top_syncedClocks\freqchng_clkgen_hi
 WARNING:HDLCompiler:1127 - "D:\Shichen Lu\MB_top_syncedClocks\freqchng_clkgen_highfreq.v" Line 80: Assignment to clkout5_unused ignored, since the identifier is never used
 WARNING:HDLCompiler:1127 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 54: Assignment to LOCKED ignored, since the identifier is never used
 
-Elaborating module <freqchng_mux>.
-
-Elaborating module <BUFGMUX(CLK_SEL_TYPE="SYNC")>.
-
 Elaborating module <counter_nonoverlap_clkgen_highfreq>.
 
 Elaborating module <ODDR2(DDR_ALIGNMENT="NONE",INIT=1'b0,SRTYPE="SYNC")>.
@@ -148,7 +142,7 @@ Synthesizing Unit <top>.
 INFO:Xst:3210 - "D:\Shichen Lu\MB_top_syncedClocks\top.v" line 51: Output port <LOCKED> of the instance <freqchng> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <W_FREQ<5:3>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
-	no macro.
+	inferred   4 Multiplexer(s).
 Unit <top> synthesized.
 
 Synthesizing Unit <freqchng_clkgen_highfreq>.
@@ -156,14 +150,6 @@ Synthesizing Unit <freqchng_clkgen_highfreq>.
     Summary:
 	no macro.
 Unit <freqchng_clkgen_highfreq> synthesized.
-
-Synthesizing Unit <freqchng_mux>.
-    Related source file is "D:\Shichen Lu\MB_top_syncedClocks\freqchng_mux.v".
-WARNING:Xst:647 - Input <FREQ_IN<5:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <FREQ_SEL<2:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Summary:
-	no macro.
-Unit <freqchng_mux> synthesized.
 
 Synthesizing Unit <counter_nonoverlap_clkgen_highfreq>.
     Related source file is "D:\Shichen Lu\MB_top_syncedClocks\counter_nonoverlap_clkgen_highfreq.v".
@@ -179,18 +165,18 @@ WARNING:Xst:647 - Input <DUTY_SEL<0:0>> is never used. This port will be preserv
     Found 1-bit register for signal <CLK_OUT_MODN_2>.
     Found 3-bit register for signal <count_8>.
     Found 1-bit register for signal <CLK_OUT_MODL_1>.
-    Found 4-bit subtractor for signal <PHASE_SEL[4]_GND_7_o_sub_5_OUT> created at line 44.
-    Found 4-bit subtractor for signal <PHASE_SEL[4]_GND_7_o_sub_6_OUT> created at line 44.
-    Found 4-bit subtractor for signal <PHASE_SEL[4]_PWR_7_o_sub_8_OUT> created at line 45.
-    Found 4-bit subtractor for signal <PHASE_SEL[4]_GND_7_o_sub_11_OUT> created at line 46.
-    Found 4-bit subtractor for signal <PHASE_SEL[4]_GND_7_o_sub_12_OUT> created at line 46.
-    Found 4-bit subtractor for signal <count_16[3]_GND_7_o_sub_15_OUT> created at line 48.
-    Found 3-bit subtractor for signal <PHASE_SEL[4]_GND_7_o_sub_22_OUT> created at line 55.
-    Found 3-bit subtractor for signal <PHASE_SEL[4]_GND_7_o_sub_23_OUT> created at line 55.
-    Found 3-bit subtractor for signal <PHASE_SEL[4]_PWR_7_o_sub_25_OUT> created at line 56.
-    Found 3-bit subtractor for signal <PHASE_SEL[4]_GND_7_o_sub_28_OUT> created at line 57.
-    Found 3-bit subtractor for signal <PHASE_SEL[4]_GND_7_o_sub_29_OUT> created at line 57.
-    Found 3-bit subtractor for signal <count_8[2]_GND_7_o_sub_32_OUT> created at line 59.
+    Found 4-bit subtractor for signal <PHASE_SEL[4]_GND_5_o_sub_5_OUT> created at line 44.
+    Found 4-bit subtractor for signal <PHASE_SEL[4]_GND_5_o_sub_6_OUT> created at line 44.
+    Found 4-bit subtractor for signal <PHASE_SEL[4]_PWR_5_o_sub_8_OUT> created at line 45.
+    Found 4-bit subtractor for signal <PHASE_SEL[4]_GND_5_o_sub_11_OUT> created at line 46.
+    Found 4-bit subtractor for signal <PHASE_SEL[4]_GND_5_o_sub_12_OUT> created at line 46.
+    Found 4-bit subtractor for signal <count_16[3]_GND_5_o_sub_15_OUT> created at line 48.
+    Found 3-bit subtractor for signal <PHASE_SEL[4]_GND_5_o_sub_22_OUT> created at line 55.
+    Found 3-bit subtractor for signal <PHASE_SEL[4]_GND_5_o_sub_23_OUT> created at line 55.
+    Found 3-bit subtractor for signal <PHASE_SEL[4]_PWR_5_o_sub_25_OUT> created at line 56.
+    Found 3-bit subtractor for signal <PHASE_SEL[4]_GND_5_o_sub_28_OUT> created at line 57.
+    Found 3-bit subtractor for signal <PHASE_SEL[4]_GND_5_o_sub_29_OUT> created at line 57.
+    Found 3-bit subtractor for signal <count_8[2]_GND_5_o_sub_32_OUT> created at line 59.
     Found 4-bit comparator equal for signal <count_16[3]_PHASE_SEL[4]_equal_4_o> created at line 43
     Found 4-bit comparator equal for signal <count_16[3]_PHASE_SEL[4]_equal_7_o> created at line 44
     Found 4-bit comparator equal for signal <count_16[3]_PHASE_SEL[4]_equal_9_o> created at line 45
@@ -203,6 +189,7 @@ WARNING:Xst:647 - Input <DUTY_SEL<0:0>> is never used. This port will be preserv
 	inferred  12 Adder/Subtractor(s).
 	inferred  13 D-type flip-flop(s).
 	inferred   8 Comparator(s).
+	inferred   3 Multiplexer(s).
 Unit <counter_nonoverlap_clkgen_highfreq> synthesized.
 
 =========================================================================
@@ -219,6 +206,8 @@ Macro Statistics
 # Comparators                                          : 8
  3-bit comparator equal                                : 4
  4-bit comparator equal                                : 4
+# Multiplexers                                         : 7
+ 1-bit 2-to-1 multiplexer                              : 7
 
 =========================================================================
 
@@ -247,6 +236,8 @@ Macro Statistics
 # Comparators                                          : 8
  3-bit comparator equal                                : 4
  4-bit comparator equal                                : 4
+# Multiplexers                                         : 7
+ 1-bit 2-to-1 multiplexer                              : 7
 
 =========================================================================
 
@@ -296,25 +287,24 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 32
+# BELS                             : 36
 #      GND                         : 1
-#      INV                         : 4
+#      INV                         : 1
 #      LUT2                        : 3
-#      LUT3                        : 4
+#      LUT3                        : 10
 #      LUT4                        : 4
 #      LUT5                        : 3
-#      LUT6                        : 12
+#      LUT6                        : 13
 #      VCC                         : 1
 # FlipFlops/Latches                : 13
 #      FD                          : 4
 #      FDR                         : 2
 #      FDS                         : 4
 #      ODDR2                       : 3
-# Clock Buffers                    : 6
-#      BUFG                        : 1
-#      BUFGMUX                     : 5
-# IO Buffers                       : 13
-#      IBUF                        : 9
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 14
+#      IBUF                        : 10
 #      IBUFG                       : 1
 #      OBUF                        : 3
 # Others                           : 1
@@ -328,22 +318,22 @@ Selected Device : 6slx25tfgg484-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:              13  out of  30064     0%  
- Number of Slice LUTs:                   30  out of  15032     0%  
-    Number used as Logic:                30  out of  15032     0%  
+ Number of Slice LUTs:                   34  out of  15032     0%  
+    Number used as Logic:                34  out of  15032     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     33
-   Number with an unused Flip Flop:      20  out of     33    60%  
-   Number with an unused LUT:             3  out of     33     9%  
-   Number of fully used LUT-FF pairs:    10  out of     33    30%  
+ Number of LUT Flip Flop pairs used:     37
+   Number with an unused Flip Flop:      24  out of     37    64%  
+   Number with an unused LUT:             3  out of     37     8%  
+   Number of fully used LUT-FF pairs:    10  out of     37    27%  
    Number of unique control sets:         4
 
 IO Utilization: 
  Number of IOs:                          16
- Number of bonded IOBs:                  13  out of    250     5%  
+ Number of bonded IOBs:                  14  out of    250     5%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                6  out of     16    37%  
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
  Number of PLL_ADVs:                      1  out of      2    50%  
 
 ---------------------------
@@ -364,14 +354,21 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-nonoverlap_clkgen/CLK_OUT_MOD_1    | BUFGMUX                | 2     |
-nonoverlap_clkgen/CLK_OUT_MODN_1   | BUFGMUX                | 2     |
-nonoverlap_clkgen/CLK_OUT_MODL_1   | BUFGMUX                | 2     |
-freqmux/W_freq0_freq1              | BUFGMUX                | 10    |
------------------------------------+------------------------+-------+
+-----------------------------------------------------------------+--------------------------------------+-------+
+Clock Signal                                                     | Clock buffer(FF name)                | Load  |
+-----------------------------------------------------------------+--------------------------------------+-------+
+W_CLK_MOD_INV_11_o(W_CLK_MOD_INV_11_o1:O)                        | NONE(*)(ODDR2_CLK_MOD_buf)           | 1     |
+W_CLK_MOD(nonoverlap_clkgen/Mmux_CLK_OUT_MOD11:O)                | NONE(*)(ODDR2_CLK_MOD_buf)           | 1     |
+W_CLKN_MOD_INV_12_o(W_CLKN_MOD_INV_12_o1:O)                      | NONE(*)(ODDR2_CLKN_MOD_buf)          | 1     |
+W_CLKN_MOD(nonoverlap_clkgen/Mmux_CLK_OUT_MODN11:O)              | NONE(*)(ODDR2_CLKN_MOD_buf)          | 1     |
+W_CLKL_MOD_INV_13_o(W_CLKL_MOD_INV_13_o1:O)                      | NONE(*)(ODDR2_CLKL_MOD_buf)          | 1     |
+W_CLKL_MOD(nonoverlap_clkgen/Mmux_CLK_OUT_MODL11:O)              | NONE(*)(ODDR2_CLKL_MOD_buf)          | 1     |
+W_FREQ_SEL[2]_X_1_o_Mux_0_o(Mmux_W_FREQ_SEL[2]_X_1_o_Mux_0_o11:O)| BUFG(*)(nonoverlap_clkgen/count_16_3)| 10    |
+-----------------------------------------------------------------+--------------------------------------+-------+
+(*) These 7 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -383,23 +380,23 @@ Speed Grade: -3
 
    Minimum period: 3.445ns (Maximum Frequency: 290.276MHz)
    Minimum input arrival time before clock: 5.365ns
-   Maximum output required time after clock: 1.026ns
-   Maximum combinational path delay: 1.905ns
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'freqmux/W_freq0_freq1'
+Timing constraint: Default period analysis for Clock 'W_FREQ_SEL[2]_X_1_o_Mux_0_o'
   Clock period: 3.445ns (frequency: 290.276MHz)
   Total number of paths / destination ports: 78 / 16
 -------------------------------------------------------------------------
 Delay:               3.445ns (Levels of Logic = 3)
   Source:            nonoverlap_clkgen/count_16_0 (FF)
   Destination:       nonoverlap_clkgen/CLK_OUT_MODN_1 (FF)
-  Source Clock:      freqmux/W_freq0_freq1 rising
-  Destination Clock: freqmux/W_freq0_freq1 rising
+  Source Clock:      W_FREQ_SEL[2]_X_1_o_Mux_0_o rising
+  Destination Clock: W_FREQ_SEL[2]_X_1_o_Mux_0_o rising
 
   Data Path: nonoverlap_clkgen/count_16_0 to nonoverlap_clkgen/CLK_OUT_MODN_1
                                 Gate     Net
@@ -415,20 +412,20 @@ Delay:               3.445ns (Levels of Logic = 3)
                                        (33.7% logic, 66.3% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'freqmux/W_freq0_freq1'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'W_FREQ_SEL[2]_X_1_o_Mux_0_o'
   Total number of paths / destination ports: 74 / 4
 -------------------------------------------------------------------------
 Offset:              5.365ns (Levels of Logic = 5)
   Source:            W_PHASE_SEL<3> (PAD)
   Destination:       nonoverlap_clkgen/CLK_OUT_MODN_1 (FF)
-  Destination Clock: freqmux/W_freq0_freq1 rising
+  Destination Clock: W_FREQ_SEL[2]_X_1_o_Mux_0_o rising
 
   Data Path: W_PHASE_SEL<3> to nonoverlap_clkgen/CLK_OUT_MODN_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            10   1.222   1.201  W_PHASE_SEL_3_IBUF (W_PHASE_SEL_3_IBUF)
-     LUT5:I0->O            1   0.203   0.827  nonoverlap_clkgen/PHASE_SEL[4]_GND_7_o_sub_12_OUT<2>21 (nonoverlap_clkgen/PHASE_SEL[4]_GND_7_o_sub_12_OUT<2>2)
+     LUT5:I0->O            1   0.203   0.827  nonoverlap_clkgen/PHASE_SEL[4]_GND_5_o_sub_12_OUT<2>21 (nonoverlap_clkgen/PHASE_SEL[4]_GND_5_o_sub_12_OUT<2>2)
      LUT6:I2->O            2   0.203   0.617  nonoverlap_clkgen/count_16[3]_PHASE_SEL[4]_equal_13_o4411 (nonoverlap_clkgen/count_16[3]_PHASE_SEL[4]_equal_13_o441)
      LUT6:I5->O            1   0.205   0.580  nonoverlap_clkgen/count_16[3]_PHASE_SEL[4]_equal_7_o41 (nonoverlap_clkgen/count_16[3]_PHASE_SEL[4]_equal_7_o)
      LUT3:I2->O            1   0.205   0.000  nonoverlap_clkgen/CLK_OUT_MOD_1_rstpot (nonoverlap_clkgen/CLK_OUT_MOD_1_rstpot)
@@ -438,66 +435,29 @@ Offset:              5.365ns (Levels of Logic = 5)
                                        (39.9% logic, 60.1% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'freqmux/W_freq0_freq1'
-  Total number of paths / destination ports: 6 / 6
--------------------------------------------------------------------------
-Offset:              1.026ns (Levels of Logic = 0)
-  Source:            nonoverlap_clkgen/CLK_OUT_MODL_1 (FF)
-  Destination:       nonoverlap_clkgen/BUFGMUX_clkout3:I0 (PAD)
-  Source Clock:      freqmux/W_freq0_freq1 rising
-
-  Data Path: nonoverlap_clkgen/CLK_OUT_MODL_1 to nonoverlap_clkgen/BUFGMUX_clkout3:I0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDR:C->Q              1   0.447   0.579  nonoverlap_clkgen/CLK_OUT_MODL_1 (nonoverlap_clkgen/CLK_OUT_MODL_1)
-    BUFGMUX:I0                 0.000          nonoverlap_clkgen/BUFGMUX_clkout3
-    ----------------------------------------
-    Total                      1.026ns (0.447ns logic, 0.579ns route)
-                                       (43.6% logic, 56.4% route)
-
-=========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 6 / 6
--------------------------------------------------------------------------
-Delay:               1.905ns (Levels of Logic = 1)
-  Source:            W_FREQ_SEL<1> (PAD)
-  Destination:       freqmux/MUX_0b:S (PAD)
-
-  Data Path: W_FREQ_SEL<1> to freqmux/MUX_0b:S
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             4   1.222   0.683  W_FREQ_SEL_1_IBUF (W_FREQ_SEL_1_IBUF)
-    BUFGMUX:S                  0.000          freqmux/MUX_0b
-    ----------------------------------------
-    Total                      1.905ns (1.222ns logic, 0.683ns route)
-                                       (64.2% logic, 35.8% route)
-
-=========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock freqmux/W_freq0_freq1
----------------------+---------+---------+---------+---------+
-                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------------+---------+---------+---------+---------+
-freqmux/W_freq0_freq1|    3.445|         |         |         |
----------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock W_FREQ_SEL[2]_X_1_o_Mux_0_o
+---------------------------+---------+---------+---------+---------+
+                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------+---------+---------+---------+---------+
+W_FREQ_SEL[2]_X_1_o_Mux_0_o|    3.445|         |         |         |
+---------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.12 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.55 secs
  
 --> 
 
-Total memory usage is 256240 kilobytes
+Total memory usage is 255856 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   12 (   0 filtered)
-Number of infos    :    5 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
 

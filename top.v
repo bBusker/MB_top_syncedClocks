@@ -57,10 +57,9 @@ module top(
 		.CLK_OUT_50MHz(W_FREQ[2])
 	);
 	
-	freqchng_mux_highfreq freqmux(
-		.FREQ_IN(W_FREQ),
-		.FREQ_SEL(W_FREQ_SEL),
-		.FREQ_OUT(W_SELECTED_FREQ)
+	BUFG BUFG_freqmux(
+		.O(W_SELECTED_FREQ),
+		.I(W_FREQ[W_FREQ_SEL])
 	);
 	
 	counter_nonoverlap_clkgen_highfreq nonoverlap_clkgen (

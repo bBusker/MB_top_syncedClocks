@@ -94,7 +94,18 @@ module freqchng_clkgen_highfreq
   assign CLK_OUT_25MHz = clkout1;
 
   assign CLK_OUT_50MHz = clkout2;
-
+	
+//	BUFG clkout1_buf
+//		(.O   (CLK_OUT_10MHz),
+//		 .I   (clkout0));
+//
+//	BUFG clkout2_buf
+//		(.O   (CLK_OUT_25MHz),
+//		 .I   (clkout1));
+//
+//	BUFG clkout3_buf
+//		(.O   (CLK_OUT_50MHz),
+//		 .I   (clkout2));
 
 
 endmodule

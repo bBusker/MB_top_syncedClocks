@@ -23,7 +23,7 @@ module counter_nonoverlap_clkgen_highfreq(
 	input [2:0] FREQ_SEL,
 	input [4:0] PHASE_SEL,
 	input [3:0] DUTY_SEL,
-	output CLK_OUT_MOD,		//reg for testing
+	output CLK_OUT_MOD,	
 	output CLK_OUT_MODN,
 	output CLK_OUT_MODL
 );
@@ -59,35 +59,35 @@ module counter_nonoverlap_clkgen_highfreq(
 		else count_8 = count_8 - 1'b1;
 	end
 //	
-//	assign CLK_OUT_MOD = CLK_OUT_MOD_2;
-//	assign CLK_OUT_MODN = CLK_OUT_MODN_2;
-//	assign CLK_OUT_MODL = CLK_OUT_MODL_2;
+	assign CLK_OUT_MOD = (FREQ_SEL[1]) ? CLK_OUT_MOD_2 : CLK_OUT_MOD_1;
+	assign CLK_OUT_MODN = (FREQ_SEL[1]) ? CLK_OUT_MODN_2 : CLK_OUT_MODN_1;
+	assign CLK_OUT_MODL = (FREQ_SEL[1]) ? CLK_OUT_MODL_2 : CLK_OUT_MODL_1;
 //	
-	BUFGMUX # (
-		.CLK_SEL_TYPE("SYNC")
-	) BUFGMUX_clkin1 (
-		.O(CLK_OUT_MOD),
-		.I1(CLK_OUT_MOD_2),
-		.I0(CLK_OUT_MOD_1),
-		.S(FREQ_SEL[1])
-	);
-	
-	BUFGMUX # (
-		.CLK_SEL_TYPE("SYNC")
-	) BUFGMUX_clkout2 (
-		.O(CLK_OUT_MODN),
-		.I1(CLK_OUT_MODN_2),
-		.I0(CLK_OUT_MODN_1),
-		.S(FREQ_SEL[1])
-	);
-	
-	BUFGMUX # (
-		.CLK_SEL_TYPE("SYNC")
-	) BUFGMUX_clkout3 (
-		.O(CLK_OUT_MODL),
-		.I1(CLK_OUT_MODL_2),
-		.I0(CLK_OUT_MODL_1),
-		.S(FREQ_SEL[1])
-	);
+//	BUFGMUX # (
+//		.CLK_SEL_TYPE("SYNC")
+//	) BUFGMUX_clkin1 (
+//		.O(CLK_OUT_MOD),
+//		.I1(CLK_OUT_MOD_2),
+//		.I0(CLK_OUT_MOD_1),
+//		.S(FREQ_SEL[1])
+//	);
+//	
+//	BUFGMUX # (
+//		.CLK_SEL_TYPE("SYNC")
+//	) BUFGMUX_clkout2 (
+//		.O(CLK_OUT_MODN),
+//		.I1(CLK_OUT_MODN_2),
+//		.I0(CLK_OUT_MODN_1),
+//		.S(FREQ_SEL[1])
+//	);
+//	
+//	BUFGMUX # (
+//		.CLK_SEL_TYPE("SYNC")
+//	) BUFGMUX_clkout3 (
+//		.O(CLK_OUT_MODL),
+//		.I1(CLK_OUT_MODL_2),
+//		.I0(CLK_OUT_MODL_1),
+//		.S(FREQ_SEL[1])
+//	);
 	
 endmodule

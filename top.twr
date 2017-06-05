@@ -32,22 +32,73 @@ Data Sheet report:
 All values displayed in nanoseconds (ns)
 
 Setup/Hold to clock USER_CLOCK
---------------+------------+------------+------------+------------+---------------------+--------+
-              |Max Setup to|  Process   |Max Hold to |  Process   |                     | Clock  |
-Source        | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)    | Phase  |
---------------+------------+------------+------------+------------+---------------------+--------+
-W_DUTY_SEL<1> |    1.809(R)|      SLOW  |    2.711(R)|      SLOW  |W_SELECTED_FREQ      |   0.000|
-W_DUTY_SEL<2> |    1.964(R)|      SLOW  |    2.995(R)|      SLOW  |W_SELECTED_FREQ      |   0.000|
-W_DUTY_SEL<3> |    1.727(R)|      SLOW  |    3.353(R)|      SLOW  |W_SELECTED_FREQ      |   0.000|
-W_FREQ_SEL<0> |    2.537(R)|      SLOW  |   -0.966(R)|      SLOW  |W_FREQ<0>            |   0.000|
-              |    2.537(R)|      SLOW  |   -0.966(R)|      SLOW  |W_FREQ<1>            |   0.000|
-W_FREQ_SEL<1> |    1.907(R)|      SLOW  |   -0.346(R)|      SLOW  |W_FREQ<2>            |   0.000|
-              |    0.587(R)|      FAST  |    1.606(R)|      SLOW  |freqmux/W_freq0_freq1|   0.000|
-W_PHASE_SEL<1>|    1.211(R)|      SLOW  |    3.122(R)|      SLOW  |W_SELECTED_FREQ      |   0.000|
-W_PHASE_SEL<2>|    1.777(R)|      SLOW  |    3.075(R)|      SLOW  |W_SELECTED_FREQ      |   0.000|
-W_PHASE_SEL<3>|    1.394(R)|      SLOW  |    3.489(R)|      SLOW  |W_SELECTED_FREQ      |   0.000|
-W_PHASE_SEL<4>|    1.082(R)|      SLOW  |    3.834(R)|      SLOW  |W_SELECTED_FREQ      |   0.000|
---------------+------------+------------+------------+------------+---------------------+--------+
+--------------+------------+------------+------------+------------+------------------+--------+
+              |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source        | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+--------------+------------+------------+------------+------------+------------------+--------+
+W_DUTY_SEL<1> |    0.559(R)|      FAST  |    2.590(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_DUTY_SEL<2> |    0.394(R)|      FAST  |    3.276(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_DUTY_SEL<3> |    0.469(R)|      FAST  |    3.023(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_PHASE_SEL<1>|    0.487(R)|      FAST  |    3.204(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_PHASE_SEL<2>|    0.414(R)|      FAST  |    3.536(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_PHASE_SEL<3>|    0.320(R)|      FAST  |    3.970(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_PHASE_SEL<4>|   -0.207(R)|      FAST  |    3.865(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+--------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock W_FREQ_SEL<0>
+--------------+------------+------------+------------+------------+------------------+--------+
+              |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source        | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+--------------+------------+------------+------------+------------+------------------+--------+
+W_DUTY_SEL<1> |    0.254(R)|      FAST  |    1.741(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_DUTY_SEL<2> |    0.091(R)|      SLOW  |    2.427(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_DUTY_SEL<3> |    0.164(R)|      FAST  |    2.174(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_PHASE_SEL<1>|    0.182(R)|      FAST  |    2.355(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_PHASE_SEL<2>|    0.109(R)|      FAST  |    2.687(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_PHASE_SEL<3>|    0.015(R)|      FAST  |    3.121(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_PHASE_SEL<4>|   -0.512(R)|      FAST  |    3.016(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+--------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock W_FREQ_SEL<1>
+--------------+------------+------------+------------+------------+------------------+--------+
+              |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source        | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+--------------+------------+------------+------------+------------+------------------+--------+
+W_DUTY_SEL<1> |   -0.120(R)|      FAST  |    2.135(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_DUTY_SEL<2> |   -0.285(R)|      FAST  |    2.821(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_DUTY_SEL<3> |   -0.210(R)|      FAST  |    2.568(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_PHASE_SEL<1>|   -0.192(R)|      FAST  |    2.749(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_PHASE_SEL<2>|   -0.265(R)|      FAST  |    3.081(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_PHASE_SEL<3>|   -0.359(R)|      FAST  |    3.515(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_PHASE_SEL<4>|   -0.886(R)|      FAST  |    3.410(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+--------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock W_FREQ_SEL<2>
+--------------+------------+------------+------------+------------+------------------+--------+
+              |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source        | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+--------------+------------+------------+------------+------------+------------------+--------+
+W_DUTY_SEL<1> |    0.209(R)|      FAST  |    1.803(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_DUTY_SEL<2> |    0.044(R)|      FAST  |    2.489(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_DUTY_SEL<3> |    0.119(R)|      FAST  |    2.236(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_PHASE_SEL<1>|    0.137(R)|      FAST  |    2.417(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_PHASE_SEL<2>|    0.064(R)|      FAST  |    2.749(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_PHASE_SEL<3>|   -0.030(R)|      FAST  |    3.183(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+W_PHASE_SEL<4>|   -0.557(R)|      FAST  |    3.078(R)|      SLOW  |W_SELECTED_FREQ   |   0.000|
+--------------+------------+------------+------------+------------+------------------+--------+
+
+Clock W_FREQ_SEL<1> to Pad
+------------+-----------------+------------+-----------------+------------+-------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                   | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)  | Phase  |
+------------+-----------------+------------+-----------------+------------+-------------------+--------+
+MBI_CLKL_MOD|         8.432(R)|      SLOW  |         5.038(R)|      FAST  |W_CLKL_MOD         |   0.000|
+            |         8.689(R)|      SLOW  |         5.158(R)|      FAST  |W_CLKL_MOD_INV_13_o|   0.000|
+MBI_CLKN_MOD|         8.136(R)|      SLOW  |         4.863(R)|      FAST  |W_CLKN_MOD         |   0.000|
+            |         8.097(R)|      SLOW  |         4.811(R)|      FAST  |W_CLKN_MOD_INV_12_o|   0.000|
+MBI_CLK_MOD |         8.629(R)|      SLOW  |         5.189(R)|      FAST  |W_CLK_MOD          |   0.000|
+            |         8.401(R)|      SLOW  |         4.977(R)|      FAST  |W_CLK_MOD_INV_11_o |   0.000|
+------------+-----------------+------------+-----------------+------------+-------------------+--------+
 
 Clock to Setup on destination clock USER_CLOCK
 ---------------+---------+---------+---------+---------+
@@ -55,17 +106,53 @@ Clock to Setup on destination clock USER_CLOCK
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
 USER_CLOCK     |    3.082|         |         |         |
+W_FREQ_SEL<0>  |    3.082|         |         |         |
+W_FREQ_SEL<1>  |    3.082|         |         |         |
+W_FREQ_SEL<2>  |    3.082|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock W_FREQ_SEL<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+USER_CLOCK     |    3.082|         |         |         |
+W_FREQ_SEL<0>  |    3.082|         |         |         |
+W_FREQ_SEL<1>  |    3.082|         |         |         |
+W_FREQ_SEL<2>  |    3.082|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock W_FREQ_SEL<1>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+USER_CLOCK     |    3.082|         |         |         |
+W_FREQ_SEL<0>  |    3.082|         |         |         |
+W_FREQ_SEL<1>  |    3.082|         |         |         |
+W_FREQ_SEL<2>  |    3.082|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock W_FREQ_SEL<2>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+USER_CLOCK     |    3.082|         |         |         |
+W_FREQ_SEL<0>  |    3.082|         |         |         |
+W_FREQ_SEL<1>  |    3.082|         |         |         |
+W_FREQ_SEL<2>  |    3.082|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Fri Jun 02 15:08:31 2017 
+Analysis completed Mon Jun 05 11:46:28 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 239 MB
+Peak Memory Usage: 237 MB
 
 
 
