@@ -24,12 +24,17 @@ module freqchng_clkgen_highfreq
  (// Clock in ports
   input         CLK_IN,
   // Clock out ports
-  output        CLK_OUT_10MHz,
-  output        CLK_OUT_25MHz,
-  output        CLK_OUT_50MHz,
+  output        CLK_OUT_0,
+  output        CLK_OUT_1,
+  output        CLK_OUT_2,
+  output			 CLK_OUT_3,
+  output			 CLK_OUT_4,
+  output			 CLK_OUT_5,
   // Status and control signals
   input         RESET,
-  output        LOCKED
+  output        LOCKED,
+  // For modulated signal gen
+  output			 FLAG_HIGH_FREQ
  );
 
   // Input buffering
@@ -89,23 +94,25 @@ module freqchng_clkgen_highfreq
   // Output buffering
   //-----------------------------------
 
-  assign CLK_OUT_10MHz = clkout0;
+  assign CLK_OUT_0 = clkout0;
 
-  assign CLK_OUT_25MHz = clkout1;
+  assign CLK_OUT_1 = clkout1;
 
-  assign CLK_OUT_50MHz = clkout2;
+  assign CLK_OUT_2 = clkout2;
 	
 //	BUFG clkout1_buf
-//		(.O   (CLK_OUT_10MHz),
+//		(.O   (CLK_OUT_1),
 //		 .I   (clkout0));
 //
 //	BUFG clkout2_buf
-//		(.O   (CLK_OUT_25MHz),
+//		(.O   (CLK_OUT_2),
 //		 .I   (clkout1));
 //
 //	BUFG clkout3_buf
-//		(.O   (CLK_OUT_50MHz),
+//		(.O   (CLK_OUT_3),
 //		 .I   (clkout2));
 
-
+// For modulated signal gen
+	assign FLAG_HIGH_FREQ = 1'b1;
+	
 endmodule

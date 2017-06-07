@@ -5,25 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Shichen Lu\MB_top_syncedClocks\freqchng_clkgen_highfreq.v" Line 78: Assignment to <arg fmt="%s" index="1">clkout3_unused</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 41: Assignment to <arg fmt="%s" index="1">LOCKED</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Shichen Lu\MB_top_syncedClocks\freqchng_clkgen_highfreq.v" Line 79: Assignment to <arg fmt="%s" index="1">clkout4_unused</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Shichen Lu\MB_top_syncedClocks\freqchng_clkgen_highfreq.v" Line 80: Assignment to <arg fmt="%s" index="1">clkout5_unused</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 54: Assignment to <arg fmt="%s" index="1">LOCKED</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"D:\Shichen Lu\MB_top_syncedClocks\top.v" Line 34: Net &lt;<arg fmt="%s" index="1">W_FREQ[5]</arg>&gt; does not have a driver.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Shichen Lu\MB_top_syncedClocks\top.v</arg>&quot; line <arg fmt="%s" index="2">51</arg>: Output port &lt;<arg fmt="%s" index="3">LOCKED</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">freqchng</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">W_FREQ&lt;5:3&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">D:\Shichen Lu\MB_top_syncedClocks\top.v</arg>&quot; line <arg fmt="%s" index="2">38</arg>: Output port &lt;<arg fmt="%s" index="3">LOCKED</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">freqchng</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">FREQ_SEL&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -32,22 +17,46 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">FREQ_SEL&lt;2:2&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">PHASE_SEL&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">R_CLK_OUT_MODL_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter_nonoverlap_clkgen</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DUTY_SEL&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">R_CLK_OUT_MODL_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter_nonoverlap_clkgen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">R_CLK_OUT_MOD_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter_nonoverlap_clkgen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">R_CLK_OUT_MOD_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter_nonoverlap_clkgen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">R_CLK_OUT_MODN_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter_nonoverlap_clkgen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">R_CLK_OUT_MODN_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter_nonoverlap_clkgen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">count_8_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter_nonoverlap_clkgen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">count_8_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter_nonoverlap_clkgen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">count_8_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter_nonoverlap_clkgen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">count_16_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter_nonoverlap_clkgen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">count_16_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter_nonoverlap_clkgen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">count_16_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter_nonoverlap_clkgen</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">count_16_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter_nonoverlap_clkgen</arg>&gt;.
 </msg>
 
 <msg type="info" file="Xst" num="1901" delta="old" >Instance <arg fmt="%s" index="1">freqchng/pll_base_inst</arg> in unit <arg fmt="%s" index="2">freqchng/pll_base_inst</arg> of type <arg fmt="%s" index="3">PLL_BASE</arg> has been replaced by <arg fmt="%s" index="4">PLL_ADV</arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">nonoverlap_clkgen/count_16_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;nonoverlap_clkgen/count_8_0&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">nonoverlap_clkgen/count_16_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;nonoverlap_clkgen/count_8_1&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">nonoverlap_clkgen/count_16_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;nonoverlap_clkgen/count_8_2&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.

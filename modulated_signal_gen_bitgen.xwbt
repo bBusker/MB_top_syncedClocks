@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\Shichen Lu\MB_top_syncedClocks\modulated_signal_gen.ncd
+OUTFILE=D:\Shichen Lu\MB_top_syncedClocks\modulated_signal_gen.bit
+FAMILY=Spartan6
+PART=xc6slx25t-3fgg484
+WORKINGDIR=D:\Shichen Lu\MB_top_syncedClocks
+LICENSE=WebPack
+USER_INFO=__0_0_0
