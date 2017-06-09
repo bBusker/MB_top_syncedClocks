@@ -1,3 +1,0 @@
-verilog work "freqchng_clkgen.v"
-verilog work "counter_nonoverlap_clkgen_highfreq.v"
-verilog work "top.v"

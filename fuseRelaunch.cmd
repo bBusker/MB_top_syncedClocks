@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/Shichen Lu/MB_top_syncedClocks/top_isim_beh.exe" -prj "D:/Shichen Lu/MB_top_syncedClocks/top_beh.prj" "work.top" "work.glbl" 

@@ -20,6 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module counter_nonoverlap_clkgen(
 	input CLK_IN,
+	input DRAIN_B,
 	input [2:0] FREQ_SEL,
 	input [4:0] PHASE_SEL,
 	input [3:0] DUTY_SEL,
@@ -35,10 +36,6 @@ module counter_nonoverlap_clkgen(
 	reg [2:0] R_CLK_OUT_MOD;
 	reg [2:0] R_CLK_OUT_MODN;
 	reg [2:0] R_CLK_OUT_MODL;
-//	reg CLK_OUT_MOD_2;
-//	reg CLK_OUT_MODN_2;
-//	reg CLK_OUT_MODL_2;
-
 	
 	always @ (posedge CLK_IN) begin
 		if (count_32 == 31) R_CLK_OUT_MODL[0] = 1;
@@ -73,8 +70,8 @@ module counter_nonoverlap_clkgen(
 		else count_8 = count_8 - 1'b1;
 	end
 	
-	assign CLK_OUT_MOD = ~FLAG_HIGH_FREQ ? R_CLK_OUT_MOD[0] : (FREQ_SEL[1] ? R_CLK_OUT_MOD[2] : R_CLK_OUT_MOD[1]);
-	assign CLK_OUT_MODN = ~FLAG_HIGH_FREQ ? R_CLK_OUT_MODN[0] : (FREQ_SEL[1] ? R_CLK_OUT_MODN[2] : R_CLK_OUT_MODN[1]);
-	assign CLK_OUT_MODL = ~FLAG_HIGH_FREQ ? R_CLK_OUT_MODL[0] : (FREQ_SEL[1] ? R_CLK_OUT_MODL[2] : R_CLK_OUT_MODL[1]);
+	assign CLK_OUT_MOD = ~DRAIN_B ? 0 : (~FLAG_HIGH_FREQ ? R_CLK_OUT_MOD[0] : (FREQ_SEL[1] ? R_CLK_OUT_MOD[2] : R_CLK_OUT_MOD[1]));
+	assign CLK_OUT_MODN = ~DRAIN_B ? 0 : (~FLAG_HIGH_FREQ ? R_CLK_OUT_MODN[0] : (FREQ_SEL[1] ? R_CLK_OUT_MODN[2] : R_CLK_OUT_MODN[1]));
+	assign CLK_OUT_MODL = ~DRAIN_B ? 0 : (~FLAG_HIGH_FREQ ? R_CLK_OUT_MODL[0] : (FREQ_SEL[1] ? R_CLK_OUT_MODL[2] : R_CLK_OUT_MODL[1]));
 
 endmodule

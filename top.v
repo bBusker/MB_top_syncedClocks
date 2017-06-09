@@ -18,11 +18,12 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module modulated_signal_gen(
+module top(
 	input 			USER_CLOCK,			//clk input
 	input	[2:0] 	FREQ_SEL,			//OK board input for frequency selection of generated signals
 	input [4:0]		PHASE_SEL,			//OK board input for phase selection between CLK and CLKL
 	input [3:0]		DUTY_SEL,			//OK board input for duty selection of CLK and CLKN
+	input				DRAIN_B,				//drain_b reset input
 	output 			MBI_CLK_MOD,		//clk output to MB imager board
 	output 			MBI_CLKN_MOD,		//clkn output to MB imager board, 180deg phase shifted from clk
 	output 			MBI_CLKL_MOD		//clkl output to MB imager board, for light source
@@ -35,10 +36,10 @@ module modulated_signal_gen(
 	wire				W_SELECTED_FREQ;
 	wire				FLAG_HIGH_FREQ;			//for clk and clkn generation, passes information about if highfreq module is used
 	
-	freqchng_clkgen freqchng(					//PLL for frequency generation from USER_CLOCK
+	freqchng_clkgen_highfreq freqchng(					//PLL for frequency generation from USER_CLOCK
 		.CLK_IN(USER_CLOCK),						//to cover larger frequency range, there is a high and a low frequency version of this module
 		.RESET(1'b0),								//use module name "freqchng_clkgen" for lowfreq or "freqchng_clkgen_highfreq" for high freq
-		.LOCKED(LOCKED),							//availiable frequences (refers to final output freq for signal):
+		.LOCKED(LOCKED),							//availiable frequences (refers to final output freq for signals):
 		.FLAG_HIGH_FREQ(FLAG_HIGH_FREQ),		//clk_out	|	freqchng_clkgen output	|	freqchng_clkgen_highfreq output
 		.CLK_OUT_0(W_FREQ[0]),					//		0		|			100kHz				|			10MHz
 		.CLK_OUT_1(W_FREQ[1]),					//		1		|			200kHz				|			25MHz
@@ -57,14 +58,15 @@ module modulated_signal_gen(
 		.CLK_IN(W_SELECTED_FREQ),							//for higher frequencies, resolution of phase and duty change lowers
 		.FREQ_SEL(FREQ_SEL),									//100kHz-4MHz: 5-bit resolution ps, 4-bit resolution duty
 		.PHASE_SEL(PHASE_SEL),								//10MHz & 25MHz: 4-bit resolution ps, 3-bit resolution duty
-		.DUTY_SEL(DUTY_SEL),									//50MHz: 3-bit resolution, 2-bit resolution duty
+		.DUTY_SEL(DUTY_SEL),									//50MHz: 3-bit resolution ps, 2-bit resolution duty
 		.FLAG_HIGH_FREQ(FLAG_HIGH_FREQ),
+		.DRAIN_B(1'b1),
 		.CLK_OUT_MOD(W_CLK_MOD),
 		.CLK_OUT_MODN(W_CLKN_MOD),
 		.CLK_OUT_MODL(W_CLKL_MOD)
 	);
 	
-	//ODDR2's for Spartan 6 pin output
+	//ODDR2's for Spartan 6 pin output------------------------
 	
 	ODDR2 #(
 		.DDR_ALIGNMENT("NONE"), // Sets output alignment to "NONE", "C0" or "C1"
@@ -110,4 +112,5 @@ module modulated_signal_gen(
 		.R(1'b0), // 1-bit reset input
 		.S(1'b0) // 1-bit set input
 	);
+	
 endmodule
